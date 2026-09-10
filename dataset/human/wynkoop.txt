@@ -1,0 +1,373 @@
+time to time from the gas office. And it must be admitted that many of
+the explanations are misleading, either through the intention of the
+superior officials or by reason of the ignorance of their subordinates.
+
+Hardly has the chill of shortening days driven us indoors in the early
+twilight before complaints of poor gas become epidemic. Now, what _is_
+‘poor’ gas? Is the gas deficient in light-giving constituents, or is
+it merely burned in such a manner as not to afford a satisfactory
+illumination?
+
+The charter of Greater New York requires that the illuminating gas
+supplied throughout the city shall be of at least twenty candle power,
+or illuminating quality, or richness--that is to say, if we burn this
+gas in a standard burner at the standard pressure (or at as near this
+pressure as may be), so that the rate of consumption is five cubic
+feet an hour, the flame thus produced shall be equivalent to twenty
+standard sperm candles, each burning at the rate of one hundred and
+twenty grains of sperm per hour, and all bunched--if such a thing were
+possible. There can be hardly any doubt but that all the gas sent out
+from modern gas works fulfills the above requirement. Indeed, my own
+tests give results ranging from twenty-two to twenty-eight candles,
+with an average of about twenty-four. Manifestly, the gas _sent out_ is
+not ‘poor.’
+
+Nevertheless, the fact that the gas as manufactured is of the required
+candle power is no indication that the product as delivered to the
+consumer will give a similarly satisfactory test. Distribution of
+gas is attended with many perplexities, not the least of which
+is condensation. The illuminating hydrocarbons, or light-giving
+constituents held in suspension in the gas, are not so firmly fixed
+therein as to be unaffected by the size of the pipe, the character of
+the internal pipe surface, and barometric and thermometric variations.
+The transmission of gas causes, therefore, a loss of candle power
+ranging from a small fraction to several candles, although it is
+possible to conceive of conditions so extraordinarily favorable that
+the illuminating quality of the gas might be actually improved by
+distribution.
+
+It will be readily understood from this explanation that tests made
+at the gas works, or even at points arbitrarily selected at a certain
+distance from these works, are hardly calculated to satisfy the
+consumer. For this reason I have preferred, in conducting these tests,
+to sacrifice to some degree the accuracy that obtains in laboratory
+experiments, in order to test gas samples _taken from the main directly
+in front of the complainant’s own premises_. I argue that the consumer
+cares little or nothing as to whether the gas as manufactured complies
+with the law, or whether tests made at a point perhaps a mile away
+from the works show the required candle power; but that he does want
+to know what is the quality of the gas passing in at his service pipe.
+The method of collecting and transporting to a laboratory the gas
+samples enables one to say with positiveness that the gas at the point
+of complaint has an illuminating power of at least so many candles,
+and that it may be even one candle better than the tests indicate. The
+figures thus obtained range from twenty and a half to twenty-five. So,
+then, the gas _delivered to the consumer_ is not ‘poor.’
+
+Hygienic reasons demand that the impurities in the gas shall not exceed
+a definite percentage. Whatever effect these impurities may have upon
+the candle power has been covered by the tests above explained, so that
+any further consideration of these impurities may be omitted here.
+
+It is always a difficult matter to convince an indignant householder
+that the quality of the gas supplied to him is satisfactory. He knows
+perfectly well that he is not getting the desired result, and no
+explanation, however elaborate, as to candle power will placate him,
+unless it be supplemented by a further statement detailing the cause
+of the trouble. When you are trying to draw water in the bathroom
+while the cook is filling the washtubs in the basement, do you say the
+water is ‘poor’? Why, then, should you characterize the gas as ‘poor,’
+when people nearer to the gas works than you are happen to be drawing
+heavily upon the common gas main? Imagine, if you please, a long gas
+main, with consumers tapping in at points throughout its entire length,
+and with a gas holder forcing the gas in at one end. Since there is
+a loss of pressure, caused by the transmission, it follows that the
+pressure will be higher at the gas holder than anywhere else along the
+line, the _difference_ in pressure depending, roughly, upon the size
+and length of the pipe and upon the amount of gas flowing. Now, for any
+one customer the size and length of pipe will remain constant, but the
+flow of gas along the line will vary from hour to hour, consequently
+the pressure at his house may be expected to vary from hour to hour.
+
+The unit of measurement of gas pressure is that pressure which will
+cause a difference of water level of one tenth of an inch in the two
+legs of a V-shaped tube when one end is connected with the gas main and
+the other end is left open to the outer air. Ten tenths, or one inch,
+is the standard, or normal pressure.
+
+[Illustration: EXHIBIT 1.]
+
+Any appliance--even a gas-burner--operates to best advantage under
+certain well-defined conditions. Depart from these conditions, and the
+efficiency of the device is impaired to an extent depending largely
+upon the nature of the appliance under consideration. For example,
+burn an incandescent lamp at fifty per cent. above normal voltage and
+it breaks down; burn a gas jet at two hundred per cent. above normal
+pressure, and it still operates--how satisfactorily ‘deponent sayeth
+not.’ Now, the gas-burner is supposed to operate to best advantage
+at ten tenths of an inch. At this pressure the flame is neither so
+wavering as to be affected by every chance draught, nor so rigid as to
+permit the gas to blow through without being properly consumed. Below
+the normal the flame decreases; above, the light is increased somewhat,
+but not by any means in proportion to the increase in the gas flow.
+Thus we see that the satisfactory employment of gas as an illuminant
+depends upon the maintenance of a pressure high enough to deliver
+the required amount of gas, but not so high as to cause wasteful
+consumption.
+
+[Illustration: EXHIBIT 2.]
+
+Turning back now to the gas main, let us consider the pressures
+actually existing. Exhibit 1 is a photograph of a twenty-four-hour
+record of pressure at a point not far from the works. The radial lines
+represent time, and there is a line for each quarter of an hour. The
+circles represent pressure, there being one circle for each tenth of
+an inch. Starting at _E_, the point at which the record begins, and
+following the irregular line clockwise, one may readily determine the
+fluctuations of pressure and the time of their occurrence. Interpreting
+the diagram, we find that the pressure was slightly above the normal
+until 4.30 P. M. (_A_), when the works began to raise the pressure
+little by little, in order to compensate for the increased loss due to
+increased flow through the mains. At 6.15 P. M. (_B_), the works ceased
+increasing the pressure. While this increase lasted--from 6.15 P. M.
+(_B_) to 10.15 P. M. (_C_)--our friend near the works suffered under
+twenty-one tenths pressure, the gas blowing merrily through the tips
+and the meter conscientiously registering gas wasted as well as gas
+utilized. From 10.15 P. M. (_C_) the pressure falls by steps during the
+ensuing two hours, finally reaching eleven tenths just after midnight
+(_D_), which latter pressure is quite steadily maintained until the
+following forenoon. The service from bedtime to dinner time should have
+proved quite satisfactory. One would naturally expect to find this
+consumer complaining of high bills, however.
+
+[Illustration: EXHIBIT 3.]
+
+Visiting the fellow at the distant end of the line, we find conditions
+widely at variance from those already considered. Exhibit 2 tells a
+new story. The recording gauge was placed in service at 4 P. M. (_E_),
+and shortly afterward (_A_), the pressure began to fall. The jets grew
+dimmer and dimmer, while the Welsbach mantles became petticoats of
+red, with hems of white at the bottom. No wonder this man complains
+of ‘poor’ gas, while some learned friend, dropping in for an evening
+cigar, explains that there is ‘air in the pipes.’ The one consolatory
+reflection is that, at all events, the poor fellow had a good light to
+undress by (_B_ to _C_).
+
+[Illustration: EXHIBIT 4.]
+
+Exhibits 3 and 4 come from my own residence. Together they form a
+‘before-taking’ and ‘after-taking’ advertisement--not of medicine,
+but of a gas governor. The fact that I am located at a considerable
+distance--several miles--from the works, and am supplied through a main
+laid a number of years ago, when the territory was sparsely settled,
+enables me to present Exhibit 3. Comment on this record is unnecessary.
+After securing this diagram I installed a governor and set it at eleven
+tenths. Exhibit 4 shows what happened. I am now doing for myself, and
+at my own expense, that which the gas company fails to do for me. This
+governor, therefore, renders me almost entirely independent of the
+gas company; and, in order to demonstrate more clearly to what degree
+this independence extends, the gauge has been allowed to run for
+forty-eight hours without changing the card, thus super-imposing the
+record of the second day upon that of the first. Note how closely the
+readings for the two days agree. The governor is a protection against
+excess of pressure only; if the street pressure falls below eleven
+tenths--the point at which my governor is set--automatic regulation
+ceases, and my gas simply becomes subject to practically the same
+variations as exist on the main. Happily, the latter condition is
+infrequently realized in our neighborhood. No argument is needed to
+prove how successfully a governing device of this nature can cope with
+the trouble indicated by Exhibit 1, or how utterly inadequate it is to
+afford relief from the evil depicted in Exhibit 2. Increased pressure
+is the only remedy for the latter.
+
+The gas company does not recommend the use of these house-to-house
+governors--presumably because such a recommendation would be in effect
+an admission that the service as now maintained by the company is not
+satisfactory. Indeed, the less enlightened officials--and it is these,
+unfortunately, with whom the consumer has generally to deal--positively
+and unreasoningly condemn all such regulating devices. In spite of
+this, there exist to-day several gas-reduction companies, whose sole
+occupation consists in exploiting various gas-pressure-regulating
+appliances, which are rented to consumers for a certain percentage of
+the monthly saving in the gas bills which their use effects.
+
+It would appear to be a self-evident proposition that when one pays for
+gas delivered at his meter he is entitled to receive that gas under
+such a pressure as will afford the most satisfactory service. This
+pressure is found to be one inch. Making due allowance for reasonable
+fluctuations of a few tenths above the normal, any further departure
+from the standard may be taken as a sure indication of a disinclination
+on the part of the company to meet the expense of new pipes and
+regulating apparatus. The time is not far distant when the public
+will demand, not cheaper gas nor better gas, but a more satisfactory
+service. But before condemning the gas company one must look to his
+house piping. The company’s responsibility ends just inside the meter,
+and from that point the consumer must provide satisfactory appliances,
+giving the same attention to the gas pipes as he gives to the plumbing.
+This is seldom done and the company is frequently blamed for the
+neglect of the householder.
+
+The gas engineer, steering between the Scylla of ‘poor’ gas and the
+Charybdis of excessive pressures, finds himself still ‘dangerous in the
+rapids’ of financial expenditure. At present he is doing the best he
+can with the money doled out to him by the management.
+
+It will be observed that up to the present point the gas meter itself
+has played no part in the discussion. The meter, although greatly
+maligned, is in reality an eminently satisfactory piece of mechanism.
+Concerning this apparatus many erroneous notions prevail. One of these
+is that a householder may burn thousands of feet of gas without cost
+to himself, provided he keeps the company in blissful ignorance of
+the employment of gas for heating purposes upon his premises. The
+demonstration of the falsity of this idea lies within the reach of any
+one who will take the trouble to read his own meter on those days on
+which the company’s indexer pays his monthly visits.
+
+[Illustration: FIG. 1.--READS 3,300 CUBIC FEET.]
+
+[Illustration:
+
+    FIG. 2.--READS 19,800 CUBIC FEET. The apparent reading is 29,800.
+    The gearing of the indexing mechanism is not especially delicate,
+    and it frequently happens that the dial of one denomination begins
+    to record before the hand of the next lower denomination has made a
+    complete revolution.
+]
+
+[Illustration: FIG. 3.--READS 19,800 CUBIC FEET.]
+
+Figs. 1, 2 and 3 represent different states of the index usually
+employed on the three, five and ten light meters, the sizes commonly
+found in our dwellings. The smaller dial, placed centrally above the
+other, is known as the ‘proving dial,’ and, being used merely for
+testing purposes, is not considered in reading the gas consumption.
+Although the index dials vary in nomenclature as well as in number,
+it is generally safe to consider that if the name is placed _above_
+the dial a complete revolution of the pointer is required to register
+the amount of gas indicated by the name; whereas if the name is placed
+_below_ the dial each numbered division of the dial represents the
+amount corresponding to the name. If doubt still exists as to the value
+of each division of the lowest or right-hand dial, remember that no
+meter index is designed to read less than one hundred cubic feet for
+each division of the circle.
+
+After one has indexed his own meter for a month or two he is in a
+position to begin checking the bills presented. The ‘present state of
+meter’ and the ‘previous state of meter’ are always specified, and the
+mere subtraction of the former from the latter gives the consumption.
+This is not invariably the case, however. After a meter has registered
+its maximum reading--100,000 in the smaller sizes--it passes over
+the zero point and begins to build up a new record. This happens at
+intervals as long as the apparatus is kept in service. Before me lies
+a bill giving the ‘present state’ as 1,700 and the ‘previous state’
+as 96,300. Since the meter was continuously employed, it must have
+registered up to 100,000, so that it registered 3,700 cubic feet on the
+old score before recording 1,700 cubic feet on the new. Consequently,
+adding 1,700 to the difference between ‘previous state’ and the highest
+possible reading gives 5,400 cubic feet--the amount consumed during the
+month. By reading one’s own meter the detection of any error on the
+part of the indexer or of the clerical force at the gas office becomes
+possible. Errors of this nature are of rare occurrence, as those
+who have adopted this plan of checking gas bills will testify. The
+responsibility for excessive bills is thus taken from the gas employees
+and thrown entirely upon the gas-registering mechanism itself. Those
+people, then, who chuckle furtively over the fact that the gas company
+has not ‘caught on’ to the surreptitious use of gas ranges are either
+the fortunate possessors of ‘slow’ meters or are deluding themselves as
+to the amount of gas which they actually consume.
+
+[Illustration: FIG. 4.--INTERIOR OF COMMON GAS METER.]
+
+Fig. 4 is a photograph of the common dry meter, with the front, back,
+top and left side removed. It is called a ‘dry’ meter to distinguish
+it from those meters, having little vogue in this country, which
+employ a liquid in place of a valve motion. The apparatus shown
+consists of a case divided into three compartments by a horizontal
+partition one fourth of the way down from the top, and by a vertical
+partition centrally placed and extending upward from the bottom of the
+casing to the horizontal partition. The upper compartment contains
+the registering mechanism and a small valve chamber, the latter
+corresponding to the steam chest of an engine. In each of the lower
+compartments is a metal disk attached to the central partition by
+well-oiled flexible leathers, each disk, leather and the partition
+forming a bellows. As in a locomotive, the meter really consists of two
+separate mechanisms, set to operate out of phase and avoid dead centers.
+
+[Illustration: FIG. 5.]
+
+[Illustration: FIG. 6.]
+
+Considering one mechanism only, recourse may be had to a diagrammatic
+representation of the action (Fig. 5). Gas entering the inlet passes
+into the valve chamber. Here an ordinary D-slide-valve closes two of
+the openings, leaving a third through which the gas may flow into the
+bellows or inner compartment. The bellows expands, gradually filling
+the outer compartment, and forcing the gas out under the valve into
+the outlet pipe, as indicated by the arrows. When the bellows is fully
+distended the valve shifts into the position shown in Fig. 6, admitting
+the inflowing gas to the outer compartment and collapsing the bellows,
+whose contents are forced into the outlet pipe by the paths traced by
+the arrows.
+
+Thus, it will be observed, the meter is a volume measurer pure and
+simple, measuring cubic feet with as much deliberation as is required
+to deal water out of a cask by means of a pint dipper. Its percentage
+of error is the same at all pressures and under all loads within its
+capacity, and it measures cubic feet of gas regardless of whether that
+gas be expanded or compressed.
+
+And so we are obliged to realize, as another fallacy is exposed, that
+the meter does not spin around most energetically under the higher
+pressures, cheerfully and accommodatingly serving its masters by adding
+a mythical cubic foot or two to the count at each revolution.
+
+It remains, then, to consider the error of the meter. The custom is,
+in New York at least, not to set a meter that registers fast--that
+registers a greater volume of gas than actually passes through it. If
+it is found to be slow, however, and not more than three per cent.,
+it is allowed to go out. As a result, the meter, when first placed,
+always favors the consumer, sometimes to the extent of recording only
+ninety-seven feet of gas for each one hundred feet actually passed.
+Owing to the aging of the mechanism and the drying out of the leathers,
+there exists a tendency to increase the registry for each cubic foot
+passed. In this way a slow meter may become a fast meter after a period
+of active service. From the meager data at my disposal, it would appear
+that every meter should be called in for a thorough overhauling and
+readjustment at periodic intervals of from three to five years.
+
+Assuming that there are several million gas meters in Greater New
+York alone, it is but natural to expect that out of this vast number,
+in spite of any reasonable care that may have been exercised in
+their adjustment originally, many will be found subsequently to be
+defective--some because of mechanical injury, some through sheer old
+age. Unfortunately, it is not possible as yet to obtain a convincingly
+large array of figures; but in the Borough of Brooklyn, where there are
+in service nearly a quarter of a million meters, and where complaints
+against them have been studiously encouraged by the authorities, one
+hundred and eighty-seven meters have been carefully tested. Here are
+the results:
+
+   21 correct
+                                     {   3 more than 10 per cent.
+  114 fast, average 3 per cent       {  42 between 3 and 10 per cent.
+      (recording 103 cubic feet for  {  69 less than 3 per cent.
+      each 100 cubic feet actually   { ---
+      passed)                        { 114
+
+                                     {   0 more than 10 per cent.
+   52 slow, average 2¼ per cent      {  13 between 3 and 10 per cent.
+      (recording 97¾ cubic feet      {  39 less than 3 per cent.
+      for each 100 cubic feet        { ---
+      actually passed)               {  52
+  ---
+  187
+
+When one remembers that these one hundred and eighty-seven meters are
+presumably the worst of their kind, having been put in evidence by a
+naturally suspicious public, it is but fair to assume that the figures
+overrate rather than underestimate the errors of the average gas meter.
+Quoting from _The Progressive Age_, a journal devoted largely to the
+interests of the gas industry: “The meters made to-day will remain
+a long while in service before they begin to register incorrectly,
+and when we consider the dampness, extremes of temperature and hard
+usage they receive as they are transferred from cellar to attic, from
+among the dust, cobwebs and litter of a basement closet to the corner
+shelf of some coal cellar, to be the playground of rats, spiders and
+cockroaches, to be drenched in summer by sweating or leaky water pipes
+and wear a venerable beard of icicles in winter--to be, in fact, the
+worst-used machine about a gas plant--we can not fail but express
+surprise that it registers at all correctly.”
+
+
+
+

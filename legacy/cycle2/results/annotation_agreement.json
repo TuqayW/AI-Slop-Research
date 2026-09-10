@@ -1,0 +1,11 @@
+{
+  "status": "not_available",
+  "n_independent_annotations": 0,
+  "n_paired_documents": 0,
+  "raw_agreement": null,
+  "binary_kappa": null,
+  "ordinal_kappa": null,
+  "reason": "No independent human ratings supplied.",
+  "errors": [],
+  "resolved_quality": {}
+}

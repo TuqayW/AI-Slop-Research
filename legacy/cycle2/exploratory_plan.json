@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-10",
+  "status": "Supplementary exploratory schedule; the authoritative prospective protocol is protocol.json",
+  "seed": 20260910,
+  "exploratory": {
+    "data": "All 24 pilot documents, including former pilot test articles, are development-only",
+    "repetitions": 100,
+    "split_sizes_in_topic_pairs": [6, 3, 3],
+    "configurations": [
+      {"name": "original", "regularization": 0.1, "features": "all"},
+      {"name": "pilot_selected", "regularization": 10.0, "features": "without_length"},
+      {"name": "length_only", "regularization": 0.1, "features": "length"},
+      {"name": "repetition_only", "regularization": 0.1, "features": "repetition"},
+      {"name": "without_repetition", "regularization": 0.1, "features": "without_repetition"}
+    ],
+    "threshold_policies": ["legacy", "negative_max", "separating_midpoint"],
+    "formatting_probes": ["whitespace", "uppercase", "sentence_bullets", "digits_as_words"],
+    "interval_interpretation": "2.5th/97.5th percentiles across reused development splits describe instability, not independent population confidence intervals"
+  }
+}

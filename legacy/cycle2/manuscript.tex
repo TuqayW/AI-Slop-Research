@@ -1,0 +1,191 @@
+\section{Second Development Cycle: Diagnostics and Readiness}
+\subsection{Scope and separation of evidence}
+All 24 pilot documents are now development material, including the six articles
+used for the original final assessment. Their original results remain in the
+record. No new untouched evaluation set has been constituted, and no contemporary
+corpus with independent quality annotations has been acquired. Reusing an old
+test set for diagnosis is legitimate once its role changes; calling the resulting
+analysis another held-out success is not.
+
+The second cycle adds two complementary development analyses and an implemented,
+gated workflow for later independent annotation, calibration, model freezing and
+evaluation. The authoritative prospective specification is
+\texttt{cycle2/protocol.json}, with \texttt{cycle2/rubric.md} and the JSON bundle
+and custody templates. Earlier CSV-schema drafts are explicitly superseded.
+The separate \texttt{cycle2/exploratory\_plan.json} defines the supplementary
+repeated-split experiment, not a competing final-evaluation protocol. A local
+snapshot records the methodological hashes; it is not external preregistration,
+an independent annotation audit, or a frozen trained model.
+
+Public resources were reviewed for possible use. RAID offers authorship stress
+tests, M4 addresses domain and generator variation, CoAuthor records mixed
+human--AI writing, and SummEval supplies expert and crowd judgments of generated
+summaries \cite{raid,m4,coauthor,summeval}. The review did not establish that any
+provided the required combination of contemporary human provenance, this study's
+quality rubric and a representative sampling frame. Existing summarization
+ratings cannot simply be renamed as ground truth for a different construct.
+Source details and permission gaps are recorded in
+\texttt{cycle2/source\_audit.md}; no benchmark text was imported as qualified
+primary data.
+
+Bulk-access attempts through the terminal returned proxy 403 errors. Browser
+access to documentation succeeded, but no external annotation file was analyzed.
+This is an access limitation, not proof that suitable data do not exist.
+Neither consent nor independent human judgment can be supplied by the assistant
+on behalf of absent participants. The current annotation audit therefore has
+zero documents and null agreement statistics. Final, independent-challenge,
+prevalence and annual-trend results remain unavailable.
+
+\subsection{Exploratory failure analysis and controls}
+The first analysis uses leave-one-topic-pair-out assessment. In each of 12 folds,
+one pair is assessed, three pairs select a cutoff, and the remaining eight
+pairs fit the model. Normalization uses fitting data only. The original
+configuration gives FNR 0.25, while the pilot-selected configuration gives FNR
+approximately 0.333; both give FPR 0 on these reassigned development articles.
+Their mean within-fold AUROC is 1.0. Scores from different fitted models are
+not pooled into a global AUROC.
+
+\input{cycle2/artifacts/diagnostic_table.tex}
+
+The supplementary analysis uses 100 seed-fixed 6/3/3 topic-pair partitions.
+Each allocates six pairs to fitting, three to cutoff calibration and three
+to assessment. Five settings are fitted: the original ten-feature model at
+penalty 0.1; the selected eight-feature pilot setting at penalty 10; length-only
+and repetition-only controls at penalty 0.1; and the ten-feature model without
+its repetition features, also at penalty 0.1. The 500 fits are supplemented by
+100 within-pair label-permutation fits on the original split. These are 600
+calculations on 24 documents, not 600 independent experiments.
+
+Three cutoff rules are compared: the original rule with conservative
+tie-breaking; a cutoff immediately above the highest calibration-negative
+score; and the midpoint between that maximum and the lowest positive score
+when the calibration classes separate. The midpoint falls back to the original
+rule otherwise. These comparisons are explicitly exploratory and do not replace
+the original test record or select a new confirmatory model.
+
+The original failure reproduces exactly in both analyses. For the selected
+pilot model, the negative-maximum counterfactual uses a cutoff near 0.4603.
+It recovers all three generated former-test positives but also flags one
+historical article. A midpoint near 0.5002 separates those six documents.
+The latter is not a new accuracy result: those documents are now development
+material, and the question is how the decision rule behaves.
+
+\input{cycle2/results/diagnostic_tables.tex}
+
+Across the 100 supplementary partitions, the selected pilot setting with the
+legacy rule has mean FNR 0.240 and mean FPR 0.000. The negative-maximum rule
+reduces mean FNR to 0.000 but raises mean FPR to 0.260. The midpoint gives mean
+FNR approximately 0.007 and FPR 0.040. This is an operating-point trade-off
+within the pilot, not established deployment performance. The length-only
+control reaches median assessment AUROC 1.0 despite legacy-threshold mean FNR
+approximately 0.657. Simple surface differences can therefore account for much
+of the ranking in these tiny assessment sets without producing reliable
+decisions or establishing an authorship mechanism.
+
+The two permutation procedures answer different diagnostic questions. The
+99-permutation leave-pair-out procedure gives a Monte Carlo value of 0.01 for
+mean within-fold AUROC. The supplementary 100-permutation procedure, using
+the original six-document assessment split, gives a tail fraction near 0.099.
+Their assessment statistics and training allocations differ; the values must
+not be selected according to which appears more favorable. Both concern
+association under within-pair exchangeability, not proof that origin rather
+than source, era or register caused that association.
+
+On the frozen selected pilot model, whitespace changes and uppercase conversion
+leave all 24 scores unchanged. Prefixing each sentence with a hyphen changes
+four generated-positive decisions to unflagged, with a maximum absolute score
+change near 0.01849. This adds formatting without adding substantive claims.
+Replacing digit sequences with the word ``number'' changes some scores but
+no flags; because that manipulation changes content, it is a destructive
+sensitivity probe rather than a meaning-preserving robustness test.
+
+The immediate failure mechanism is identifiable: the selected operating point
+does not transfer to the assessment score range even when ranking is preserved.
+Its underlying causes cannot be separated here. Historical era, publication
+source, register and the generating assistant are confounded with origin.
+Source-disjoint performance is \emph{not identifiable}; independent translation,
+proficiency and mixed-authorship challenge results are \emph{not available}.
+Repeated splitting cannot create missing source diversity.
+
+\subsection{Uncertainty and prospective methodology}
+Supplementary split percentiles describe sensitivity conditional on the same
+24 documents, not confidence intervals for modern-web performance. The
+leave-pair-out analysis additionally reports topic-cluster bootstrap intervals
+conditional on fitted predictions, excluding training uncertainty. A bootstrap
+that contains only zero errors is not evidence of zero population risk.
+Exact binomial intervals are separately labeled as requiring independence,
+which shared sources violate. Repeated assessments must not be counted as
+new independent observations.
+
+The authoritative prospective protocol covers English public-web-style text
+created from January 1, 2024 through September 10, 2026, with consented or
+reuse-permitted origin evidence. Its collection targets and minimum evaluation
+strata are recorded as plans, not achieved counts or a completed power analysis.
+Genre, topic, proficiency, formatting, authorship pattern and generator-family
+metadata are required, with unknown metadata identified rather than inferred.
+A stratified curated benchmark is not an internet probability sample.
+
+The confirmatory comparison fixes the original ten-feature model at L2 penalty
+0.1. Independent development and calibration bundles must pass annotation,
+provenance, rights and privacy admission and remain source-, author- and
+cluster-disjoint. The model is fitted before inspecting calibration scores.
+One negative representative per cluster is selected by document ID, not by its
+score, and each head requires at least 120 negative calibration clusters under
+the protocol.
+
+The implemented calibration rule selects a negative-score order statistic,
+following the independent-negative principle of Neyman--Pearson calibration
+\cite{tong2018}. For $n$ independent exchangeable negative scores, target FPR
+$\alpha$, and rank $k$ in ascending order, the violation bound is
+\begin{equation}
+ B(n,k,\alpha)=\sum_{j=k}^{n}\binom{n}{j}
+                  (1-\alpha)^j\alpha^{n-j}.
+\end{equation}
+The smallest rank with $B(n,k,\alpha)\leq\delta$ is used, and the cutoff is
+the next representable value above that score. Here $\alpha=0.05$ and
+$\delta=0.025$ per head. The theoretical minimum is 72 independent negatives;
+the protocol's minimum of 120 is stricter. Many passages from one publisher
+are not many independent calibration sources.
+
+These assumptions must be justified through collection and review. The
+two per-head tolerances concern marginal error control under exchangeability;
+they do not establish a 5\% FPR for the combined slop screen or protect against
+distribution shift. The workflow reports joint-screen performance separately
+and does not infer reliability from an apparently favorable aggregate score.
+
+\subsection{Annotation, custody, and release status}
+The authoritative rubric retains the three quality dimensions and critical-error
+rule. Two fixed, distinct, independent human raters work blind to origin and
+detector output; a third human resolves decision disagreements. Initial
+judgments are preserved. Admission requires at least 100 paired documents,
+raw agreement at least 0.80, a lower 95\% cluster-bootstrap kappa bound at
+least 0.60, and at least 95\% resolved quality labels. These are design choices,
+not universal validity standards. The audit reports binary Cohen's kappa,
+dimension-level quadratically weighted kappa, uncertainty and adjudication
+counts, and defined bootstrap-replicate counts. Constant-label kappa remains
+undefined.
+
+The actual audit has no independent ratings and therefore no observed agreement
+statistic. Artificial software fixtures test arithmetic and workflow behavior;
+they are not a human annotation study. Likewise, Boolean metadata claiming
+consent or independence are not proof of either. A responsible investigator
+must verify the underlying evidence.
+
+The implemented workflow can fit and calibrate admitted bundles, record
+method/data/model hashes, freeze a model against an independent custodian's
+commitment, and evaluate the committed final bundle without changing thresholds.
+It checks source/author separation, final-cell counts, topic/source/generator
+coverage and required challenge conditions. Mixed or unknown origin does not
+become a human label; short or unresolved cases remain visible in coverage.
+Per-condition and subgroup FPR, FNR and other metrics are accompanied by
+uncertainty and small-cell cautions.
+
+None of those confirmatory steps has been completed on a qualifying real corpus.
+The template audit is blocked, there is no trained confirmatory model or
+independently held final set, and no final or independent-challenge result is
+reported. A local method snapshot is not the later model freeze. Error-adjusted
+prevalence remains unavailable without a separate probability sample and
+independently audited, transportable joint-screen error rates; annual trends
+also require comparable frames and time-specific audits. The package now
+contains executable development evidence and guarded prospective machinery,
+not a completed validation or a guarantee of publication suitability.

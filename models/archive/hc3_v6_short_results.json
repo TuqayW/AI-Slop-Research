@@ -1,0 +1,60 @@
+{
+  "feature_set": "char_26",
+  "analyzer": "char_wb",
+  "ngram_range": [
+    2,
+    6
+  ],
+  "max_features": 60000,
+  "model": "LinearSVC",
+  "C": 10.0,
+  "training": "180 benchmark train documents chunked to 180-260 words",
+  "threshold_rule": "max validation recall subject to short-validation FPR <= 5%",
+  "threshold": -0.1862491450670019,
+  "threshold_selection": {
+    "threshold": -0.1862491450670019,
+    "fpr": 0.036585365853658534,
+    "recall": 0.9871794871794872,
+    "fp": 3,
+    "tp": 77
+  },
+  "train_metrics": {
+    "n": 474,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fpr": 0.0,
+    "auroc": 1.0,
+    "tn": 241,
+    "fp": 0,
+    "fn": 0,
+    "tp": 233
+  },
+  "short_valid_metrics": {
+    "n": 160,
+    "accuracy": 0.975,
+    "precision": 0.9625,
+    "recall": 0.9871794871794872,
+    "f1": 0.9746835443037974,
+    "fpr": 0.036585365853658534,
+    "auroc": 0.993746091307067,
+    "tn": 79,
+    "fp": 3,
+    "fn": 1,
+    "tp": 77
+  },
+  "frozen_full_test_metrics": {
+    "n": 60,
+    "accuracy": 0.85,
+    "precision": 0.7692307692307693,
+    "recall": 1.0,
+    "f1": 0.8695652173913043,
+    "fpr": 0.3,
+    "auroc": 1.0,
+    "tn": 21,
+    "fp": 9,
+    "fn": 0,
+    "tp": 30
+  }
+}

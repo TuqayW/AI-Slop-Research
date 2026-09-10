@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-10",
+  "statistical_and_workflow_assertions_passed": 38,
+  "assertion_record": "37 in-session statistical/admission/synthetic-lifecycle checks plus the sampling-specification hash-binding check.",
+  "fixture_scope": "Temporary explicitly synthetic records with reduced test-only admission criteria; no genuine human annotation or contemporary accuracy evidence.",
+  "additional_integrity_checks": "Method snapshot matches current implementation; every article has exactly one leave-pair-out assessment; supplementary assessment CSV has 1500 rows; actual annotation audit is blocked with zero documents and null agreement.",
+  "compiled_pdf_pages": 17,
+  "primary_diagnostic_code_sha256": "4f7c97fd6c29fe24a9ce91164efe1a3ef8cd583f6057f24cffb86e41e14d1c1f",
+  "primary_diagnostic_results_sha256": "9303bf1096acd02b18a856b4aeea1f678e8c43ae04fb230dae9e9bb724094232",
+  "method_snapshot_sha256": "b4e4b91468f8e89e529fc12f5ca066845d6e46a2b13efcfbdd87ab093f437429",
+  "qualified_contemporary_corpus_acquired": false,
+  "independent_human_annotation_audit_completed": false,
+  "untouched_final_evaluation_completed": false,
+  "error_adjusted_prevalence_estimated": false
+}

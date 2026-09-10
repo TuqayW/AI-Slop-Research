@@ -1,0 +1,20 @@
+THE ACCURACY OF CLOCK MECHANISMS.
+
+The measurement of time depends upon the regularity of the mechanism employed.
+A clock may contain a beautifully constructed train of wheels and yet fail to
+keep satisfactory time if the regulating part is affected by temperature,
+friction, or changes in the driving force.
+
+The pendulum offers one means of maintaining regularity because its period is
+comparatively stable. But even this arrangement is not entirely independent
+of surrounding conditions. Changes in temperature alter the dimensions of the
+rod, while variations in amplitude may influence the motion.
+
+The object of the regulator is therefore to reduce these sources of error.
+The driving force must be maintained within suitable limits, and the moving
+parts must be constructed so that unnecessary friction is avoided.
+
+The progress of clockmaking has consisted largely in reducing the number and
+magnitude of such disturbances. Accuracy is obtained not by one ingenious
+device alone, but by careful adjustment of all the conditions upon which the
+motion depends.

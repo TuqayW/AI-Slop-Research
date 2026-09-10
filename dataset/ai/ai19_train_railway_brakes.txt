@@ -1,0 +1,20 @@
+THE OPERATION OF RAILWAY BRAKES.
+
+The safety of a railway train depends upon the ability to reduce its motion
+within a suitable distance. The greater the weight and speed of the train,
+the more work must be performed by the braking apparatus before the wheels are
+brought to rest.
+
+A brake acts by pressing a frictional surface against a moving wheel or other
+member. The resulting resistance converts mechanical energy into heat. If the
+pressure is too small, the stopping distance becomes excessive; if it is
+applied too suddenly, the wheels may cease to rotate while the train continues
+to move, reducing the useful effect.
+
+A successful system therefore requires control as well as strength. The
+brakes on different vehicles must respond with sufficient uniformity that the
+train does not undergo violent changes in longitudinal force.
+
+The history of railway brakes shows again that an apparatus must be judged as
+a system. The strength of a single lever tells little unless the complete
+chain of action can be made reliable.

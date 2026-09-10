@@ -1,0 +1,20 @@
+BRIDGES AND THE DISTRIBUTION OF WEIGHT.
+
+The construction of a bridge requires more than sufficient strength in its
+separate members. The weight placed upon the roadway must be conducted to the
+supports in such a manner that no portion is required to perform a duty for
+which it was not designed.
+
+A beam resting upon two supports bends when loaded. The upper fibres are
+compressed while the lower fibres are extended, and the amount of this change
+depends upon the form and material of the beam. By arranging the members so
+that the load follows several paths, the engineer may obtain greater strength
+without a proportional increase in material.
+
+The difficulty is increased when moving loads are considered. A bridge must
+bear not only its own weight but also the varying pressure produced by carts,
+engines, and other traffic. The structure therefore requires sufficient margin
+to accommodate changes which cannot be predicted at one instant.
+
+A good bridge is consequently not merely a strong object. It is an organized
+system in which each member assists in carrying the load toward the supports.

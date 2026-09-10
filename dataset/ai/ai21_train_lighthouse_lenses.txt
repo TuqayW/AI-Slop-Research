@@ -1,0 +1,19 @@
+THE LENSES OF LIGHTHOUSES.
+
+The object of a lighthouse lens is to direct a considerable quantity of light
+toward the horizon where it may be seen by distant vessels. A simple lamp
+emits rays in many directions, much of whose illumination is consequently
+wasted.
+
+By arranging glass surfaces in suitable forms, the rays may be refracted into
+a more useful path. The lens must be large enough to intercept the light
+produced by the lamp and accurately shaped so that the desired beam is formed.
+
+The revolving mechanism presents another problem. If the lens is caused to
+move steadily, the observer at sea perceives a succession of flashes. The
+interval and character of these flashes become part of the signal by which the
+position of the lighthouse is recognized.
+
+The apparatus therefore combines optics with mechanical motion. The brightness
+of the lamp alone does not establish the usefulness of the lighthouse; the
+light must be gathered, directed, and presented in a recognizable manner.

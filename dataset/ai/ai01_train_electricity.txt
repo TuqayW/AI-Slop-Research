@@ -1,0 +1,22 @@
+THE DISTRIBUTION OF ELECTRIC LIGHT.
+
+The increasing use of electricity for illumination has rendered necessary a
+careful consideration of the manner in which the current shall be distributed.
+It is one thing to produce the current at a central station and quite another
+to convey it economically to lamps situated at different distances. The wires
+must be of sufficient capacity to carry the required current without excessive
+loss, while at the same time the expense of metal must be kept within reasonable
+limits.
+
+In a large installation the demand is not constant. Some lamps are lighted
+early in the evening and others later, while certain workshops may require
+power during the day. A distribution system must therefore accommodate changes
+of load without unnecessary waste. The arrangement of conductors, transformers
+and switches becomes almost as important as the generating machinery itself.
+
+It is sometimes supposed that the perfection of the lamp is the chief matter
+to be considered. In practice the whole system must be regarded as an
+interdependent mechanism. A lamp of excellent construction cannot compensate
+for losses in transmission, nor can a powerful generator make a badly planned
+network economical. The future development of electric lighting will depend
+upon improvements in the system as a whole rather than upon a single invention.

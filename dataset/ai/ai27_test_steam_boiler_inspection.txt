@@ -1,0 +1,18 @@
+INSPECTION OF STEAM BOILERS.
+
+A steam boiler is a vessel in which pressure and temperature are maintained
+for the production of useful power. Because the stresses imposed upon its
+walls may be considerable, regular inspection is essential.
+
+The visible condition of the metal provides only part of the information
+required. Corrosion may progress where it cannot easily be seen, while scale
+inside the boiler may interfere with the transfer of heat and alter the
+conditions under which the vessel operates.
+
+Inspection should consequently consider the construction, water condition,
+working pressure and history of the apparatus. A record made on one occasion
+is more useful when it can be compared with earlier observations.
+
+The object is not merely to discover defects after they become serious, but to
+recognize changes while there is still time to correct them. Reliable operation
+depends upon continued examination as well as sound original construction.

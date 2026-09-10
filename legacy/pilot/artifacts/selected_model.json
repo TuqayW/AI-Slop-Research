@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "features": [
+    "log_word_count",
+    "type_token_ratio",
+    "mean_word_length",
+    "mean_sentence_length",
+    "sentence_length_cv",
+    "repeated_trigram_fraction",
+    "repeated_sentence_fraction",
+    "digit_token_fraction",
+    "url_rate",
+    "punctuation_rate"
+  ],
+  "min_words": 80,
+  "mean": [
+    5.0170439552489166,
+    0.7038987773826747,
+    4.9117816931697345,
+    22.25879028379028,
+    0.4975185053883699,
+    0.002126716756634145,
+    0.0,
+    0.0036483389396050427,
+    0.0,
+    0.05021556147511877
+  ],
+  "scale": [
+    0.07802912323820692,
+    0.05373585779251461,
+    0.32122331400684623,
+    9.275215846745809,
+    0.11961305524838384,
+    0.0030192490504569805,
+    1.0,
+    0.0067276468819319,
+    1.0,
+    0.01813614276603599
+  ],
+  "heads": {
+    "ai": {
+      "coefficients": [
+        -1.374078136370641e-05,
+        0.0,
+        0.04183637509026459,
+        0.040588542635037805,
+        0.0,
+        -0.023898465870086115,
+        -0.032340676258179823,
+        0.0,
+        -0.02448838404034595,
+        0.0,
+        -0.018551632298623718
+      ],
+      "threshold": 0.539989302517962
+    }
+  },
+  "feature_set": "without_length",
+  "active_feature_count": 8,
+  "regularization": 10.0,
+  "validation_max_fpr": 0.05,
+  "dataset_sha256": "21f14902821225ca375d22e4544a060cba365b4581e47cb0f7099a5a3b2e2508",
+  "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use."
+}

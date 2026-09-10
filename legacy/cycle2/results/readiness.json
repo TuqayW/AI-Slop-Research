@@ -1,0 +1,28 @@
+{
+  "status": "not_ready",
+  "n_contemporary_documents": 0,
+  "role_counts": {},
+  "blockers": [
+    "No contemporary corpus has been acquired.",
+    "Independent agreement audit has fewer than 200 paired documents.",
+    "train: 0 documents, target 1200.",
+    "train: the four origin-by-quality cells are incomplete.",
+    "tune: 0 documents, target 400.",
+    "tune: the four origin-by-quality cells are incomplete.",
+    "calibration: 0 documents, target 400.",
+    "calibration: the four origin-by-quality cells are incomplete.",
+    "ai: fewer than 72 independent negative calibration clusters.",
+    "low_quality: fewer than 72 independent negative calibration clusters.",
+    "Fewer than three documented development generator IDs; family independence needs external verification.",
+    "Independent human annotation and custodian attestations are missing.",
+    "External final-set source/author disjointness audit is missing.",
+    "A separately held, hash-committed untouched final and challenge set is unavailable.",
+    "No confirmatory model/threshold freeze exists; the old pilot model is not eligible."
+  ],
+  "final_evaluation": null,
+  "challenge_evaluation": null,
+  "error_adjusted_prevalence": null,
+  "annual_trends": null,
+  "automatic_release_permitted": false,
+  "note": "Metadata checks cannot establish genuine consent, human independence, representativeness, or unseen custody. No final scoring is implemented or authorized by a Boolean attestation."
+}

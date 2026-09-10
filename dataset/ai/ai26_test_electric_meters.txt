@@ -1,0 +1,18 @@
+THE MEASUREMENT OF ELECTRIC CURRENT.
+
+The increasing use of electric power has created a need for instruments by
+which the quantity of electricity delivered to an installation may be
+determined. A mere indication that a circuit is carrying current does not
+tell the engineer how much energy has been supplied over a period of time.
+
+An electric meter must therefore respond to a quantity related to the current
+and duration of the operation. The mechanism may produce motion proportional
+to the electrical work performed, allowing the total consumption to be read
+from a scale or register.
+
+Accuracy depends upon more than the indicating pointer. Friction, temperature
+and changes in the electrical conditions may introduce errors, and the meter
+must be constructed so that such influences remain within suitable limits.
+
+The value of the instrument lies in converting an invisible process into a
+record which can be examined, compared and used for practical accounting.

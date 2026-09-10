@@ -1,0 +1,25 @@
+IMPROVEMENTS IN WATER PUMPS.
+
+The ordinary pumping engine appears at first sight to be a simple machine.
+Water enters one part of the apparatus, pressure is applied to it, and the
+fluid is delivered through a pipe. Yet the useful effect depends upon many
+details which are easily neglected. Valves must open and close at the proper
+instant, the passages must be sufficiently large, and the moving parts must
+work without excessive friction.
+
+A pump which gives a satisfactory result under a nearly constant supply may
+behave quite differently when the level of the water changes. The suction
+height then becomes an important consideration, and imperfections in the
+valves may produce a marked reduction of delivery. The temptation to judge a
+pump merely by the force observed at its outlet is therefore misleading.
+
+There is also an advantage in arranging the working parts so that inspection
+can be made without dismantling the entire machine. An apparatus which is
+theoretically efficient but troublesome to maintain may prove inferior to a
+somewhat simpler construction. The best pumping machinery is likely to be that
+which combines regular action with accessibility.
+
+As in many branches of mechanical engineering, improvements do not necessarily
+consist in making the machine more elaborate. A better relation among the
+existing parts may accomplish more than the addition of another complicated
+device.

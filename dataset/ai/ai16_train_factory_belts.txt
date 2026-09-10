@@ -1,0 +1,20 @@
+THE TRANSMISSION OF POWER BY BELTS.
+
+In many workshops the motion of one shaft is communicated to another by means
+of a belt. The arrangement is simple, but the regularity of the transmission
+depends upon conditions which deserve attention.
+
+A belt must possess sufficient tension to maintain contact with the pulleys.
+If the tension is too small, slipping may occur; if it is too great, the load
+upon the bearings is unnecessarily increased. The material of the belt and
+the condition of the pulleys also influence the result.
+
+As the distance between shafts increases, the arrangement becomes more
+difficult to maintain. Changes in temperature and the gradual stretching of
+the material alter the tension with time. Periodic adjustment is therefore
+necessary.
+
+The advantage of the belt system lies partly in its simplicity and its ability
+to accommodate machinery arranged at convenient distances. Its successful
+operation, however, depends upon maintaining a suitable relation among speed,
+tension, friction, and load.

@@ -1,0 +1,8 @@
+{
+  "evaluation_sha256": null,
+  "custodian_id": null,
+  "independent_human_custodian": false,
+  "developers_have_not_accessed_final_text_or_labels": false,
+  "sealing_evidence_reference": null,
+  "status": "Template only. No untouched final dataset has been collected or reserved."
+}

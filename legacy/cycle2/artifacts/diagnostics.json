@@ -1,0 +1,907 @@
+{
+  "status": "exploratory_development_only",
+  "seed": 20260910,
+  "n": 24,
+  "all_pilot_test_rows_reclassified_as_development": true,
+  "input_sha256": "739149d269a4857a85e814c65b93536db86df24df1e44b33bb6ec7c450ecbe31",
+  "reproduction": {
+    "baseline": {
+      "n": 6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.5,
+      "auroc": 1.0,
+      "fnr": 1.0,
+      "fpr_iid_exact_95": [
+        0.0,
+        0.7075982261787133
+      ],
+      "fnr_iid_exact_95": [
+        0.2924017738212867,
+        1.0
+      ],
+      "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+    },
+    "selected": {
+      "n": 6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.5,
+      "auroc": 1.0,
+      "fnr": 1.0,
+      "fpr_iid_exact_95": [
+        0.0,
+        0.7075982261787133
+      ],
+      "fnr_iid_exact_95": [
+        0.2924017738212867,
+        1.0
+      ],
+      "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+    }
+  },
+  "fixed_model_threshold_comparison": {
+    "baseline": {
+      "conservative": {
+        "threshold": 0.9444533743733248,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        }
+      },
+      "midpoint_validation_gap": {
+        "threshold": 0.5031163590305234,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 3,
+          "fp": 0,
+          "tn": 3,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "fnr": 0.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        }
+      },
+      "just_above_validation_negative_max": {
+        "threshold": 0.061779343687721984,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 3,
+          "fp": 1,
+          "tn": 2,
+          "fn": 0,
+          "precision": 0.75,
+          "recall": 1.0,
+          "fpr": 0.3333333333333333,
+          "f1": 0.8571428571428571,
+          "accuracy": 0.8333333333333334,
+          "auroc": 1.0,
+          "fnr": 0.0,
+          "fpr_iid_exact_95": [
+            0.008403758659612647,
+            0.9057006759492866
+          ],
+          "fnr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        }
+      }
+    },
+    "selected": {
+      "conservative": {
+        "threshold": 0.539989302517962,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        }
+      },
+      "midpoint_validation_gap": {
+        "threshold": 0.5001500955558743,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 3,
+          "fp": 0,
+          "tn": 3,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0,
+          "fnr": 0.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        }
+      },
+      "just_above_validation_negative_max": {
+        "threshold": 0.46031088859378677,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 3,
+          "fp": 1,
+          "tn": 2,
+          "fn": 0,
+          "precision": 0.75,
+          "recall": 1.0,
+          "fpr": 0.3333333333333333,
+          "f1": 0.8571428571428571,
+          "accuracy": 0.8333333333333334,
+          "auroc": 1.0,
+          "fnr": 0.0,
+          "fpr_iid_exact_95": [
+            0.008403758659612647,
+            0.9057006759492866
+          ],
+          "fnr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        }
+      }
+    }
+  },
+  "formatting_controls": {
+    "baseline": {
+      "uppercase": {
+        "documents": 24,
+        "mean_absolute_score_change": 0.0,
+        "maximum_absolute_score_change": 0.0,
+        "decision_flips": 0,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        },
+        "caution": "Paired surface-format diagnostic, not an independent challenge corpus or comprehensive semantic-equivalence audit."
+      },
+      "collapsed_whitespace": {
+        "documents": 24,
+        "mean_absolute_score_change": 0.0,
+        "maximum_absolute_score_change": 0.0,
+        "decision_flips": 0,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        },
+        "caution": "Paired surface-format diagnostic, not an independent challenge corpus or comprehensive semantic-equivalence audit."
+      },
+      "sentence_bullets": {
+        "documents": 24,
+        "mean_absolute_score_change": 0.05292867334737291,
+        "maximum_absolute_score_change": 0.15408401809261896,
+        "decision_flips": 5,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        },
+        "caution": "Paired surface-format diagnostic, not an independent challenge corpus or comprehensive semantic-equivalence audit."
+      }
+    },
+    "selected": {
+      "uppercase": {
+        "documents": 24,
+        "mean_absolute_score_change": 0.0,
+        "maximum_absolute_score_change": 0.0,
+        "decision_flips": 0,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        },
+        "caution": "Paired surface-format diagnostic, not an independent challenge corpus or comprehensive semantic-equivalence audit."
+      },
+      "collapsed_whitespace": {
+        "documents": 24,
+        "mean_absolute_score_change": 0.0,
+        "maximum_absolute_score_change": 0.0,
+        "decision_flips": 0,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        },
+        "caution": "Paired surface-format diagnostic, not an independent challenge corpus or comprehensive semantic-equivalence audit."
+      },
+      "sentence_bullets": {
+        "documents": 24,
+        "mean_absolute_score_change": 0.013019099254644404,
+        "maximum_absolute_score_change": 0.018489957765155385,
+        "decision_flips": 4,
+        "original_test_now_development": {
+          "n": 6,
+          "tp": 0,
+          "fp": 0,
+          "tn": 3,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0,
+          "fnr": 1.0,
+          "fpr_iid_exact_95": [
+            0.0,
+            0.7075982261787133
+          ],
+          "fnr_iid_exact_95": [
+            0.2924017738212867,
+            1.0
+          ],
+          "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption."
+        },
+        "caution": "Paired surface-format diagnostic, not an independent challenge corpus or comprehensive semantic-equivalence audit."
+      }
+    }
+  },
+  "source_disjoint_evaluation": {
+    "status": "not_identifiable",
+    "reason": "Historical origin and the single historical source coincide; generated origin and the single assistant coincide. Holding out a source removes an origin class."
+  },
+  "cross_validation": {
+    "original": {
+      "n": 24,
+      "tp": 9,
+      "fp": 0,
+      "tn": 12,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.75,
+      "fpr": 0.0,
+      "f1": 0.8571428571428571,
+      "accuracy": 0.875,
+      "fnr": 0.25,
+      "fpr_iid_exact_95": [
+        0.0,
+        0.26464846939705117
+      ],
+      "fnr_iid_exact_95": [
+        0.05486064452799241,
+        0.5718584618780997
+      ],
+      "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption.",
+      "mean_within_fold_auroc": 1.0,
+      "threshold_min_median_max": [
+        0.6419883738190664,
+        0.801499432096867,
+        0.9373355779800244
+      ],
+      "topic_cluster_bootstrap": {
+        "clusters": 12,
+        "replicates": 2000,
+        "percentile_95": {
+          "fpr": [
+            0.0,
+            0.0
+          ],
+          "fnr": [
+            0.0,
+            0.5
+          ],
+          "precision": [
+            1.0,
+            1.0
+          ],
+          "recall": [
+            0.5,
+            1.0
+          ],
+          "f1": [
+            0.6666666666666666,
+            1.0
+          ],
+          "accuracy": [
+            0.75,
+            1.0
+          ]
+        },
+        "valid_replicates": {
+          "fpr": 2000,
+          "fnr": 2000,
+          "precision": 2000,
+          "recall": 2000,
+          "f1": 2000,
+          "accuracy": 2000
+        },
+        "caution": "Conditional on fitted predictions; does not include training uncertainty. Boundary-degenerate intervals are not evidence of zero population risk."
+      }
+    },
+    "pilot_selected": {
+      "n": 24,
+      "tp": 8,
+      "fp": 0,
+      "tn": 12,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "fpr": 0.0,
+      "f1": 0.8,
+      "accuracy": 0.8333333333333334,
+      "fnr": 0.33333333333333337,
+      "fpr_iid_exact_95": [
+        0.0,
+        0.26464846939705117
+      ],
+      "fnr_iid_exact_95": [
+        0.09924609114958328,
+        0.6511244935807182
+      ],
+      "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption.",
+      "mean_within_fold_auroc": 1.0,
+      "threshold_min_median_max": [
+        0.5089249024781767,
+        0.5164663018993415,
+        0.5310310184450286
+      ],
+      "topic_cluster_bootstrap": {
+        "clusters": 12,
+        "replicates": 2000,
+        "percentile_95": {
+          "fpr": [
+            0.0,
+            0.0
+          ],
+          "fnr": [
+            0.08333333333333337,
+            0.5833333333333333
+          ],
+          "precision": [
+            1.0,
+            1.0
+          ],
+          "recall": [
+            0.4166666666666667,
+            0.9166666666666666
+          ],
+          "f1": [
+            0.5882352941176471,
+            0.9565217391304348
+          ],
+          "accuracy": [
+            0.7083333333333334,
+            0.9583333333333334
+          ]
+        },
+        "valid_replicates": {
+          "fpr": 2000,
+          "fnr": 2000,
+          "precision": 2000,
+          "recall": 2000,
+          "f1": 2000,
+          "accuracy": 2000
+        },
+        "caution": "Conditional on fitted predictions; does not include training uncertainty. Boundary-degenerate intervals are not evidence of zero population risk."
+      }
+    },
+    "length_only": {
+      "n": 24,
+      "tp": 4,
+      "fp": 2,
+      "tn": 10,
+      "fn": 8,
+      "precision": 0.6666666666666666,
+      "recall": 0.3333333333333333,
+      "fpr": 0.16666666666666666,
+      "f1": 0.4444444444444444,
+      "accuracy": 0.5833333333333334,
+      "fnr": 0.6666666666666667,
+      "fpr_iid_exact_95": [
+        0.020862525459661812,
+        0.4841377486860764
+      ],
+      "fnr_iid_exact_95": [
+        0.3488755064192816,
+        0.9007539088504167
+      ],
+      "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption.",
+      "mean_within_fold_auroc": 0.8333333333333334,
+      "threshold_min_median_max": [
+        0.5841900720879565,
+        0.6740976727906096,
+        1.0000000000000002
+      ],
+      "topic_cluster_bootstrap": {
+        "clusters": 12,
+        "replicates": 2000,
+        "percentile_95": {
+          "fpr": [
+            0.0,
+            0.4166666666666667
+          ],
+          "fnr": [
+            0.41666666666666663,
+            0.9166666666666666
+          ],
+          "precision": [
+            0.25,
+            1.0
+          ],
+          "recall": [
+            0.08333333333333333,
+            0.5833333333333334
+          ],
+          "f1": [
+            0.125,
+            0.7275119617224868
+          ],
+          "accuracy": [
+            0.4166666666666667,
+            0.751041666666661
+          ]
+        },
+        "valid_replicates": {
+          "fpr": 2000,
+          "fnr": 2000,
+          "precision": 2000,
+          "recall": 2000,
+          "f1": 2000,
+          "accuracy": 2000
+        },
+        "caution": "Conditional on fitted predictions; does not include training uncertainty. Boundary-degenerate intervals are not evidence of zero population risk."
+      }
+    },
+    "without_repetition": {
+      "n": 24,
+      "tp": 9,
+      "fp": 0,
+      "tn": 12,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.75,
+      "fpr": 0.0,
+      "f1": 0.8571428571428571,
+      "accuracy": 0.875,
+      "fnr": 0.25,
+      "fpr_iid_exact_95": [
+        0.0,
+        0.26464846939705117
+      ],
+      "fnr_iid_exact_95": [
+        0.05486064452799241,
+        0.5718584618780997
+      ],
+      "interval_caution": "Exact binomial intervals assume independent observations; shared sources violate this assumption.",
+      "mean_within_fold_auroc": 1.0,
+      "threshold_min_median_max": [
+        0.6048926504616936,
+        0.801852119576778,
+        0.9353200868161573
+      ],
+      "topic_cluster_bootstrap": {
+        "clusters": 12,
+        "replicates": 2000,
+        "percentile_95": {
+          "fpr": [
+            0.0,
+            0.0
+          ],
+          "fnr": [
+            0.0,
+            0.5
+          ],
+          "precision": [
+            1.0,
+            1.0
+          ],
+          "recall": [
+            0.5,
+            1.0
+          ],
+          "f1": [
+            0.6666666666666666,
+            1.0
+          ],
+          "accuracy": [
+            0.75,
+            1.0
+          ]
+        },
+        "valid_replicates": {
+          "fpr": 2000,
+          "fnr": 2000,
+          "precision": 2000,
+          "recall": 2000,
+          "f1": 2000,
+          "accuracy": 2000
+        },
+        "caution": "Conditional on fitted predictions; does not include training uncertainty. Boundary-degenerate intervals are not evidence of zero population risk."
+      }
+    }
+  },
+  "paired_label_permutation": {
+    "permutations": 99,
+    "statistic": "mean within-fold AUROC after refitting and validation threshold selection",
+    "observed": 1.0,
+    "null_statistics": [
+      0.8333333333333334,
+      0.25,
+      0.25,
+      0.3333333333333333,
+      0.5,
+      0.8333333333333334,
+      0.4166666666666667,
+      0.5,
+      0.6666666666666666,
+      0.5833333333333334,
+      0.25,
+      0.6666666666666666,
+      0.6666666666666666,
+      0.4166666666666667,
+      0.5,
+      0.5,
+      0.5,
+      0.75,
+      0.75,
+      0.25,
+      0.16666666666666666,
+      0.6666666666666666,
+      0.16666666666666666,
+      0.75,
+      0.5,
+      0.75,
+      0.5833333333333334,
+      0.5833333333333334,
+      0.4166666666666667,
+      0.5,
+      0.75,
+      0.25,
+      0.4166666666666667,
+      0.5833333333333334,
+      0.3333333333333333,
+      0.25,
+      0.5833333333333334,
+      0.6666666666666666,
+      0.5833333333333334,
+      0.5,
+      0.4166666666666667,
+      0.4166666666666667,
+      0.6666666666666666,
+      0.4166666666666667,
+      0.5833333333333334,
+      0.5833333333333334,
+      0.5,
+      0.4166666666666667,
+      0.5,
+      0.4166666666666667,
+      0.5833333333333334,
+      0.75,
+      0.4166666666666667,
+      0.5833333333333334,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333,
+      0.5833333333333334,
+      0.4166666666666667,
+      0.6666666666666666,
+      0.75,
+      0.6666666666666666,
+      0.5,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333,
+      0.5833333333333334,
+      0.4166666666666667,
+      0.16666666666666666,
+      0.4166666666666667,
+      0.6666666666666666,
+      0.5,
+      0.5,
+      0.5833333333333334,
+      0.4166666666666667,
+      0.5,
+      0.5,
+      0.3333333333333333,
+      0.6666666666666666,
+      0.4166666666666667,
+      0.5833333333333334,
+      0.75,
+      0.25,
+      0.3333333333333333,
+      0.25,
+      0.75,
+      0.6666666666666666,
+      0.4166666666666667,
+      0.5833333333333334,
+      0.75,
+      0.6666666666666666,
+      0.5,
+      0.75,
+      0.4166666666666667,
+      0.25,
+      0.4166666666666667,
+      0.25,
+      0.6666666666666666,
+      0.5
+    ],
+    "monte_carlo_p": 0.01,
+    "caution": "An association sanity check under within-pair exchangeability, not evidence that origin rather than era, source, or register caused the association."
+  },
+  "feature_shift_original_split": [
+    {
+      "ai": 0,
+      "feature": "log_word_count",
+      "test_minus_validation_mean": -0.0535183906825516,
+      "change_in_training_sd": -0.685877124611165
+    },
+    {
+      "ai": 0,
+      "feature": "type_token_ratio",
+      "test_minus_validation_mean": -0.009000731855209554,
+      "change_in_training_sd": -0.16749954732207428
+    },
+    {
+      "ai": 0,
+      "feature": "mean_word_length",
+      "test_minus_validation_mean": 0.17937218254382348,
+      "change_in_training_sd": 0.5584033746068647
+    },
+    {
+      "ai": 0,
+      "feature": "mean_sentence_length",
+      "test_minus_validation_mean": 2.2791005291005284,
+      "change_in_training_sd": 0.24571940607723392
+    },
+    {
+      "ai": 0,
+      "feature": "sentence_length_cv",
+      "test_minus_validation_mean": 0.09293508571262515,
+      "change_in_training_sd": 0.7769644000785679
+    },
+    {
+      "ai": 0,
+      "feature": "repeated_trigram_fraction",
+      "test_minus_validation_mean": 0.021956406166932473,
+      "change_in_training_sd": 7.272141449745342
+    },
+    {
+      "ai": 0,
+      "feature": "repeated_sentence_fraction",
+      "test_minus_validation_mean": 0.0,
+      "change_in_training_sd": null
+    },
+    {
+      "ai": 0,
+      "feature": "digit_token_fraction",
+      "test_minus_validation_mean": -0.018566849816849817,
+      "change_in_training_sd": -2.759783642437278
+    },
+    {
+      "ai": 0,
+      "feature": "url_rate",
+      "test_minus_validation_mean": 0.0,
+      "change_in_training_sd": null
+    },
+    {
+      "ai": 0,
+      "feature": "punctuation_rate",
+      "test_minus_validation_mean": 0.03138549882952868,
+      "change_in_training_sd": 1.73054983269679
+    },
+    {
+      "ai": 1,
+      "feature": "log_word_count",
+      "test_minus_validation_mean": 0.041604209374121126,
+      "change_in_training_sd": 0.5331882205969687
+    },
+    {
+      "ai": 1,
+      "feature": "type_token_ratio",
+      "test_minus_validation_mean": -0.03989659804489498,
+      "change_in_training_sd": -0.7424576378578359
+    },
+    {
+      "ai": 1,
+      "feature": "mean_word_length",
+      "test_minus_validation_mean": -0.23478923402059948,
+      "change_in_training_sd": -0.7309221460046185
+    },
+    {
+      "ai": 1,
+      "feature": "mean_sentence_length",
+      "test_minus_validation_mean": 1.2407407407407423,
+      "change_in_training_sd": 0.13376947353479152
+    },
+    {
+      "ai": 1,
+      "feature": "sentence_length_cv",
+      "test_minus_validation_mean": 0.09542167666727303,
+      "change_in_training_sd": 0.7977530251118832
+    },
+    {
+      "ai": 1,
+      "feature": "repeated_trigram_fraction",
+      "test_minus_validation_mean": 0.0,
+      "change_in_training_sd": 0.0
+    },
+    {
+      "ai": 1,
+      "feature": "repeated_sentence_fraction",
+      "test_minus_validation_mean": 0.0,
+      "change_in_training_sd": null
+    },
+    {
+      "ai": 1,
+      "feature": "digit_token_fraction",
+      "test_minus_validation_mean": 0.0,
+      "change_in_training_sd": 0.0
+    },
+    {
+      "ai": 1,
+      "feature": "url_rate",
+      "test_minus_validation_mean": 0.0,
+      "change_in_training_sd": null
+    },
+    {
+      "ai": 1,
+      "feature": "punctuation_rate",
+      "test_minus_validation_mean": -0.0040543148870259005,
+      "change_in_training_sd": -0.22354890669577868
+    }
+  ]
+}

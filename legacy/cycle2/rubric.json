@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "status": "Superseded CSV-schema draft. The authoritative integrated-workflow rubric is cycle2/rubric.md.",
+  "scales": {"0": "No material defect", "1": "Noticeable but limited defect", "2": "Substantial defect", "uncertain": "Evidence insufficient; not a negative label"},
+  "dimensions": {
+    "factual": "Central checkable claims conflict with evidence or important asserted evidence cannot be substantiated. Judge fiction within its stated genre, not as factual reporting.",
+    "information": "Substantial redundancy or generic padding without answering the stated question or adding relevant information. Necessary technical repetition is not automatically a defect.",
+    "relevance": "Major contradictions, irrelevant passages, or failure to serve the document's apparent purpose. Judge against the stated task."
+  },
+  "critical_error": "Verified central factual error defeats the document's purpose; evidence reference and rationale required",
+  "binary_rule": "1 if at least two dimensions equal 2 or critical_error equals 1; otherwise 0. Any unresolved dimension or critical-error judgment yields uncertain pending adjudication.",
+  "blinding": "Randomized IDs, task/genre and claim-checking evidence only; no origin, generator, score, split, or identifiable byline. Record compromised blinding when evidence reveals origin.",
+  "independence": "Two distinct human primary raters work separately. No assistant/model ratings count as independent human annotation. Third human resolves disagreements without overwriting initial judgments.",
+  "records": "Pseudonymous rater ID, rubric hash, document ID, dimension scores, critical-error decision, rationale, evidence reference, blinding and independence attestations. Identity/contact/payment records are not public.",
+  "audit": "Raw agreement and Cohen kappa for derived binary quality; linear-weighted ordinal kappa per dimension; uncertain and disagreement fractions; provenance-cluster bootstrap intervals. Report different rater pairs separately.",
+  "freeze": "Train raters on separate rubric-pilot text; audit at least 200 development documents. Rubric changes require versioned amendments before final model freeze.",
+  "prohibitions": ["Generation is not poor quality", "Do not infer malicious intent", "Do not penalize language background or unusual formatting by itself", "Do not use author identity"]
+}

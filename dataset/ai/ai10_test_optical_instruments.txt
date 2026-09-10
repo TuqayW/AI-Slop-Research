@@ -1,0 +1,23 @@
+THE ACCURACY OF OPTICAL INSTRUMENTS.
+
+An optical instrument may possess excellent lenses and still fail to give a
+satisfactory result if the parts are not properly aligned. The path of the
+light must be maintained with considerable precision, for a small deviation in
+one component may produce a visible error in the final image.
+
+Telescopes, microscopes and surveying instruments differ greatly in their
+construction, yet the same general principle applies to each. The observer
+relies upon a definite relation between the separate optical surfaces. Changes
+of temperature may alter dimensions sufficiently to disturb this relation,
+while rough handling may produce a displacement which is not immediately
+obvious.
+
+It is therefore desirable that instruments be examined under conditions
+resembling those in which they are to be used. An adjustment which appears
+perfect in the workshop may require correction when the instrument is exposed
+to a different temperature or mounted upon another support.
+
+Accuracy is thus not merely a property of the glass. It is a property of the
+complete instrument, including its frame, adjustments and method of use. The
+best construction is one which preserves the intended optical relations while
+remaining sufficiently robust for practical work.

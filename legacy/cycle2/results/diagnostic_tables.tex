@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Features & Cutoff rule & Mean FPR & Mean FNR & Median AUROC & Recall interval \\
+\midrule
+All ten & Legacy & 0.000 & 0.220 & 1.000 & [0.33, 1.00] \\
+All ten & Negative max & 0.230 & 0.000 & 1.000 & [1.00, 1.00] \\
+All ten & Midpoint & 0.010 & 0.000 & 1.000 & [1.00, 1.00] \\
+Pilot selected & Legacy & 0.000 & 0.240 & 1.000 & [0.16, 1.00] \\
+Pilot selected & Negative max & 0.260 & 0.000 & 1.000 & [1.00, 1.00] \\
+Pilot selected & Midpoint & 0.040 & 0.007 & 1.000 & [1.00, 1.00] \\
+Length only & Legacy & 0.087 & 0.657 & 1.000 & [0.00, 1.00] \\
+Length only & Negative max & 0.240 & 0.390 & 1.000 & [0.00, 1.00] \\
+Length only & Midpoint & 0.153 & 0.500 & 1.000 & [0.00, 1.00] \\
+Repetition only & Legacy & 0.120 & 0.720 & 0.833 & [0.00, 1.00] \\
+Repetition only & Negative max & 0.153 & 0.720 & 0.833 & [0.00, 1.00] \\
+Repetition only & Midpoint & 0.120 & 0.720 & 0.833 & [0.00, 1.00] \\
+No repetition & Legacy & 0.000 & 0.210 & 1.000 & [0.33, 1.00] \\
+No repetition & Negative max & 0.223 & 0.000 & 1.000 & [1.00, 1.00] \\
+No repetition & Midpoint & 0.003 & 0.000 & 1.000 & [1.00, 1.00] \\
+\bottomrule
+\end{tabular}
+\caption{Exploratory cycle-two diagnostics over 100 repeated topic-pair splits of the same 24 pilot documents. Intervals are the 2.5th and 97.5th percentiles across splits, not confidence intervals for modern-web performance.}
+\end{table}

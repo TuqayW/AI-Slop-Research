@@ -1,0 +1,2102 @@
+[
+  {
+    "repeat": 0,
+    "train": [
+      "balanced-valves",
+      "ship-salvage",
+      "safety-valves",
+      "light",
+      "fire-prevention",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "volcanoes",
+      "air-engines",
+      "nail-tools"
+    ],
+    "assessment": [
+      "oil-production",
+      "buried-wires",
+      "glass-fibers"
+    ]
+  },
+  {
+    "repeat": 1,
+    "train": [
+      "glass-fibers",
+      "safety-valves",
+      "fire-prevention",
+      "air-engines",
+      "ship-salvage",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "volcanoes",
+      "balanced-valves",
+      "buried-wires"
+    ],
+    "assessment": [
+      "nail-tools",
+      "light",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 2,
+    "train": [
+      "glass-fibers",
+      "oil-production",
+      "volcanoes",
+      "fire-prevention",
+      "air-engines",
+      "nail-tools"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "safety-valves",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "buried-wires",
+      "light"
+    ]
+  },
+  {
+    "repeat": 3,
+    "train": [
+      "oil-production",
+      "glass-fibers",
+      "fire-prevention",
+      "nail-tools",
+      "buried-wires",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "air-engines",
+      "safety-nuts",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "light",
+      "volcanoes",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 4,
+    "train": [
+      "volcanoes",
+      "glass-fibers",
+      "nail-tools",
+      "fire-prevention",
+      "ship-salvage",
+      "light"
+    ],
+    "calibration": [
+      "air-engines",
+      "safety-nuts",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "safety-valves",
+      "oil-production",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 5,
+    "train": [
+      "fire-prevention",
+      "glass-fibers",
+      "air-engines",
+      "light",
+      "buried-wires",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "safety-valves",
+      "oil-production",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "nail-tools",
+      "volcanoes",
+      "safety-nuts"
+    ]
+  },
+  {
+    "repeat": 6,
+    "train": [
+      "ship-salvage",
+      "fire-prevention",
+      "glass-fibers",
+      "air-engines",
+      "oil-production",
+      "volcanoes"
+    ],
+    "calibration": [
+      "balanced-valves",
+      "light",
+      "nail-tools"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "buried-wires",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 7,
+    "train": [
+      "nail-tools",
+      "safety-nuts",
+      "air-engines",
+      "volcanoes",
+      "oil-production",
+      "safety-valves"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "buried-wires",
+      "light"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "balanced-valves",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 8,
+    "train": [
+      "balanced-valves",
+      "safety-valves",
+      "air-engines",
+      "ship-salvage",
+      "fire-prevention",
+      "light"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "buried-wires",
+      "nail-tools"
+    ],
+    "assessment": [
+      "volcanoes",
+      "oil-production",
+      "glass-fibers"
+    ]
+  },
+  {
+    "repeat": 9,
+    "train": [
+      "volcanoes",
+      "buried-wires",
+      "oil-production",
+      "safety-nuts",
+      "safety-valves",
+      "light"
+    ],
+    "calibration": [
+      "air-engines",
+      "fire-prevention",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "ship-salvage",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 10,
+    "train": [
+      "air-engines",
+      "oil-production",
+      "glass-fibers",
+      "nail-tools",
+      "ship-salvage",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "safety-valves",
+      "light",
+      "safety-nuts"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "volcanoes",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 11,
+    "train": [
+      "balanced-valves",
+      "ship-salvage",
+      "air-engines",
+      "light",
+      "volcanoes",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "buried-wires",
+      "glass-fibers",
+      "safety-valves"
+    ],
+    "assessment": [
+      "nail-tools",
+      "oil-production",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 12,
+    "train": [
+      "safety-nuts",
+      "nail-tools",
+      "oil-production",
+      "volcanoes",
+      "fire-prevention",
+      "air-engines"
+    ],
+    "calibration": [
+      "balanced-valves",
+      "safety-valves",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "light",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 13,
+    "train": [
+      "air-engines",
+      "nail-tools",
+      "balanced-valves",
+      "volcanoes",
+      "buried-wires",
+      "safety-valves"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "safety-nuts",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "light",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 14,
+    "train": [
+      "safety-nuts",
+      "buried-wires",
+      "balanced-valves",
+      "ship-salvage",
+      "fire-prevention",
+      "light"
+    ],
+    "calibration": [
+      "safety-valves",
+      "air-engines",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "nail-tools",
+      "volcanoes",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 15,
+    "train": [
+      "ship-salvage",
+      "air-engines",
+      "fire-prevention",
+      "glass-fibers",
+      "safety-valves",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "oil-production",
+      "nail-tools"
+    ],
+    "assessment": [
+      "buried-wires",
+      "volcanoes",
+      "light"
+    ]
+  },
+  {
+    "repeat": 16,
+    "train": [
+      "ship-salvage",
+      "air-engines",
+      "fire-prevention",
+      "buried-wires",
+      "safety-nuts",
+      "safety-valves"
+    ],
+    "calibration": [
+      "oil-production",
+      "glass-fibers",
+      "volcanoes"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "nail-tools",
+      "light"
+    ]
+  },
+  {
+    "repeat": 17,
+    "train": [
+      "glass-fibers",
+      "oil-production",
+      "fire-prevention",
+      "safety-nuts",
+      "volcanoes",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "buried-wires",
+      "light",
+      "air-engines"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "safety-valves",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 18,
+    "train": [
+      "fire-prevention",
+      "balanced-valves",
+      "buried-wires",
+      "glass-fibers",
+      "ship-salvage",
+      "safety-valves"
+    ],
+    "calibration": [
+      "volcanoes",
+      "nail-tools",
+      "air-engines"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "oil-production",
+      "light"
+    ]
+  },
+  {
+    "repeat": 19,
+    "train": [
+      "nail-tools",
+      "air-engines",
+      "glass-fibers",
+      "volcanoes",
+      "safety-valves",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "buried-wires",
+      "oil-production",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "light",
+      "fire-prevention",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 20,
+    "train": [
+      "fire-prevention",
+      "balanced-valves",
+      "nail-tools",
+      "safety-nuts",
+      "ship-salvage",
+      "oil-production"
+    ],
+    "calibration": [
+      "buried-wires",
+      "safety-valves",
+      "air-engines"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "volcanoes",
+      "light"
+    ]
+  },
+  {
+    "repeat": 21,
+    "train": [
+      "glass-fibers",
+      "volcanoes",
+      "oil-production",
+      "fire-prevention",
+      "air-engines",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "balanced-valves",
+      "safety-valves",
+      "buried-wires"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "nail-tools",
+      "light"
+    ]
+  },
+  {
+    "repeat": 22,
+    "train": [
+      "oil-production",
+      "light",
+      "nail-tools",
+      "buried-wires",
+      "air-engines",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "volcanoes",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "safety-valves",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 23,
+    "train": [
+      "safety-valves",
+      "fire-prevention",
+      "oil-production",
+      "glass-fibers",
+      "air-engines",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "volcanoes",
+      "nail-tools",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "buried-wires",
+      "light",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 24,
+    "train": [
+      "buried-wires",
+      "ship-salvage",
+      "fire-prevention",
+      "oil-production",
+      "nail-tools",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "volcanoes",
+      "balanced-valves",
+      "light"
+    ],
+    "assessment": [
+      "air-engines",
+      "glass-fibers",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 25,
+    "train": [
+      "air-engines",
+      "buried-wires",
+      "volcanoes",
+      "nail-tools",
+      "light",
+      "glass-fibers"
+    ],
+    "calibration": [
+      "oil-production",
+      "ship-salvage",
+      "fire-prevention"
+    ],
+    "assessment": [
+      "safety-valves",
+      "safety-nuts",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 26,
+    "train": [
+      "air-engines",
+      "nail-tools",
+      "light",
+      "fire-prevention",
+      "safety-valves",
+      "volcanoes"
+    ],
+    "calibration": [
+      "buried-wires",
+      "glass-fibers",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "oil-production",
+      "safety-nuts",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 27,
+    "train": [
+      "safety-nuts",
+      "buried-wires",
+      "volcanoes",
+      "ship-salvage",
+      "balanced-valves",
+      "nail-tools"
+    ],
+    "calibration": [
+      "safety-valves",
+      "glass-fibers",
+      "air-engines"
+    ],
+    "assessment": [
+      "light",
+      "fire-prevention",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 28,
+    "train": [
+      "air-engines",
+      "light",
+      "fire-prevention",
+      "glass-fibers",
+      "oil-production",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "volcanoes",
+      "safety-nuts",
+      "safety-valves"
+    ],
+    "assessment": [
+      "buried-wires",
+      "nail-tools",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 29,
+    "train": [
+      "volcanoes",
+      "light",
+      "oil-production",
+      "buried-wires",
+      "balanced-valves",
+      "air-engines"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "ship-salvage",
+      "safety-valves"
+    ],
+    "assessment": [
+      "nail-tools",
+      "fire-prevention",
+      "safety-nuts"
+    ]
+  },
+  {
+    "repeat": 30,
+    "train": [
+      "glass-fibers",
+      "light",
+      "safety-valves",
+      "nail-tools",
+      "air-engines",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "volcanoes",
+      "buried-wires",
+      "oil-production"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "safety-nuts",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 31,
+    "train": [
+      "balanced-valves",
+      "buried-wires",
+      "light",
+      "safety-nuts",
+      "safety-valves",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "volcanoes",
+      "oil-production",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "nail-tools",
+      "air-engines"
+    ]
+  },
+  {
+    "repeat": 32,
+    "train": [
+      "safety-nuts",
+      "safety-valves",
+      "air-engines",
+      "balanced-valves",
+      "volcanoes",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "light",
+      "buried-wires"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "oil-production",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 33,
+    "train": [
+      "fire-prevention",
+      "safety-nuts",
+      "safety-valves",
+      "oil-production",
+      "volcanoes",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "light",
+      "nail-tools"
+    ],
+    "assessment": [
+      "buried-wires",
+      "air-engines",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 34,
+    "train": [
+      "ship-salvage",
+      "fire-prevention",
+      "buried-wires",
+      "balanced-valves",
+      "oil-production",
+      "air-engines"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "volcanoes",
+      "light"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "nail-tools",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 35,
+    "train": [
+      "air-engines",
+      "balanced-valves",
+      "oil-production",
+      "buried-wires",
+      "volcanoes",
+      "glass-fibers"
+    ],
+    "calibration": [
+      "light",
+      "safety-valves",
+      "nail-tools"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "ship-salvage",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 36,
+    "train": [
+      "light",
+      "glass-fibers",
+      "fire-prevention",
+      "oil-production",
+      "safety-valves",
+      "buried-wires"
+    ],
+    "calibration": [
+      "volcanoes",
+      "nail-tools",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "air-engines",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 37,
+    "train": [
+      "air-engines",
+      "safety-valves",
+      "nail-tools",
+      "buried-wires",
+      "oil-production",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "light",
+      "volcanoes",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "glass-fibers",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 38,
+    "train": [
+      "nail-tools",
+      "safety-valves",
+      "balanced-valves",
+      "fire-prevention",
+      "oil-production",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "ship-salvage",
+      "air-engines",
+      "volcanoes"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "light",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 39,
+    "train": [
+      "oil-production",
+      "fire-prevention",
+      "balanced-valves",
+      "safety-valves",
+      "glass-fibers",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "light",
+      "volcanoes",
+      "air-engines"
+    ],
+    "assessment": [
+      "buried-wires",
+      "safety-nuts",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 40,
+    "train": [
+      "buried-wires",
+      "volcanoes",
+      "light",
+      "safety-valves",
+      "nail-tools",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "air-engines",
+      "glass-fibers",
+      "oil-production"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "balanced-valves",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 41,
+    "train": [
+      "buried-wires",
+      "air-engines",
+      "volcanoes",
+      "ship-salvage",
+      "balanced-valves",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "nail-tools",
+      "glass-fibers",
+      "light"
+    ],
+    "assessment": [
+      "safety-valves",
+      "oil-production",
+      "safety-nuts"
+    ]
+  },
+  {
+    "repeat": 42,
+    "train": [
+      "nail-tools",
+      "oil-production",
+      "air-engines",
+      "volcanoes",
+      "buried-wires",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "fire-prevention",
+      "light"
+    ],
+    "assessment": [
+      "safety-valves",
+      "safety-nuts",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 43,
+    "train": [
+      "glass-fibers",
+      "oil-production",
+      "fire-prevention",
+      "ship-salvage",
+      "balanced-valves",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "light",
+      "buried-wires",
+      "air-engines"
+    ],
+    "assessment": [
+      "nail-tools",
+      "volcanoes",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 44,
+    "train": [
+      "safety-nuts",
+      "nail-tools",
+      "oil-production",
+      "air-engines",
+      "ship-salvage",
+      "safety-valves"
+    ],
+    "calibration": [
+      "buried-wires",
+      "light",
+      "fire-prevention"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "volcanoes",
+      "glass-fibers"
+    ]
+  },
+  {
+    "repeat": 45,
+    "train": [
+      "oil-production",
+      "light",
+      "glass-fibers",
+      "fire-prevention",
+      "safety-nuts",
+      "volcanoes"
+    ],
+    "calibration": [
+      "air-engines",
+      "buried-wires",
+      "nail-tools"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "safety-valves",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 46,
+    "train": [
+      "balanced-valves",
+      "ship-salvage",
+      "oil-production",
+      "buried-wires",
+      "volcanoes",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "light",
+      "glass-fibers",
+      "safety-valves"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "nail-tools",
+      "air-engines"
+    ]
+  },
+  {
+    "repeat": 47,
+    "train": [
+      "air-engines",
+      "safety-nuts",
+      "oil-production",
+      "volcanoes",
+      "ship-salvage",
+      "light"
+    ],
+    "calibration": [
+      "buried-wires",
+      "balanced-valves",
+      "safety-valves"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "nail-tools",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 48,
+    "train": [
+      "fire-prevention",
+      "nail-tools",
+      "ship-salvage",
+      "balanced-valves",
+      "volcanoes",
+      "buried-wires"
+    ],
+    "calibration": [
+      "safety-valves",
+      "oil-production",
+      "safety-nuts"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "air-engines",
+      "light"
+    ]
+  },
+  {
+    "repeat": 49,
+    "train": [
+      "glass-fibers",
+      "buried-wires",
+      "balanced-valves",
+      "nail-tools",
+      "air-engines",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "safety-valves",
+      "safety-nuts",
+      "light"
+    ],
+    "assessment": [
+      "volcanoes",
+      "fire-prevention",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 50,
+    "train": [
+      "air-engines",
+      "safety-valves",
+      "light",
+      "fire-prevention",
+      "ship-salvage",
+      "nail-tools"
+    ],
+    "calibration": [
+      "volcanoes",
+      "balanced-valves",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "oil-production",
+      "safety-nuts",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 51,
+    "train": [
+      "light",
+      "buried-wires",
+      "ship-salvage",
+      "balanced-valves",
+      "fire-prevention",
+      "oil-production"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "volcanoes",
+      "safety-nuts"
+    ],
+    "assessment": [
+      "nail-tools",
+      "safety-valves",
+      "air-engines"
+    ]
+  },
+  {
+    "repeat": 52,
+    "train": [
+      "safety-nuts",
+      "safety-valves",
+      "volcanoes",
+      "glass-fibers",
+      "ship-salvage",
+      "nail-tools"
+    ],
+    "calibration": [
+      "air-engines",
+      "buried-wires",
+      "light"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "oil-production",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 53,
+    "train": [
+      "balanced-valves",
+      "fire-prevention",
+      "oil-production",
+      "safety-valves",
+      "glass-fibers",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "ship-salvage",
+      "nail-tools",
+      "buried-wires"
+    ],
+    "assessment": [
+      "light",
+      "volcanoes",
+      "air-engines"
+    ]
+  },
+  {
+    "repeat": 54,
+    "train": [
+      "light",
+      "nail-tools",
+      "ship-salvage",
+      "glass-fibers",
+      "buried-wires",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "balanced-valves",
+      "fire-prevention",
+      "safety-valves"
+    ],
+    "assessment": [
+      "air-engines",
+      "volcanoes",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 55,
+    "train": [
+      "nail-tools",
+      "safety-nuts",
+      "glass-fibers",
+      "ship-salvage",
+      "balanced-valves",
+      "oil-production"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "volcanoes",
+      "light"
+    ],
+    "assessment": [
+      "air-engines",
+      "safety-valves",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 56,
+    "train": [
+      "air-engines",
+      "safety-valves",
+      "nail-tools",
+      "balanced-valves",
+      "light",
+      "oil-production"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "safety-nuts",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "volcanoes",
+      "ship-salvage",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 57,
+    "train": [
+      "ship-salvage",
+      "nail-tools",
+      "safety-valves",
+      "glass-fibers",
+      "buried-wires",
+      "volcanoes"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "safety-nuts",
+      "air-engines"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "light",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 58,
+    "train": [
+      "fire-prevention",
+      "safety-nuts",
+      "balanced-valves",
+      "safety-valves",
+      "light",
+      "nail-tools"
+    ],
+    "calibration": [
+      "buried-wires",
+      "air-engines",
+      "volcanoes"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "oil-production",
+      "glass-fibers"
+    ]
+  },
+  {
+    "repeat": 59,
+    "train": [
+      "volcanoes",
+      "nail-tools",
+      "light",
+      "ship-salvage",
+      "safety-valves",
+      "buried-wires"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "fire-prevention",
+      "air-engines"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "glass-fibers",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 60,
+    "train": [
+      "light",
+      "air-engines",
+      "glass-fibers",
+      "volcanoes",
+      "fire-prevention",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "nail-tools",
+      "ship-salvage",
+      "oil-production"
+    ],
+    "assessment": [
+      "safety-valves",
+      "safety-nuts",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 61,
+    "train": [
+      "buried-wires",
+      "safety-valves",
+      "balanced-valves",
+      "nail-tools",
+      "oil-production",
+      "volcanoes"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "glass-fibers",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "air-engines",
+      "light"
+    ]
+  },
+  {
+    "repeat": 62,
+    "train": [
+      "glass-fibers",
+      "safety-nuts",
+      "nail-tools",
+      "air-engines",
+      "balanced-valves",
+      "volcanoes"
+    ],
+    "calibration": [
+      "light",
+      "safety-valves",
+      "fire-prevention"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "oil-production",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 63,
+    "train": [
+      "light",
+      "safety-valves",
+      "air-engines",
+      "buried-wires",
+      "nail-tools",
+      "oil-production"
+    ],
+    "calibration": [
+      "volcanoes",
+      "fire-prevention",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "safety-nuts",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 64,
+    "train": [
+      "oil-production",
+      "air-engines",
+      "safety-valves",
+      "balanced-valves",
+      "light",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "glass-fibers",
+      "volcanoes"
+    ],
+    "assessment": [
+      "ship-salvage",
+      "nail-tools",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 65,
+    "train": [
+      "ship-salvage",
+      "safety-valves",
+      "oil-production",
+      "light",
+      "glass-fibers",
+      "nail-tools"
+    ],
+    "calibration": [
+      "air-engines",
+      "safety-nuts",
+      "buried-wires"
+    ],
+    "assessment": [
+      "volcanoes",
+      "balanced-valves",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 66,
+    "train": [
+      "light",
+      "buried-wires",
+      "nail-tools",
+      "balanced-valves",
+      "glass-fibers",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "safety-valves",
+      "safety-nuts",
+      "air-engines"
+    ],
+    "assessment": [
+      "volcanoes",
+      "oil-production",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 67,
+    "train": [
+      "ship-salvage",
+      "glass-fibers",
+      "safety-nuts",
+      "balanced-valves",
+      "fire-prevention",
+      "air-engines"
+    ],
+    "calibration": [
+      "buried-wires",
+      "nail-tools",
+      "volcanoes"
+    ],
+    "assessment": [
+      "safety-valves",
+      "oil-production",
+      "light"
+    ]
+  },
+  {
+    "repeat": 68,
+    "train": [
+      "ship-salvage",
+      "volcanoes",
+      "glass-fibers",
+      "air-engines",
+      "nail-tools",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "light",
+      "oil-production"
+    ],
+    "assessment": [
+      "buried-wires",
+      "safety-valves",
+      "safety-nuts"
+    ]
+  },
+  {
+    "repeat": 69,
+    "train": [
+      "safety-nuts",
+      "glass-fibers",
+      "air-engines",
+      "oil-production",
+      "buried-wires",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "nail-tools",
+      "volcanoes",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "light",
+      "safety-valves",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 70,
+    "train": [
+      "nail-tools",
+      "light",
+      "ship-salvage",
+      "balanced-valves",
+      "oil-production",
+      "glass-fibers"
+    ],
+    "calibration": [
+      "safety-valves",
+      "buried-wires",
+      "volcanoes"
+    ],
+    "assessment": [
+      "air-engines",
+      "fire-prevention",
+      "safety-nuts"
+    ]
+  },
+  {
+    "repeat": 71,
+    "train": [
+      "light",
+      "air-engines",
+      "nail-tools",
+      "balanced-valves",
+      "volcanoes",
+      "buried-wires"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "glass-fibers",
+      "fire-prevention"
+    ],
+    "assessment": [
+      "oil-production",
+      "safety-valves",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 72,
+    "train": [
+      "safety-nuts",
+      "ship-salvage",
+      "oil-production",
+      "safety-valves",
+      "balanced-valves",
+      "volcanoes"
+    ],
+    "calibration": [
+      "buried-wires",
+      "air-engines",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "light",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 73,
+    "train": [
+      "volcanoes",
+      "air-engines",
+      "oil-production",
+      "safety-nuts",
+      "buried-wires",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "safety-valves",
+      "nail-tools"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "light",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 74,
+    "train": [
+      "safety-nuts",
+      "ship-salvage",
+      "fire-prevention",
+      "oil-production",
+      "buried-wires",
+      "glass-fibers"
+    ],
+    "calibration": [
+      "air-engines",
+      "nail-tools",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "volcanoes",
+      "light",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 75,
+    "train": [
+      "safety-nuts",
+      "fire-prevention",
+      "volcanoes",
+      "ship-salvage",
+      "safety-valves",
+      "light"
+    ],
+    "calibration": [
+      "air-engines",
+      "oil-production",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "nail-tools",
+      "buried-wires",
+      "glass-fibers"
+    ]
+  },
+  {
+    "repeat": 76,
+    "train": [
+      "glass-fibers",
+      "oil-production",
+      "fire-prevention",
+      "air-engines",
+      "balanced-valves",
+      "nail-tools"
+    ],
+    "calibration": [
+      "buried-wires",
+      "light",
+      "safety-nuts"
+    ],
+    "assessment": [
+      "safety-valves",
+      "volcanoes",
+      "ship-salvage"
+    ]
+  },
+  {
+    "repeat": 77,
+    "train": [
+      "light",
+      "oil-production",
+      "nail-tools",
+      "air-engines",
+      "safety-valves",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "balanced-valves",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "buried-wires",
+      "volcanoes"
+    ]
+  },
+  {
+    "repeat": 78,
+    "train": [
+      "nail-tools",
+      "ship-salvage",
+      "fire-prevention",
+      "air-engines",
+      "balanced-valves",
+      "safety-valves"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "glass-fibers",
+      "light"
+    ],
+    "assessment": [
+      "buried-wires",
+      "oil-production",
+      "volcanoes"
+    ]
+  },
+  {
+    "repeat": 79,
+    "train": [
+      "safety-nuts",
+      "volcanoes",
+      "oil-production",
+      "balanced-valves",
+      "fire-prevention",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "buried-wires",
+      "air-engines",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "light",
+      "safety-valves",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 80,
+    "train": [
+      "buried-wires",
+      "balanced-valves",
+      "ship-salvage",
+      "fire-prevention",
+      "air-engines",
+      "nail-tools"
+    ],
+    "calibration": [
+      "safety-valves",
+      "safety-nuts",
+      "volcanoes"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "light",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 81,
+    "train": [
+      "volcanoes",
+      "oil-production",
+      "fire-prevention",
+      "light",
+      "glass-fibers",
+      "nail-tools"
+    ],
+    "calibration": [
+      "ship-salvage",
+      "air-engines",
+      "buried-wires"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "balanced-valves",
+      "safety-valves"
+    ]
+  },
+  {
+    "repeat": 82,
+    "train": [
+      "ship-salvage",
+      "glass-fibers",
+      "nail-tools",
+      "fire-prevention",
+      "light",
+      "volcanoes"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "oil-production",
+      "air-engines"
+    ],
+    "assessment": [
+      "safety-valves",
+      "balanced-valves",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 83,
+    "train": [
+      "nail-tools",
+      "air-engines",
+      "glass-fibers",
+      "safety-nuts",
+      "fire-prevention",
+      "light"
+    ],
+    "calibration": [
+      "safety-valves",
+      "buried-wires",
+      "ship-salvage"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "oil-production",
+      "volcanoes"
+    ]
+  },
+  {
+    "repeat": 84,
+    "train": [
+      "nail-tools",
+      "buried-wires",
+      "fire-prevention",
+      "ship-salvage",
+      "volcanoes",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "light",
+      "oil-production"
+    ],
+    "assessment": [
+      "safety-valves",
+      "glass-fibers",
+      "air-engines"
+    ]
+  },
+  {
+    "repeat": 85,
+    "train": [
+      "ship-salvage",
+      "safety-valves",
+      "buried-wires",
+      "safety-nuts",
+      "fire-prevention",
+      "oil-production"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "balanced-valves",
+      "light"
+    ],
+    "assessment": [
+      "nail-tools",
+      "volcanoes",
+      "air-engines"
+    ]
+  },
+  {
+    "repeat": 86,
+    "train": [
+      "safety-valves",
+      "oil-production",
+      "safety-nuts",
+      "air-engines",
+      "ship-salvage",
+      "light"
+    ],
+    "calibration": [
+      "fire-prevention",
+      "volcanoes",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "buried-wires",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 87,
+    "train": [
+      "safety-nuts",
+      "ship-salvage",
+      "safety-valves",
+      "buried-wires",
+      "light",
+      "fire-prevention"
+    ],
+    "calibration": [
+      "balanced-valves",
+      "oil-production",
+      "air-engines"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "nail-tools",
+      "volcanoes"
+    ]
+  },
+  {
+    "repeat": 88,
+    "train": [
+      "light",
+      "volcanoes",
+      "oil-production",
+      "air-engines",
+      "ship-salvage",
+      "safety-valves"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "fire-prevention",
+      "buried-wires"
+    ],
+    "assessment": [
+      "glass-fibers",
+      "nail-tools",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 89,
+    "train": [
+      "light",
+      "buried-wires",
+      "safety-nuts",
+      "fire-prevention",
+      "oil-production",
+      "glass-fibers"
+    ],
+    "calibration": [
+      "volcanoes",
+      "ship-salvage",
+      "nail-tools"
+    ],
+    "assessment": [
+      "safety-valves",
+      "air-engines",
+      "balanced-valves"
+    ]
+  },
+  {
+    "repeat": 90,
+    "train": [
+      "fire-prevention",
+      "light",
+      "ship-salvage",
+      "oil-production",
+      "air-engines",
+      "safety-valves"
+    ],
+    "calibration": [
+      "buried-wires",
+      "glass-fibers",
+      "safety-nuts"
+    ],
+    "assessment": [
+      "volcanoes",
+      "balanced-valves",
+      "nail-tools"
+    ]
+  },
+  {
+    "repeat": 91,
+    "train": [
+      "fire-prevention",
+      "buried-wires",
+      "light",
+      "volcanoes",
+      "glass-fibers",
+      "safety-nuts"
+    ],
+    "calibration": [
+      "ship-salvage",
+      "air-engines",
+      "balanced-valves"
+    ],
+    "assessment": [
+      "safety-valves",
+      "nail-tools",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 92,
+    "train": [
+      "oil-production",
+      "safety-nuts",
+      "ship-salvage",
+      "safety-valves",
+      "balanced-valves",
+      "volcanoes"
+    ],
+    "calibration": [
+      "glass-fibers",
+      "nail-tools",
+      "light"
+    ],
+    "assessment": [
+      "fire-prevention",
+      "air-engines",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 93,
+    "train": [
+      "buried-wires",
+      "air-engines",
+      "safety-nuts",
+      "glass-fibers",
+      "balanced-valves",
+      "safety-valves"
+    ],
+    "calibration": [
+      "light",
+      "ship-salvage",
+      "fire-prevention"
+    ],
+    "assessment": [
+      "volcanoes",
+      "nail-tools",
+      "oil-production"
+    ]
+  },
+  {
+    "repeat": 94,
+    "train": [
+      "ship-salvage",
+      "oil-production",
+      "volcanoes",
+      "balanced-valves",
+      "safety-valves",
+      "glass-fibers"
+    ],
+    "calibration": [
+      "air-engines",
+      "nail-tools",
+      "safety-nuts"
+    ],
+    "assessment": [
+      "light",
+      "fire-prevention",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 95,
+    "train": [
+      "fire-prevention",
+      "volcanoes",
+      "nail-tools",
+      "safety-valves",
+      "balanced-valves",
+      "light"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "oil-production",
+      "glass-fibers"
+    ],
+    "assessment": [
+      "air-engines",
+      "ship-salvage",
+      "buried-wires"
+    ]
+  },
+  {
+    "repeat": 96,
+    "train": [
+      "balanced-valves",
+      "buried-wires",
+      "nail-tools",
+      "glass-fibers",
+      "safety-valves",
+      "oil-production"
+    ],
+    "calibration": [
+      "light",
+      "air-engines",
+      "volcanoes"
+    ],
+    "assessment": [
+      "safety-nuts",
+      "ship-salvage",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 97,
+    "train": [
+      "buried-wires",
+      "air-engines",
+      "glass-fibers",
+      "light",
+      "safety-nuts",
+      "balanced-valves"
+    ],
+    "calibration": [
+      "ship-salvage",
+      "safety-valves",
+      "nail-tools"
+    ],
+    "assessment": [
+      "volcanoes",
+      "oil-production",
+      "fire-prevention"
+    ]
+  },
+  {
+    "repeat": 98,
+    "train": [
+      "light",
+      "fire-prevention",
+      "air-engines",
+      "buried-wires",
+      "glass-fibers",
+      "oil-production"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "nail-tools",
+      "safety-valves"
+    ],
+    "assessment": [
+      "balanced-valves",
+      "ship-salvage",
+      "volcanoes"
+    ]
+  },
+  {
+    "repeat": 99,
+    "train": [
+      "buried-wires",
+      "safety-valves",
+      "glass-fibers",
+      "nail-tools",
+      "air-engines",
+      "ship-salvage"
+    ],
+    "calibration": [
+      "safety-nuts",
+      "volcanoes",
+      "fire-prevention"
+    ],
+    "assessment": [
+      "light",
+      "oil-production",
+      "balanced-valves"
+    ]
+  }
+]

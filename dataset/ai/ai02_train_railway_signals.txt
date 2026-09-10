@@ -1,0 +1,23 @@
+RAILWAY SIGNALS AND SAFETY.
+
+The rapid extension of railway traffic has made the proper control of trains a
+matter of increasing importance. A line upon which only a few trains are
+running may be operated with simple arrangements, but the same method becomes
+dangerous when the number of movements is greatly increased. The signal then
+serves as the visible expression of a set of rules by which one movement is
+permitted and another prohibited.
+
+The mechanical signal itself is comparatively simple. The difficulty lies in
+determining when it shall change and in making certain that the operator's
+action corresponds with the actual condition of the line. A signal which
+indicates safety while a train is already occupying the section beyond it is
+worse than useless. The apparatus must therefore be connected with the
+movements which it is intended to govern.
+
+Automatic arrangements promise assistance in this direction because they
+reduce the number of separate decisions required from the signalman. Yet
+automatic machinery introduces its own conditions. Contacts may become
+imperfect, wires may fail, and mechanical parts require inspection. A good
+railway signal system is consequently not merely an ingenious collection of
+devices. It is a method of maintaining definite knowledge of where trains are,
+which lines are clear, and what movement may safely follow another.

@@ -1,0 +1,20 @@
+THE PREPARATION OF RAILWAY TIMETABLES.
+
+A railway timetable is a written representation of a complicated sequence of
+movements. The arrival of one train may depend upon the departure of another,
+while stations with limited track space may permit only certain combinations
+of trains at one time.
+
+The preparation of the schedule therefore requires attention to the physical
+conditions of the line. The distance between stations, the speed of trains,
+and the time required for loading and unloading all influence the possible
+arrangements.
+
+A timetable which appears convenient to passengers may be impracticable if it
+allows no margin for ordinary delays. On the other hand, excessive intervals
+waste the carrying capacity of the railway.
+
+The best schedule is accordingly a compromise between speed, reliability and
+efficient use of the line. Its success is measured not by the elegance of the
+printed table but by the regularity with which the actual service can follow
+it.

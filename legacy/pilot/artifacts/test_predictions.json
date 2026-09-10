@@ -1,0 +1,266 @@
+[
+  {
+    "model": "baseline",
+    "id": "historical-balanced-valves",
+    "true_ai": 0,
+    "status": "scored",
+    "word_count": 154,
+    "heads": {
+      "ai": {
+        "score": 7.009285122018002e-09,
+        "threshold": 0.9444533743733248,
+        "flag": false,
+        "top_logit_contributions": {
+          "repeated_trigram_fraction": -14.08756438410246,
+          "type_token_ratio": -3.3501285764867808,
+          "mean_sentence_length": -2.1039228309472344
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "baseline",
+    "id": "generated-balanced-valves",
+    "true_ai": 1,
+    "status": "scored",
+    "word_count": 151,
+    "heads": {
+      "ai": {
+        "score": 0.9406955761619252,
+        "threshold": 0.9444533743733248,
+        "flag": false,
+        "top_logit_contributions": {
+          "sentence_length_cv": 0.6524848226897992,
+          "mean_word_length": 0.545638840978355,
+          "mean_sentence_length": 0.5180319530513244
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "baseline",
+    "id": "historical-safety-valves",
+    "true_ai": 0,
+    "status": "scored",
+    "word_count": 154,
+    "heads": {
+      "ai": {
+        "score": 0.0002897696508762263,
+        "threshold": 0.9444533743733248,
+        "flag": false,
+        "top_logit_contributions": {
+          "repeated_trigram_fraction": -4.435853014912823,
+          "type_token_ratio": -2.329795509749684,
+          "mean_word_length": -1.0669997453740463
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "baseline",
+    "id": "generated-safety-valves",
+    "true_ai": 1,
+    "status": "scored",
+    "word_count": 153,
+    "heads": {
+      "ai": {
+        "score": 0.9007161343035924,
+        "threshold": 0.9444533743733248,
+        "flag": false,
+        "top_logit_contributions": {
+          "mean_word_length": 0.6343511472095732,
+          "sentence_length_cv": 0.4342944419863521,
+          "repeated_trigram_fraction": 0.3900026696819855
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "baseline",
+    "id": "historical-ship-salvage",
+    "true_ai": 0,
+    "status": "scored",
+    "word_count": 140,
+    "heads": {
+      "ai": {
+        "score": 0.24158350859550498,
+        "threshold": 0.9444533743733248,
+        "flag": false,
+        "top_logit_contributions": {
+          "punctuation_rate": -0.8208706642603932,
+          "sentence_length_cv": -0.6450614988014145,
+          "mean_word_length": -0.5057308677253594
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "baseline",
+    "id": "generated-ship-salvage",
+    "true_ai": 1,
+    "status": "scored",
+    "word_count": 158,
+    "heads": {
+      "ai": {
+        "score": 0.7654966354120656,
+        "threshold": 0.9444533743733248,
+        "flag": false,
+        "top_logit_contributions": {
+          "repeated_trigram_fraction": 0.3900026696819855,
+          "mean_sentence_length": 0.34034044515077805,
+          "mean_word_length": 0.20613012642086112
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "selected",
+    "id": "historical-balanced-valves",
+    "true_ai": 0,
+    "status": "scored",
+    "word_count": 154,
+    "heads": {
+      "ai": {
+        "score": 0.2776058830845239,
+        "threshold": 0.539989302517962,
+        "flag": false,
+        "top_logit_contributions": {
+          "repeated_trigram_fraction": -0.8228641572464283,
+          "type_token_ratio": -0.19919108686911502,
+          "sentence_length_cv": 0.05085936359690246
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "selected",
+    "id": "generated-balanced-valves",
+    "true_ai": 1,
+    "status": "scored",
+    "word_count": 151,
+    "heads": {
+      "ai": {
+        "score": 0.5372267625421292,
+        "threshold": 0.539989302517962,
+        "flag": false,
+        "top_logit_contributions": {
+          "sentence_length_cv": 0.04438436080677217,
+          "mean_word_length": 0.03374041053831968,
+          "type_token_ratio": 0.02429138381906372
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "selected",
+    "id": "historical-safety-valves",
+    "true_ai": 0,
+    "status": "scored",
+    "word_count": 154,
+    "heads": {
+      "ai": {
+        "score": 0.376237946951499,
+        "threshold": 0.539989302517962,
+        "flag": false,
+        "top_logit_contributions": {
+          "repeated_trigram_fraction": -0.25910117272680144,
+          "type_token_ratio": -0.13852438471376222,
+          "mean_word_length": -0.06597955781273096
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "selected",
+    "id": "generated-safety-valves",
+    "true_ai": 1,
+    "status": "scored",
+    "word_count": 153,
+    "heads": {
+      "ai": {
+        "score": 0.5298408378447546,
+        "threshold": 0.539989302517962,
+        "flag": false,
+        "top_logit_contributions": {
+          "mean_word_length": 0.039226071395372146,
+          "sentence_length_cv": 0.02954226755809471,
+          "repeated_trigram_fraction": 0.02278031953301134
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "selected",
+    "id": "historical-ship-salvage",
+    "true_ai": 0,
+    "status": "scored",
+    "word_count": 140,
+    "heads": {
+      "ai": {
+        "score": 0.47310622403289404,
+        "threshold": 0.539989302517962,
+        "flag": false,
+        "top_logit_contributions": {
+          "punctuation_rate": -0.06553796645694326,
+          "sentence_length_cv": -0.04387939965765401,
+          "mean_word_length": -0.03127264010083763
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  },
+  {
+    "model": "selected",
+    "id": "generated-ship-salvage",
+    "true_ai": 1,
+    "status": "scored",
+    "word_count": 158,
+    "heads": {
+      "ai": {
+        "score": 0.514639081345815,
+        "threshold": 0.539989302517962,
+        "flag": false,
+        "top_logit_contributions": {
+          "repeated_trigram_fraction": 0.02278031953301134,
+          "digit_token_fraction": 0.013279817836803813,
+          "mean_word_length": 0.012746370982837502
+        }
+      }
+    },
+    "warning": "Historical single-generator authorship pilot only. Uncalibrated; quality not trained; not proof of AI use.",
+    "review_candidate": null,
+    "quality_status": "not_trained"
+  }
+]

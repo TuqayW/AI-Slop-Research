@@ -1,0 +1,20 @@
+THE USE OF LUBRICANTS IN MACHINERY.
+
+When two solid surfaces move against each other, resistance arises from the
+irregularities of the surfaces and from the deformation which accompanies
+contact. A lubricant interposed between them may reduce this resistance and
+carry away some of the heat produced by motion.
+
+The mere presence of oil does not guarantee satisfactory operation. Its
+viscosity must be suitable for the speed and pressure involved, and the supply
+must reach the actual bearing surfaces. An excess may be as inconvenient as a
+deficiency.
+
+Dust and other foreign matter introduce another difficulty. If particles
+enter the bearing, they may increase wear despite the presence of lubricant.
+Cleanliness of the surrounding machinery is therefore part of the lubrication
+problem.
+
+The value of a lubricant is best judged by its effect upon the complete
+machine: reduced friction, moderate temperature, and preservation of the
+working surfaces over time.

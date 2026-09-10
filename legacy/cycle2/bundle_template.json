@@ -1,0 +1,19 @@
+{
+  "role": "development",
+  "sampling_frame": null,
+  "selection_method": null,
+  "review": {
+    "independent_human_review": false,
+    "reviewer_id": null,
+    "evidence_reference": null,
+    "rights_review_complete": false,
+    "privacy_review_complete": false,
+    "provenance_review_complete": false,
+    "annotation_process_review_complete": false,
+    "calibration_independence_reviewed": false
+  },
+  "panel": [],
+  "annotators": [],
+  "documents": [],
+  "annotations": []
+}

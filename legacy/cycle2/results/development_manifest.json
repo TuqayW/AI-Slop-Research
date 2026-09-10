@@ -1,0 +1,170 @@
+[
+  {
+    "id": "historical-fire-prevention",
+    "cluster": "fire-prevention",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "e437ec6f14547ad7a92cb055afd059c082e0b7824ae3b93f75c4cc0c53025ea8"
+  },
+  {
+    "id": "generated-fire-prevention",
+    "cluster": "fire-prevention",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "2c1e4d88857eb460d662d30fb3cc12f4bcd48664d042716554295ec229b71e6c"
+  },
+  {
+    "id": "historical-light",
+    "cluster": "light",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "04e6bd9bef4eaf5111790357fc49f1870805190ca9008294e88b16bf0d70b27c"
+  },
+  {
+    "id": "generated-light",
+    "cluster": "light",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "6cd7f33ddb9bc6d502f1f730eefefb57b8ddd64f38418277adcc93bef3c80ed0"
+  },
+  {
+    "id": "historical-glass-fibers",
+    "cluster": "glass-fibers",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "b112468d0d7144b0576cca816dbf6adba3aa9e981c75b56a49a82917c5cc7d76"
+  },
+  {
+    "id": "generated-glass-fibers",
+    "cluster": "glass-fibers",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "73642d1bbba0c73313db0ce82f55e5f8a26410fa4cfa8fd4be474fda881d0127"
+  },
+  {
+    "id": "historical-volcanoes",
+    "cluster": "volcanoes",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "b2b246fade513051393a662b683f9dc59dcd2fc9587096d44b09550808ef4627"
+  },
+  {
+    "id": "generated-volcanoes",
+    "cluster": "volcanoes",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "5511545940f97edf63812b563d3743be18d4ea381bbbb1bdb43e186972c20fd3"
+  },
+  {
+    "id": "historical-air-engines",
+    "cluster": "air-engines",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "16577baf786c46a5c78de96cfccd0a73e10cf8be13cf202c41b4198eebee4701"
+  },
+  {
+    "id": "generated-air-engines",
+    "cluster": "air-engines",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "8a41b9303efdbf2e8f4f6c1d65486500a86e02f65e90ec3b816e50049630879c"
+  },
+  {
+    "id": "historical-buried-wires",
+    "cluster": "buried-wires",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "cbda7110807a5150c73e82cbdce7d46a2896042d7b98a96b31fe78a78c48c88d"
+  },
+  {
+    "id": "generated-buried-wires",
+    "cluster": "buried-wires",
+    "original_split": "train",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "d83a49c6af2bbce7b0af8179ca8b97c1ad9f8abcdd1db0067dea0a2910584079"
+  },
+  {
+    "id": "historical-safety-nuts",
+    "cluster": "safety-nuts",
+    "original_split": "valid",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "4e93a29dd61d472e3578b0727c20339dbbe07cb268557b4cf0403d154b2bc1cc"
+  },
+  {
+    "id": "generated-safety-nuts",
+    "cluster": "safety-nuts",
+    "original_split": "valid",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "460340339b01eadd34ac5603f0f7a95618daf6e6a343a43cf7f0df9f53034578"
+  },
+  {
+    "id": "historical-oil-production",
+    "cluster": "oil-production",
+    "original_split": "valid",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "0caa32431c9576962fe507fa7419db810afc23deaa10c481a1e3bfa30c543b42"
+  },
+  {
+    "id": "generated-oil-production",
+    "cluster": "oil-production",
+    "original_split": "valid",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "e56ac8636b6296a17c6c77bef0dc80052c1ea0fd5de42f21d2390d57d50ea128"
+  },
+  {
+    "id": "historical-nail-tools",
+    "cluster": "nail-tools",
+    "original_split": "valid",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "c476d0efe1afe282408cbfe8d10440336a235dce639d34ffc8bb71d3cded612b"
+  },
+  {
+    "id": "generated-nail-tools",
+    "cluster": "nail-tools",
+    "original_split": "valid",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "98a108e9353369517b39e7a54a65a7d5071ba9f7df4deec50cadc7142a9dbaca"
+  },
+  {
+    "id": "historical-balanced-valves",
+    "cluster": "balanced-valves",
+    "original_split": "test",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "4d04570f3095d14d183f06f942cd3eb71118687c3dd2c07012d9fde61ed0d42f"
+  },
+  {
+    "id": "generated-balanced-valves",
+    "cluster": "balanced-valves",
+    "original_split": "test",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "1b543cc19d22c7863d4b146fd34265cc0a835305bcbd8ed7189cbfd49fb2fed3"
+  },
+  {
+    "id": "historical-safety-valves",
+    "cluster": "safety-valves",
+    "original_split": "test",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "c44a3f11f23a93ebe97f00eb68fb2a88e268779e8b7ed53a19aa063eabe129c5"
+  },
+  {
+    "id": "generated-safety-valves",
+    "cluster": "safety-valves",
+    "original_split": "test",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "252ed3bd4c237e35f9dda170fa2fd66b7f14a233a83954c6609a44144b51540c"
+  },
+  {
+    "id": "historical-ship-salvage",
+    "cluster": "ship-salvage",
+    "original_split": "test",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "2a38320409e210396b19b290b4254463e9026ee08f66b932c7fe482424a0a57d"
+  },
+  {
+    "id": "generated-ship-salvage",
+    "cluster": "ship-salvage",
+    "original_split": "test",
+    "current_role": "exploratory_development_only",
+    "normalized_sha256": "deb03da961a6568ce97db468bfe326732b21661bae9952502938bb3a21939bf7"
+  }
+]

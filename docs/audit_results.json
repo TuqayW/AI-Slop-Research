@@ -1,0 +1,1797 @@
+{
+  "audit_date": "2026-09-10",
+  "scope": "retrospective repository audit; no new detector evaluation",
+  "input_manifest": {
+    "training/add_ai_1900_more.py": {
+      "bytes": 18748,
+      "sha256": "dc614a7e94e6be2791395191889f7f80a021b540500aedd60c07c139e000603c"
+    },
+    "training/build_combined_v11.py": {
+      "bytes": 4665,
+      "sha256": "2cf91b853af3be7695046082041558fb08c75d5da96f2f725a48387a448c83c6"
+    },
+    "training/build_hc3_corpus.py": {
+      "bytes": 2025,
+      "sha256": "6bfdc3eca3d7df5aaa997ed31bdedf08b36d7a9503e310963d3550176fc58d08"
+    },
+    "training/build_hc3_corpus_v2.py": {
+      "bytes": 2708,
+      "sha256": "911a623ea77b10b1aa38a441098eea2f946402dc365b906bfc18e5f4b55095ce"
+    },
+    "training/build_hc3_dev.py": {
+      "bytes": 2689,
+      "sha256": "94795637e43594a24f87a74bd90e1a1913b0ca0ee99f964e7b36264ab4b84479"
+    },
+    "training/build_hc3_paired_v10.py": {
+      "bytes": 2953,
+      "sha256": "ebc6bef9107ce782a23e147985095c4e2622fb612b29518c3a388088ffcc9cde"
+    },
+    "training/build_short_corpus_v6.py": {
+      "bytes": 1812,
+      "sha256": "371f2f1b76a5b3e956ffb5fa03ca33cdf3ba0f360dc88daabdee2111ce119eea"
+    },
+    "training/build_v3_corpus.py": {
+      "bytes": 3210,
+      "sha256": "b45123ec9a929a1061bb3eb754ab7d60e25da769a34b81fc413c1a6ce23e4438"
+    },
+    "training/fix_hc3_groups.py": {
+      "bytes": 2515,
+      "sha256": "f2cea181695656926675cc0b62cefc20c2d29eb8e0c18277867da251e1b9adaa"
+    },
+    "training/make_ai_1900.py": {
+      "bytes": 17163,
+      "sha256": "9ef416383fed0e0764151bd58c11c37b968d904d0607de3201c1fe138276336e"
+    },
+    "training/make_corpus.py": {
+      "bytes": 1444,
+      "sha256": "c5fdb1553a40da7503ac030a88ca48ec1c2f890dfe41617e537780236240ef27"
+    },
+    "training/make_dev_v9.py": {
+      "bytes": 1248,
+      "sha256": "1b623132bb22117223aef2953e8a864e737bc25ee75d58fbe48186ba3a1937fc"
+    },
+    "training/optimize_ensemble_v7.py": {
+      "bytes": 7335,
+      "sha256": "164b9d820dbf5c1aeab69f4b5228ce7f16b39e971a620e5de681ae5fa60f16d8"
+    },
+    "training/optimize_hc3.py": {
+      "bytes": 5066,
+      "sha256": "3a876b23ee62a1e1186c4a2b7c8f31938338a253307feddb3d3208fc20273113"
+    },
+    "training/optimize_hc3_v4.py": {
+      "bytes": 8170,
+      "sha256": "8b053113631dd70b819ce048a625c749945c3fa779c5315dd01e12246f4af6bd"
+    },
+    "training/optimize_hc3_v5.py": {
+      "bytes": 8499,
+      "sha256": "47498f837f68f8d6239370f164c1cd67a77ce106bab2bb7d426d1074c2645d37"
+    },
+    "training/train_best_hc3.py": {
+      "bytes": 5318,
+      "sha256": "95a2dd85d4ce54922e9fca83cc950902c7055d155db0e577b09e6b5baae6cfc8"
+    },
+    "training/train_best_hc3_v4.py": {
+      "bytes": 6717,
+      "sha256": "f8786665590c8e17929cb818a2cceb29585fb635a5e6a0823eb5f0ac7ced50a2"
+    },
+    "training/train_best_hc3_v5.py": {
+      "bytes": 6676,
+      "sha256": "c9b2546bbc7216cab7da7d25f3a5909da7086644ecf0926d14abdf4da1fe23a5"
+    },
+    "training/train_combined_v11.py": {
+      "bytes": 8695,
+      "sha256": "6c8bea87f4945404bce802f28b2ba6eb360b32d8d573c63eec6f526ac1b2b8d6"
+    },
+    "training/train_normalized_v8.py": {
+      "bytes": 7806,
+      "sha256": "1a38d4d1ea8bd3ec6f7421ae11d142731fa492f55cf42ce17b5fcd06220796fc"
+    },
+    "training/train_short_v6.py": {
+      "bytes": 7929,
+      "sha256": "10d0a73b0afc805e1c2a3a5fe6468b78f864563a8dcde761e66c924572af4089"
+    },
+    "training/verify_hc3_groups.py": {
+      "bytes": 747,
+      "sha256": "73102d75b1542417049c64fce2d052817cb190e6e7fcd4a7aaa6eb233ea201c7"
+    },
+    "analysis/analyze_human_detectors.py": {
+      "bytes": 1044,
+      "sha256": "70d31f5b09b69cb6cc84d2293e8ad387c62a91526c3898492ae3b91277f34700"
+    },
+    "evaluation/evaluate_hc3.py": {
+      "bytes": 2773,
+      "sha256": "ca992d2ccf57b83d360651a320c230b2d9aecf8de762b1ea162ba52cacdbb7db"
+    },
+    "dataset/ai/ai01_train_electricity.txt": {
+      "bytes": 1361,
+      "sha256": "fb28ea79cd704123c0ca9b5dca169548ea5f45a2fa7463b941c57551f2ea1a59"
+    },
+    "dataset/ai/ai02_train_railway_signals.txt": {
+      "bytes": 1378,
+      "sha256": "6d622a8a9ed0e365bc110a1f0ce35cb53209f85cd167a337a2d98233d37f79a5"
+    },
+    "dataset/ai/ai03_train_water_pumps.txt": {
+      "bytes": 1410,
+      "sha256": "85a3c0e51e42d7a5dddbebbc5658e0bc484e9a2cb490d70574e5c28c94c86217"
+    },
+    "dataset/ai/ai04_train_telegraph_cables.txt": {
+      "bytes": 1439,
+      "sha256": "2a46a0197f4158b5fa01245c87b9d4c095532167e55719ae4c5a15676aa0a037"
+    },
+    "dataset/ai/ai05_train_steam_engine.txt": {
+      "bytes": 1427,
+      "sha256": "5a7ac9691ff73e8675932cb129ae32bd2bd875bfafe2986a37739a93242dffb0"
+    },
+    "dataset/ai/ai06_train_telephone_exchange.txt": {
+      "bytes": 1391,
+      "sha256": "ba7110f6aaf8c072b849829002963540f33e6d826a1d6d76feee6c03cd3a4a42"
+    },
+    "dataset/ai/ai07_valid_photography.txt": {
+      "bytes": 1291,
+      "sha256": "bb70923856bc1793bd350e5cbb37b51605e3e1b80d59273aad3e04f518deb64f"
+    },
+    "dataset/ai/ai08_valid_weather.txt": {
+      "bytes": 1355,
+      "sha256": "cc1783ad2d04e9e136660f580385df2e727f9a209b7c4aaad5a1f12293945bba"
+    },
+    "dataset/ai/ai09_valid_mining_ventilation.txt": {
+      "bytes": 1273,
+      "sha256": "788c314c00155b88c819af2f4dbe67f5b1fc6b6833b48005e121689057938c44"
+    },
+    "dataset/ai/ai10_test_optical_instruments.txt": {
+      "bytes": 1285,
+      "sha256": "8ff052bec89c06917b3064b2a89bc35930a95d6ca2033e1bef06ce06d7fa09b6"
+    },
+    "dataset/ai/ai11_test_agricultural_machinery.txt": {
+      "bytes": 1298,
+      "sha256": "ef5752ba0db4e3350230d2e96b7c523e61f6bd9d0ed11da86812b0d8f177e16f"
+    },
+    "dataset/ai/ai12_test_urban_water_supply.txt": {
+      "bytes": 1339,
+      "sha256": "37103f817936a3d48427bae5ead4b9077f0641d677b80b7a6528bfddd6480c02"
+    },
+    "dataset/ai/ai13_train_bridge_design.txt": {
+      "bytes": 1103,
+      "sha256": "d5a93797df99ce52c5ade5d169c581076873ab09c3cb929fd81e835de2235d3c"
+    },
+    "dataset/ai/ai14_train_clock_mechanisms.txt": {
+      "bytes": 1067,
+      "sha256": "621b097b477644802e627e7a595cc305cfbf7ab1e1b38e6b7b9919cefcbed2e4"
+    },
+    "dataset/ai/ai15_train_crop_rotation.txt": {
+      "bytes": 1022,
+      "sha256": "42e39a8d083b004ef79988752adc50bebc9bd7c7d5886f3c70711f28d072ba73"
+    },
+    "dataset/ai/ai16_train_factory_belts.txt": {
+      "bytes": 1023,
+      "sha256": "87b03650977e567f7ec87d1b61eb0ce24bd2d9e08789c6fa61651696efbddefa"
+    },
+    "dataset/ai/ai17_train_metal_casting.txt": {
+      "bytes": 977,
+      "sha256": "78b114aa4760e0b8771ed66337a118056710ef696f3419815498ae6eead93c15"
+    },
+    "dataset/ai/ai18_train_sewer_systems.txt": {
+      "bytes": 1024,
+      "sha256": "4708a24ec19224f43eefc2bd58a53716d2c38bd6422b6e6f2386b40737dc913b"
+    },
+    "dataset/ai/ai19_train_railway_brakes.txt": {
+      "bytes": 1031,
+      "sha256": "2a55eccab617098a60a423d49d6795f29ff253b465767cd61ddc795e0cebac18"
+    },
+    "dataset/ai/ai20_train_photographic_exposure.txt": {
+      "bytes": 993,
+      "sha256": "852219d7ead2a19f8a7695fba1e669be70488de16afbec15d471983d03fb9996"
+    },
+    "dataset/ai/ai21_train_lighthouse_lenses.txt": {
+      "bytes": 993,
+      "sha256": "7919c04d3b7bc720fc9cd31c3d3b1be90d2f6143c9bc479d8d8f48edd662243e"
+    },
+    "dataset/ai/ai22_valid_airship_navigation.txt": {
+      "bytes": 938,
+      "sha256": "c3846113d60f7a78788ce354c9ec115d131cf766c7d29eac09fb78fa51e4a802"
+    },
+    "dataset/ai/ai23_valid_machinery_lubrication.txt": {
+      "bytes": 965,
+      "sha256": "3a9a2e159d84249aab7784b460978a744647dbb76bd1579f78ad649eb7ef1d99"
+    },
+    "dataset/ai/ai24_valid_factory_ventilation.txt": {
+      "bytes": 992,
+      "sha256": "c15c0186a168c6d2bcc141194462ff879fa6195e9a86cd1af097b75d151734a8"
+    },
+    "dataset/ai/ai25_valid_railway_timetables.txt": {
+      "bytes": 975,
+      "sha256": "248d23f57fe90dbb37a9d2484c3f48eb870e973cedacc4e5f06993733474ea85"
+    },
+    "dataset/ai/ai26_test_electric_meters.txt": {
+      "bytes": 971,
+      "sha256": "b68fc81707d26cb13d95924896375c13f42d6d125218f7dddcaeff87f2c025b2"
+    },
+    "dataset/ai/ai27_test_steam_boiler_inspection.txt": {
+      "bytes": 961,
+      "sha256": "9886de21f020a3aaee7511aada742d2f4e9b29851675fcfc8f2310900d8ba705"
+    },
+    "dataset/ai/ai28_test_river_navigation.txt": {
+      "bytes": 917,
+      "sha256": "79e1ddd6a82c92d9fcb6080e1348d5c1dd9f3c7dd650a38b35931f921f64eee8"
+    },
+    "dataset/ai/ai29_test_municipal_gas_lighting.txt": {
+      "bytes": 926,
+      "sha256": "501135d1e0ca5fea2b99574ac04e67fb087916f4765b56566beeb3e03a6ae5f2"
+    },
+    "dataset/ai/ai30_test_mining_drainage.txt": {
+      "bytes": 822,
+      "sha256": "5aeddcb1bc7552e99579bda47f724f8e812f60906440c99f0a54d30438abb029"
+    },
+    "dataset/combined_v11.csv": {
+      "bytes": 4311359,
+      "sha256": "f199d5c57fb87cb5cfaf87d9d302a47a0ad1b5f9cc4f52bf31deab66840fd4ad"
+    },
+    "dataset/dev_v9.csv": {
+      "bytes": 1058892,
+      "sha256": "b753142f7ab79c28b8ec54685c2fa39dd048f5e639ca2672129d6d67fca6f28d"
+    },
+    "dataset/hc3_corpus.csv": {
+      "bytes": 1471580,
+      "sha256": "9b32c810464785496cd9d0ce33230ef54c632122f16d6032df168f106e9283e4"
+    },
+    "dataset/hc3_dev_corpus.csv": {
+      "bytes": 13677132,
+      "sha256": "fc3257532576b0637f055f5ef4825aaf15a3df5fcbe17b3bc29fe9794a722e5c"
+    },
+    "dataset/hc3_paired_v10.csv": {
+      "bytes": 8269415,
+      "sha256": "a5559d7863a9f8c34596553a7e404fd35cfad5aeec8cab2e841471136cefa2c5"
+    },
+    "dataset/hc3_short_v6.csv": {
+      "bytes": 803612,
+      "sha256": "eb7c1dd98b7ef2a03296204197b096dce71e72280d8386064364dc788e0b57de"
+    },
+    "dataset/human/collier.txt": {
+      "bytes": 22511,
+      "sha256": "66263860cf5700b039477e038f3f6b560938f587c35a9eeff6ba6c76f5f7b41a"
+    },
+    "dataset/human/darwin.txt": {
+      "bytes": 25226,
+      "sha256": "4af89ee44b4c451f083fb0d171f5e674c42ead2f867748c80ca54c5fac64cc77"
+    },
+    "dataset/human/davis.txt": {
+      "bytes": 41049,
+      "sha256": "45e729ab25cb76c1a0bebba73d2ef22322e9a3ca4332d39816603ba77a30aa6c"
+    },
+    "dataset/human/haffkine.txt": {
+      "bytes": 63151,
+      "sha256": "486e35d45831962976577cc71593fdff05f275c3fd785f55638b4976edfcc068"
+    },
+    "dataset/human/jacoby.txt": {
+      "bytes": 15205,
+      "sha256": "37ab0c0686e8029ba900f3f299720549f11bf6a221f5fc55184b1e84a71fd2a8"
+    },
+    "dataset/human/macdougal.txt": {
+      "bytes": 13303,
+      "sha256": "03d55053bfff4783fbd48d9bc87553cf0417a2de43905e33ea9c9d5f7adc9ca5"
+    },
+    "dataset/human/shaler.txt": {
+      "bytes": 28976,
+      "sha256": "f41b451f45889bc97c8fcc973b9aa26e1e6048a1a943c38ea69b62d3370eb281"
+    },
+    "dataset/human/wynkoop.txt": {
+      "bytes": 21974,
+      "sha256": "111eaf4f6a46e5ab7ace14162eea4f7d9a40536ca694a94a2f990d00554ecb79"
+    },
+    "dataset/human_detectors_grouped.csv": {
+      "bytes": 1466726,
+      "sha256": "43876256f486895cb38d2116180e56765d50e25f8e2cf228a106e255046b0378"
+    },
+    "dataset/local_corpus.csv": {
+      "bytes": 222556,
+      "sha256": "69f432205f3c7473b663f8393edc0d057f39df03ecefcf30294ffbbef2f44ac3"
+    },
+    "dataset/v3_corpus.csv": {
+      "bytes": 75170,
+      "sha256": "015196758f107b0b4169e6d9905806eb0210c60d762cce0cb0e3e93b71da6049"
+    },
+    "data/benchmark/human_detectors.json": {
+      "bytes": 10288957,
+      "sha256": "7ee1dc56d71b7cc5a185286f71818060a93ca20c4e93a90520ca78a0109619b5"
+    },
+    "data/hc3/hc3_finance.jsonl": {
+      "bytes": 9889186,
+      "sha256": "72e3a439714c4693e115f8ad0b917988688abc07acba8de812198cb13cd5d72e"
+    },
+    "data/hc3/hc3_medicine.jsonl": {
+      "bytes": 2683640,
+      "sha256": "7141b0f5b3477543e95e24a2b268f46c375b08703a390e9a04ff69f5193caa28"
+    },
+    "data/hc3/hc3_open_qa.jsonl": {
+      "bytes": 2910828,
+      "sha256": "4d968e1e1473cbdf5978024872768f0c6f27dacf681f35166dc191733dccd664"
+    },
+    "data/historical_1900/human_1900.txt": {
+      "bytes": 330852,
+      "sha256": "26667fd78fd83eaf73531916b366e57dcba649f9f37c821e64346c58f4249522"
+    },
+    "data/historical_1900/human_articles/collier.txt": {
+      "bytes": 22511,
+      "sha256": "66263860cf5700b039477e038f3f6b560938f587c35a9eeff6ba6c76f5f7b41a"
+    },
+    "data/historical_1900/human_articles/darwin.txt": {
+      "bytes": 25226,
+      "sha256": "4af89ee44b4c451f083fb0d171f5e674c42ead2f867748c80ca54c5fac64cc77"
+    },
+    "data/historical_1900/human_articles/davis.txt": {
+      "bytes": 41049,
+      "sha256": "45e729ab25cb76c1a0bebba73d2ef22322e9a3ca4332d39816603ba77a30aa6c"
+    },
+    "data/historical_1900/human_articles/haffkine.txt": {
+      "bytes": 63151,
+      "sha256": "486e35d45831962976577cc71593fdff05f275c3fd785f55638b4976edfcc068"
+    },
+    "data/historical_1900/human_articles/jacoby.txt": {
+      "bytes": 15205,
+      "sha256": "37ab0c0686e8029ba900f3f299720549f11bf6a221f5fc55184b1e84a71fd2a8"
+    },
+    "data/historical_1900/human_articles/macdougal.txt": {
+      "bytes": 13303,
+      "sha256": "03d55053bfff4783fbd48d9bc87553cf0417a2de43905e33ea9c9d5f7adc9ca5"
+    },
+    "data/historical_1900/human_articles/shaler.txt": {
+      "bytes": 28976,
+      "sha256": "f41b451f45889bc97c8fcc973b9aa26e1e6048a1a943c38ea69b62d3370eb281"
+    },
+    "data/historical_1900/human_articles/wynkoop.txt": {
+      "bytes": 21974,
+      "sha256": "111eaf4f6a46e5ab7ace14162eea4f7d9a40536ca694a94a2f990d00554ecb79"
+    },
+    "data/historical_1900/human_source.txt": {
+      "bytes": 330852,
+      "sha256": "26667fd78fd83eaf73531916b366e57dcba649f9f37c821e64346c58f4249522"
+    },
+    "models/archive/hc3_best_model.joblib": {
+      "bytes": 4675666,
+      "sha256": "c2bab337f94111145d58a6ff2bbd102b6d32766f4efe7757531d842f669c728c"
+    },
+    "models/archive/hc3_best_results.json": {
+      "bytes": 2286,
+      "sha256": "108ca1a65c0614733f5bed44891474247c9fe7624322928ad05b5dc05b4223d7"
+    },
+    "models/archive/hc3_optimization.json": {
+      "bytes": 13107,
+      "sha256": "6969da7327718d56083fb5485572cf7349ba306dc0d384497d3c9ad8322ac02b"
+    },
+    "models/archive/hc3_v2_model.joblib": {
+      "bytes": 4663845,
+      "sha256": "7ddc14f05513d12b4bb4edc0111bfe4a2a50ba31029bf71fb01b152e3c5afb57"
+    },
+    "models/archive/hc3_v2_results.json": {
+      "bytes": 975,
+      "sha256": "2e9c6f7169d45ffa7e43d86defd6c9313439d806f2cfe5f8ba890b7c96fc6a75"
+    },
+    "models/archive/hc3_v4_best_model.joblib": {
+      "bytes": 1700804,
+      "sha256": "c2e0753ef90e1c663fcc9c511ab404fdfd7aedd1765194792e27f6c3f81d83e6"
+    },
+    "models/archive/hc3_v4_best_results.json": {
+      "bytes": 2347,
+      "sha256": "f1a7fb44387d41045245e1ca00efcaeeefc74ce83f78119e08ac6168f5f825fe"
+    },
+    "models/archive/hc3_v4_search.json": {
+      "bytes": 13838,
+      "sha256": "91afa36146045f92d4e43b32c51096df4b66ac805c752247ebb36e6635a31ae3"
+    },
+    "models/archive/hc3_v5_best_model.joblib": {
+      "bytes": 2578520,
+      "sha256": "4f161e8399ecd55259f59c5c7bb1c4a5029a859e8d6e1ae16dd82e3b9c5b6af6"
+    },
+    "models/archive/hc3_v5_best_results.json": {
+      "bytes": 2366,
+      "sha256": "4fa13ec37de1e05f496aa6ba2fbdb888c85ecac8b40033aaad79b87606fa770b"
+    },
+    "models/archive/hc3_v5_search.json": {
+      "bytes": 114910,
+      "sha256": "a23f23d5139b9be1babce7ca4da643612003cb39e4401064a27d01ff92a6e19e"
+    },
+    "models/archive/hc3_v6_short_model.joblib": {
+      "bytes": 2577619,
+      "sha256": "6d2d96a54cea6caf8e0d0089b17ff3861506b5bd9cabd81c1551d209bd28498d"
+    },
+    "models/archive/hc3_v6_short_results.json": {
+      "bytes": 1235,
+      "sha256": "4c14f4f507eadd12dd51107014235a1c242b0699eac74ae07a602025ef3e4d10"
+    },
+    "models/archive/hc3_v7_ensemble_search.json": {
+      "bytes": 7114,
+      "sha256": "a57b55596b3eed5e43b0165c8adca9e9a6a72453d96e80310bad7e34da83b3ef"
+    },
+    "models/archive/hc3_v8_normalized_model.joblib": {
+      "bytes": 2574367,
+      "sha256": "cd90867650fcc3b902941996bf30d9cbf11053798dce6399d5e055465b72bc4d"
+    },
+    "models/archive/hc3_v8_normalized_results.json": {
+      "bytes": 2538,
+      "sha256": "d827f0f2f6058a7113c9b85aae9bb6d21a88e63c79334054813bb526d84b1eba"
+    },
+    "models/archive/v2_model.joblib": {
+      "bytes": 794261,
+      "sha256": "889d09d50dceda5cead5de0e5ace75f082d0ce0fd6c93c45660e7395ea7d0c6b"
+    },
+    "models/archive/v2_results.json": {
+      "bytes": 870,
+      "sha256": "345820ee9269ee065665abe134b0ca358f7050190bbc7556293167c53d529ed1"
+    },
+    "models/archive/v3_model.joblib": {
+      "bytes": 1744837,
+      "sha256": "f81db744114df893ed03c228c4aa4754ee9fa95050392835af36993976ec4dbf"
+    },
+    "models/archive/v3_results.json": {
+      "bytes": 874,
+      "sha256": "e7371e9a2047adab04fde0fc0ea71302fbe0bd5edaa91d07e5e54d7e03bb528d"
+    },
+    "models/current/hc3_v11_combined_model.joblib": {
+      "bytes": 5907329,
+      "sha256": "322b9def256ded8cd646948f2115dd43100246fd7788d4bc2899f8ac81e4f30d"
+    },
+    "models/current/hc3_v11_combined_results.json": {
+      "bytes": 1066,
+      "sha256": "9fd17a8148a20b8785457ea21eb7c3ebf663c51c72b5e5ef07e8ea928f501162"
+    },
+    "models/current/hc3_v11_portable.joblib": {
+      "bytes": 2169567,
+      "sha256": "33ed3b5f7811eaa4a49daf2b52159753f743ed020b9d6a3e56f1a7348c254e89"
+    },
+    "models/current/requirements_v11.txt": {
+      "bytes": 91,
+      "sha256": "72a1208c14289673d2ca6e697645068444399d60c367ae0f17d1077b6eb653d0"
+    },
+    "samples/article.txt": {
+      "bytes": 1068,
+      "sha256": "a647381eeebeb71c4f6cdda8a7376a78195eee0a0f41f27209877bda4f15d015"
+    },
+    "legacy/cycle2/README.md": {
+      "bytes": 10181,
+      "sha256": "6a1e4afa71d0c9d6701b2db7ca620742ed258449dfcf429c404fabeb714697ce"
+    },
+    "legacy/cycle2/analysis_report.md": {
+      "bytes": 7024,
+      "sha256": "63c3c5210d01755c7971b7684384131b8ac5f555d9e42519e836b604f9327858"
+    },
+    "legacy/cycle2/artifacts/annotation_audit.json": {
+      "bytes": 1491,
+      "sha256": "f71933d9a0a1ddde0de7f6112ace70114e418666aa7662c71456b3b091d01baf"
+    },
+    "legacy/cycle2/artifacts/diagnostic_table.tex": {
+      "bytes": 510,
+      "sha256": "a332157f6f6a1dfff5e0a98b387830a4a23af76968a6e84fe07abce2223a1ee8"
+    },
+    "legacy/cycle2/artifacts/diagnostics.json": {
+      "bytes": 24488,
+      "sha256": "d1a56c4c845d71f108447e2e4a02d7a71f0b34ecafa5f5d95b3a614cdc6d140b"
+    },
+    "legacy/cycle2/artifacts/fold_predictions.json": {
+      "bytes": 35076,
+      "sha256": "7da770ed106aa4b0c5bba06bc0a5bd8d8733e6fba41f039b726d627a1533ee65"
+    },
+    "legacy/cycle2/artifacts/verification.json": {
+      "bytes": 1185,
+      "sha256": "3ac135fda9b3de12080532d8b1f1cdf1796c497ef13229ad9b425a031ef917c1"
+    },
+    "legacy/cycle2/bundle_template.json": {
+      "bytes": 483,
+      "sha256": "fa21ee49a2ab6b13069118d1404e027da5480b82f8fca95aee92e0788881c350"
+    },
+    "legacy/cycle2/data/README.md": {
+      "bytes": 2372,
+      "sha256": "41f47950cb10f3d3a1eabeedca1db762d14e87a30a93bcc93a549d5ed6a1117b"
+    },
+    "legacy/cycle2/data/annotations.csv": {
+      "bytes": 120,
+      "sha256": "3d64c96d3c3ca2a7f876ed15c5c33e9f6b40af12d5f145db7432b6763619da07"
+    },
+    "legacy/cycle2/data/corpus.csv": {
+      "bytes": 236,
+      "sha256": "ff96b43a285876beca43cb3105ab13794733fcb809416e0365110a02f723faeb"
+    },
+    "legacy/cycle2/data/custody.json": {
+      "bytes": 351,
+      "sha256": "553d3af7140fb9f6bd4aabba88f2cf896472bf3631577da4504d3bdea71a019b"
+    },
+    "legacy/cycle2/dataset_review.json": {
+      "bytes": 3128,
+      "sha256": "412bcdf831379f675ee4bc16d962dd8ff65661604b18b1544f58afa9a577b1dc"
+    },
+    "legacy/cycle2/exploratory_plan.json": {
+      "bytes": 1118,
+      "sha256": "117011fc03e25bd829f5281ea92ad8c31a36d555b0eb538f5501b4cd3e7d1b38"
+    },
+    "legacy/cycle2/manuscript.tex": {
+      "bytes": 11992,
+      "sha256": "b569b7827dd16bc379f891cb871e2a23e318eb8851b7ad7e36e82ffd04b003e9"
+    },
+    "legacy/cycle2/method_snapshot.json": {
+      "bytes": 1153,
+      "sha256": "8e8e8b1aae2c96d9283660781c85a2d894ae029c01bb04cad4755c369a9bb9b6"
+    },
+    "legacy/cycle2/protocol.json": {
+      "bytes": 3823,
+      "sha256": "8fe46923c4295269353bd8c91230a40b7a948296c78d4cea07e62744bad055b9"
+    },
+    "legacy/cycle2/results/annotation_agreement.json": {
+      "bytes": 262,
+      "sha256": "8f5a974aab4d6820dc3547e11bdfd43f01afc3b4acf7c83b2548b7970d5ebf37"
+    },
+    "legacy/cycle2/results/development_manifest.json": {
+      "bytes": 6012,
+      "sha256": "088db9457baa12f0ff2da5748e81fe223b5bded11b35496c9765cc99c49d7ee1"
+    },
+    "legacy/cycle2/results/development_splits.json": {
+      "bytes": 35892,
+      "sha256": "7c986d632ad1fef7a98962024df274a662880af5c788f6d90d691313a491c5bc"
+    },
+    "legacy/cycle2/results/diagnostic_tables.tex": {
+      "bytes": 1424,
+      "sha256": "4e12e351767358c43dda7b2e10133df10e80a0e1b24d4328fc113ca2ef124741"
+    },
+    "legacy/cycle2/results/diagnostics.json": {
+      "bytes": 24774,
+      "sha256": "a866f67988b3aa4b4cd33ba32af61ae417f4f137076e3e278135252ac98d3dfe"
+    },
+    "legacy/cycle2/results/feature_shifts.csv": {
+      "bytes": 1351,
+      "sha256": "3e41e38c9cd3485899d7ffef0500d1bb7771841b7630c5e10c8d2cf02e5468fc"
+    },
+    "legacy/cycle2/results/fold_results.csv": {
+      "bytes": 166686,
+      "sha256": "216345e763532806e186f68de0724baa2a92927b5f73325aa91cab211f6ef85a"
+    },
+    "legacy/cycle2/results/formatting_probes.csv": {
+      "bytes": 8849,
+      "sha256": "cad2d7b49daccd40cce60e90226b21609353338ecba78aceebf275e37b4bede4"
+    },
+    "legacy/cycle2/results/permutation_control.csv": {
+      "bytes": 6732,
+      "sha256": "531795d4c6db7fc3ca59a7a96444bc7ea92d3ec98ce4b3a35d16493094c1db78"
+    },
+    "legacy/cycle2/results/readiness.json": {
+      "bytes": 1480,
+      "sha256": "249c0d1c682f8810b3d8accb290e431eed7122af17f76eda16dbd0c2597b358e"
+    },
+    "legacy/cycle2/rubric.json": {
+      "bytes": 2399,
+      "sha256": "ef05aeaabc2959025facb68b99b912f911385d9b830459a8c3c2a6ee6b264126"
+    },
+    "legacy/cycle2/rubric.md": {
+      "bytes": 3710,
+      "sha256": "38c3efc9feaf579b838d42a8ad8d7c8ddc45dc18b85935373a9d8724aea01474"
+    },
+    "legacy/cycle2/sampling.json": {
+      "bytes": 3109,
+      "sha256": "839f012afd5b91baa6825f6024f7068ce3774d0cbb4bb523d0f0faf932619298"
+    },
+    "legacy/cycle2/sampling.md": {
+      "bytes": 7832,
+      "sha256": "812816af82c5e7e0c77390e8f8f7a37498a8c37618455f5586345b9d2869f300"
+    },
+    "legacy/cycle2/seal_template.json": {
+      "bytes": 284,
+      "sha256": "bb94b51600dc70c70680bcc0568059a845c40e7d2874e2ab4e634c3f68133183"
+    },
+    "legacy/cycle2/source_audit.md": {
+      "bytes": 3777,
+      "sha256": "a7a5977ea14348e5e63e60f8e399a084973e6f3cd59615a9600507f629e6ea4c"
+    },
+    "legacy/cycle2_diagnostics.py": {
+      "bytes": 10622,
+      "sha256": "055aea4f3c79d568e622c2954684ae6de9f03eae361f5e8e776799f9f2285712"
+    },
+    "legacy/cycle2_stats.py": {
+      "bytes": 4933,
+      "sha256": "478bbed70d8ff77149c4f478a6aab3de82f8b0d840b70e19d0fdd8718b01e361"
+    },
+    "legacy/cycle2_workflow.py": {
+      "bytes": 25854,
+      "sha256": "c5032cd63309cf96338c1b5d8349d9a7e640b3fc31dcf389cd6fff82890b446a"
+    },
+    "legacy/detector.py": {
+      "bytes": 11389,
+      "sha256": "6e823d0c9fa0db2d052389c74a60ea98761894b9951f30bbacd37df7acf0f2e5"
+    },
+    "legacy/detector_backup.py": {
+      "bytes": 11389,
+      "sha256": "6e823d0c9fa0db2d052389c74a60ea98761894b9951f30bbacd37df7acf0f2e5"
+    },
+    "legacy/detector_v2.py": {
+      "bytes": 7934,
+      "sha256": "19d347304640ef5c23d87671d3db323d700e0aecaecfb5f286c72511fb6d4998"
+    },
+    "legacy/pilot/README.md": {
+      "bytes": 7238,
+      "sha256": "37f8488e5d4abf1cfbd3a33418190e1f81c9d074f628ea6f62d19f2a842428db"
+    },
+    "legacy/pilot/artifacts/baseline_model.json": {
+      "bytes": 1496,
+      "sha256": "514d20c9bc6aa45e36ce61753d590f81dd5406dbb7daf5ffb35e1bbb80ce6352"
+    },
+    "legacy/pilot/artifacts/corpus.csv": {
+      "bytes": 22924,
+      "sha256": "739149d269a4857a85e814c65b93536db86df24df1e44b33bb6ec7c450ecbe31"
+    },
+    "legacy/pilot/artifacts/manifest.json": {
+      "bytes": 14532,
+      "sha256": "ce6d61f7477671cb8eb994b82edd3072f63a0fec86868a323d1de14c8f917e88"
+    },
+    "legacy/pilot/artifacts/results_tables.tex": {
+      "bytes": 1149,
+      "sha256": "a842d07612c37e9fd82c5ccfc8f105978fc301a2e0f97801786b0b13e26b7368"
+    },
+    "legacy/pilot/artifacts/selected_model.json": {
+      "bytes": 1483,
+      "sha256": "7a208d598c56bfa983e5ff81f2e93f4ef5ccc236d28f0c33e2b4b71847297c02"
+    },
+    "legacy/pilot/artifacts/selection.json": {
+      "bytes": 4416,
+      "sha256": "9a8e8b5e95da4da67f330091564368ad906cdc61350494021a055620a8bebf10"
+    },
+    "legacy/pilot/artifacts/test_predictions.json": {
+      "bytes": 8165,
+      "sha256": "b7ce495cec1d417175aa8f6534ef75d3301e8b0a37f9d8b4baa0fe84d59af36c"
+    },
+    "legacy/pilot/artifacts/test_results.json": {
+      "bytes": 1054,
+      "sha256": "ce2e69d0a104ec2a85daa6e3be520c0d9de7de49478ee065e0606889d0405fba"
+    },
+    "legacy/pilot/generated_articles.json": {
+      "bytes": 12408,
+      "sha256": "e03947b4f43c416081d5b0323601257d7e8dcd1e2237a9048c1ea2ccc72d52e1"
+    },
+    "legacy/pilot/human_articles.json": {
+      "bytes": 12316,
+      "sha256": "93ab9ebc2308d7df682fe6a89e731392eaf293056472b52dfeb7229d9585d833"
+    },
+    "legacy/pilot/protocol.json": {
+      "bytes": 2989,
+      "sha256": "787344a64b006277652eb904baab3009f1e0ec86f3fe41a7c943154dfece9668"
+    },
+    "legacy/run_pilot.py": {
+      "bytes": 12990,
+      "sha256": "36a6e3e9f8c026e7936bd90c601ad6d60f25d7b841f630bd2e3e8e846f8edab2"
+    },
+    "tools/make_v11_portable.py": {
+      "bytes": 699,
+      "sha256": "8c62c03336c70e22e20092a68bc86c12d39f0474381951069972ace01950e582"
+    },
+    "release/V11_RELEASE/detector_v11.py": {
+      "bytes": 2443,
+      "sha256": "b8e134e76d1ca3b2a89307189845ed01d2fc9e76225d01ee53e9e13633fb4da5"
+    },
+    "release/V11_RELEASE/hc3_v11_combined_results.json": {
+      "bytes": 1066,
+      "sha256": "9fd17a8148a20b8785457ea21eb7c3ebf663c51c72b5e5ef07e8ea928f501162"
+    },
+    "release/V11_RELEASE/hc3_v11_portable.joblib": {
+      "bytes": 2169567,
+      "sha256": "33ed3b5f7811eaa4a49daf2b52159753f743ed020b9d6a3e56f1a7348c254e89"
+    },
+    "release/V11_RELEASE/requirements_v11.txt": {
+      "bytes": 91,
+      "sha256": "72a1208c14289673d2ca6e697645068444399d60c367ae0f17d1077b6eb653d0"
+    },
+    "README.md": {
+      "bytes": 18027,
+      "sha256": "f33ba633c8cbd6deded78310d9295ac352cb266443db454a77a62eb2a8862c5b"
+    },
+    "docs/research_cycle.py": {
+      "bytes": 31756,
+      "sha256": "b69305b293b45c0417b9698574d95c894ef4a2ea32c145e2cac7365e66275366"
+    },
+    "detector_v11.py": {
+      "bytes": 2449,
+      "sha256": "cbf45be33f7859f031f73306b990c779d664d449464612d2154a8d49ead37ad0"
+    }
+  },
+  "environment": {
+    "python": "3.13.15",
+    "pandas": "2.3.3",
+    "sklearn_available": false,
+    "joblib_available": false
+  },
+  "datasets": {
+    "dataset/combined_v11.csv": {
+      "n": 2868,
+      "columns": [
+        "id",
+        "prompt_id",
+        "source",
+        "generation_model",
+        "ai",
+        "text",
+        "origin",
+        "split"
+      ],
+      "labels": {
+        "0": 1434,
+        "1": 1434
+      },
+      "split_labels": {
+        "train | 0": 1124,
+        "train | 1": 1124,
+        "valid | 0": 310,
+        "valid | 1": 310
+      },
+      "prompt_id": {
+        "unique": 1338,
+        "cross_split": 0
+      },
+      "raw_duplicates": [
+        {
+          "text_sha256": "2ee05a802e9d85f9310ac18dd5fe71328c057b4a2702ac431bf691763b5a9f9e",
+          "members": [
+            {
+              "row": 199,
+              "id": "hc3_medicine:416",
+              "group": "hc3_medicine:416",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 457,
+              "id": "hc3_medicine:695",
+              "group": "hc3_medicine:695",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 2503,
+              "id": "hc3_medicine:1124",
+              "group": "hc3_medicine:1124",
+              "split": "valid",
+              "label": "0"
+            }
+          ],
+          "cross_split": true
+        }
+      ],
+      "normalized_duplicates": [
+        {
+          "text_sha256": "3659cfb0ef5418dbe54b27f7ed32fa8b851cd86425973da3c2c3402db42f5f42",
+          "members": [
+            {
+              "row": 199,
+              "id": "hc3_medicine:416",
+              "group": "hc3_medicine:416",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 457,
+              "id": "hc3_medicine:695",
+              "group": "hc3_medicine:695",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 2503,
+              "id": "hc3_medicine:1124",
+              "group": "hc3_medicine:1124",
+              "split": "valid",
+              "label": "0"
+            }
+          ],
+          "cross_split": true
+        }
+      ],
+      "composition": {
+        "train | Associated Press | 0": 8,
+        "train | Associated Press | 1": 8,
+        "train | Discover | 0": 2,
+        "train | Discover | 1": 2,
+        "train | HC3_finance | 0": 600,
+        "train | HC3_finance | 1": 600,
+        "train | HC3_medicine | 0": 413,
+        "train | HC3_medicine | 1": 413,
+        "train | HC3_open_qa | 0": 21,
+        "train | HC3_open_qa | 1": 21,
+        "train | National Geographic | 0": 13,
+        "train | National Geographic | 1": 13,
+        "train | New York Times | 0": 20,
+        "train | New York Times | 1": 20,
+        "train | Reader's Digest | 0": 3,
+        "train | Reader's Digest | 1": 3,
+        "train | Readers Digest | 0": 12,
+        "train | Readers Digest | 1": 12,
+        "train | Scientific American | 0": 15,
+        "train | Scientific American | 1": 15,
+        "train | Smithsonian Magazine | 0": 14,
+        "train | Smithsonian Magazine | 1": 14,
+        "train | Wall Street Journal | 0": 3,
+        "train | Wall Street Journal | 1": 3,
+        "valid | Associated Press | 0": 7,
+        "valid | Associated Press | 1": 7,
+        "valid | Discover | 0": 2,
+        "valid | Discover | 1": 2,
+        "valid | HC3_finance | 0": 150,
+        "valid | HC3_finance | 1": 150,
+        "valid | HC3_medicine | 0": 126,
+        "valid | HC3_medicine | 1": 126,
+        "valid | HC3_open_qa | 0": 4,
+        "valid | HC3_open_qa | 1": 4,
+        "valid | Smithsonian Magazine | 0": 9,
+        "valid | Smithsonian Magazine | 1": 9,
+        "valid | Wall Street Journal | 0": 12,
+        "valid | Wall Street Journal | 1": 12
+      }
+    },
+    "dataset/dev_v9.csv": {
+      "n": 227,
+      "columns": [
+        "id",
+        "prompt_id",
+        "source",
+        "generation_model",
+        "ai",
+        "words",
+        "text"
+      ],
+      "labels": {
+        "0": 116,
+        "1": 111
+      }
+    },
+    "dataset/hc3_corpus.csv": {
+      "n": 300,
+      "columns": [
+        "id",
+        "text",
+        "group",
+        "source",
+        "generation_model",
+        "split",
+        "ai",
+        "low_quality"
+      ],
+      "labels": {
+        "0": 150,
+        "1": 150
+      },
+      "split_labels": {
+        "test | 0": 30,
+        "test | 1": 30,
+        "train | 0": 90,
+        "train | 1": 90,
+        "valid | 0": 30,
+        "valid | 1": 30
+      },
+      "group": {
+        "unique": 150,
+        "cross_split": 0
+      },
+      "raw_duplicates": [],
+      "normalized_duplicates": [],
+      "nonempty_quality_labels": 0
+    },
+    "dataset/hc3_dev_corpus.csv": {
+      "n": 11593,
+      "columns": [
+        "source_file",
+        "domain",
+        "line",
+        "label",
+        "text",
+        "words"
+      ],
+      "labels": {
+        "0": 3346,
+        "1": 8247
+      }
+    },
+    "dataset/hc3_paired_v10.csv": {
+      "n": 6556,
+      "columns": [
+        "domain",
+        "group_id",
+        "label",
+        "text",
+        "words",
+        "split"
+      ],
+      "labels": {
+        "0": 3278,
+        "1": 3278
+      },
+      "split_labels": {
+        "train | 0": 2622,
+        "train | 1": 2622,
+        "valid | 0": 656,
+        "valid | 1": 656
+      },
+      "group_id": {
+        "unique": 3278,
+        "cross_split": 0
+      },
+      "raw_duplicates": [
+        {
+          "text_sha256": "2ee05a802e9d85f9310ac18dd5fe71328c057b4a2702ac431bf691763b5a9f9e",
+          "members": [
+            {
+              "row": 1276,
+              "id": null,
+              "group": "medicine:695",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 3574,
+              "id": null,
+              "group": "medicine:416",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 6462,
+              "id": null,
+              "group": "medicine:1124",
+              "split": "valid",
+              "label": "0"
+            }
+          ],
+          "cross_split": true
+        }
+      ],
+      "normalized_duplicates": [
+        {
+          "text_sha256": "3659cfb0ef5418dbe54b27f7ed32fa8b851cd86425973da3c2c3402db42f5f42",
+          "members": [
+            {
+              "row": 1276,
+              "id": null,
+              "group": "medicine:695",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 3574,
+              "id": null,
+              "group": "medicine:416",
+              "split": "train",
+              "label": "0"
+            },
+            {
+              "row": 6462,
+              "id": null,
+              "group": "medicine:1124",
+              "split": "valid",
+              "label": "0"
+            }
+          ],
+          "cross_split": true
+        }
+      ],
+      "composition": {
+        "train | finance | 0": 2188,
+        "train | finance | 1": 2188,
+        "train | medicine | 0": 413,
+        "train | medicine | 1": 413,
+        "train | open_qa | 0": 21,
+        "train | open_qa | 1": 21,
+        "valid | finance | 0": 526,
+        "valid | finance | 1": 526,
+        "valid | medicine | 0": 126,
+        "valid | medicine | 1": 126,
+        "valid | open_qa | 0": 4,
+        "valid | open_qa | 1": 4
+      }
+    },
+    "dataset/hc3_short_v6.csv": {
+      "n": 474,
+      "columns": [
+        "original_id",
+        "prompt_id",
+        "source",
+        "generation_model",
+        "ai",
+        "chunk_id",
+        "text",
+        "words"
+      ],
+      "labels": {
+        "0": 241,
+        "1": 233
+      }
+    },
+    "dataset/human_detectors_grouped.csv": {
+      "n": 300,
+      "columns": [
+        "id",
+        "text",
+        "group",
+        "prompt_id",
+        "source",
+        "title",
+        "issue",
+        "generation_model",
+        "split",
+        "ai",
+        "low_quality"
+      ],
+      "labels": {
+        "0": 150,
+        "1": 150
+      },
+      "split_labels": {
+        "test | 0": 30,
+        "test | 1": 30,
+        "train | 0": 90,
+        "train | 1": 90,
+        "valid | 0": 30,
+        "valid | 1": 30
+      },
+      "group": {
+        "unique": 30,
+        "cross_split": 0
+      },
+      "prompt_id": {
+        "unique": 30,
+        "cross_split": 0
+      },
+      "raw_duplicates": [],
+      "normalized_duplicates": [],
+      "nonempty_quality_labels": 0
+    },
+    "dataset/local_corpus.csv": {
+      "n": 173,
+      "columns": [
+        "id",
+        "text",
+        "group",
+        "split",
+        "ai",
+        "low_quality"
+      ],
+      "labels": {
+        "0": 173
+      },
+      "split_labels": {
+        "test | 0": 32,
+        "train | 0": 116,
+        "valid | 0": 25
+      },
+      "group": {
+        "unique": 8,
+        "cross_split": 0
+      },
+      "raw_duplicates": [],
+      "normalized_duplicates": [],
+      "nonempty_quality_labels": 0
+    },
+    "dataset/v3_corpus.csv": {
+      "n": 60,
+      "columns": [
+        "id",
+        "text",
+        "group",
+        "split",
+        "ai",
+        "low_quality"
+      ],
+      "labels": {
+        "0": 30,
+        "1": 30
+      },
+      "split_labels": {
+        "test | 0": 8,
+        "test | 1": 8,
+        "train | 0": 15,
+        "train | 1": 15,
+        "valid | 0": 7,
+        "valid | 1": 7
+      },
+      "group": {
+        "unique": 38,
+        "cross_split": 0
+      },
+      "raw_duplicates": [],
+      "normalized_duplicates": [],
+      "nonempty_quality_labels": 0
+    }
+  },
+  "benchmark": {
+    "article_pairs": 150,
+    "article_pairs_crossing_splits": 0,
+    "generation_conditions": {
+      "claude | 0": 30,
+      "claude | 1": 30,
+      "gpt-4o | 0": 30,
+      "gpt-4o | 1": 30,
+      "humanized_o1-pro | 0": 30,
+      "humanized_o1-pro | 1": 30,
+      "o1-pro | 0": 30,
+      "o1-pro | 1": 30,
+      "paraphrased_gpt-4o | 0": 30,
+      "paraphrased_gpt-4o | 1": 30
+    },
+    "mean_whitespace_words": {
+      "0": 738.1533333333333,
+      "1": 724.0266666666666
+    },
+    "formatting_documents": {
+      "<[^>]+>": {
+        "0": 83,
+        "1": 72
+      },
+      "\\*\\*": {
+        "0": 0,
+        "1": 23
+      },
+      "\u201c|\u201d": {
+        "0": 144,
+        "1": 65
+      },
+      "\"": {
+        "0": 11,
+        "1": 86
+      },
+      "<br\\s*/?>": {
+        "0": 30,
+        "1": 60
+      }
+    },
+    "raw_to_processed_text_and_label_match": true,
+    "raw_metadata_fields": [
+      "generation_model",
+      "prompt_id",
+      "title",
+      "sub-title",
+      "author",
+      "source",
+      "issue",
+      "section",
+      "link",
+      "article",
+      "id",
+      "ground_truth",
+      "pangram",
+      "pangram_humanizers",
+      "gptzero",
+      "e5_lora",
+      "RADAR",
+      "binoculars_lowfpr",
+      "binoculars_accuracy",
+      "annotator_1",
+      "annotator_2",
+      "annotator_3",
+      "annotator_4",
+      "annotator_5",
+      "majority_vote",
+      "expert_majority_vote"
+    ]
+  },
+  "hc3": {
+    "raw_questions": {
+      "finance": 3933,
+      "medicine": 1248,
+      "open_qa": 1187
+    },
+    "qualified_pairs": 3278,
+    "raw_pair_reconstruction_matches": true
+  },
+  "combined_reconstruction_matches": true,
+  "confusion_metric_arithmetic": [
+    {
+      "location": "models/archive/hc3_best_results.json/train",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/valid",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/test",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/test_by_generation_model/claude",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/test_by_generation_model/gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/test_by_generation_model/humanized_o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/test_by_generation_model/o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_best_results.json/test_by_generation_model/paraphrased_gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v2_results.json/train",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v2_results.json/valid",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v2_results.json/test",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/train_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/valid_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/test_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/test_by_generation_model/claude",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/test_by_generation_model/gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/test_by_generation_model/humanized_o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/test_by_generation_model/o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v4_best_results.json/test_by_generation_model/paraphrased_gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/train_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/valid_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/test_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/test_by_generation_model/claude",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/test_by_generation_model/gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/test_by_generation_model/humanized_o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/test_by_generation_model/o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v5_best_results.json/test_by_generation_model/paraphrased_gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v6_short_results.json/train_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v6_short_results.json/short_valid_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v6_short_results.json/frozen_full_test_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v7_ensemble_search.json/selected/validation_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v7_ensemble_search.json/selected/frozen_test_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/train_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/valid_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/comparison_test_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/test_by_generation_model/claude",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/test_by_generation_model/gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/test_by_generation_model/humanized_o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/test_by_generation_model/o1-pro",
+      "errors": []
+    },
+    {
+      "location": "models/archive/hc3_v8_normalized_results.json/test_by_generation_model/paraphrased_gpt-4o",
+      "errors": []
+    },
+    {
+      "location": "models/archive/v2_results.json/train",
+      "errors": []
+    },
+    {
+      "location": "models/archive/v2_results.json/valid",
+      "errors": []
+    },
+    {
+      "location": "models/archive/v2_results.json/test",
+      "errors": []
+    },
+    {
+      "location": "models/archive/v3_results.json/train",
+      "errors": []
+    },
+    {
+      "location": "models/archive/v3_results.json/valid",
+      "errors": []
+    },
+    {
+      "location": "models/archive/v3_results.json/test",
+      "errors": []
+    },
+    {
+      "location": "models/current/hc3_v11_combined_results.json/train_metrics",
+      "errors": []
+    },
+    {
+      "location": "models/current/hc3_v11_combined_results.json/valid_metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/0/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/1/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/2/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/3/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/4/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/5/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/6/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/selection.json/candidates/7/validation",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/test_results.json/models/baseline",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/test_results.json/models/selected",
+      "errors": []
+    },
+    {
+      "location": "legacy/pilot/artifacts/test_results.json/models/always_negative",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/reproduction/baseline",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/reproduction/selected",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/fixed_model_threshold_comparison/baseline/conservative/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/fixed_model_threshold_comparison/baseline/midpoint_validation_gap/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/fixed_model_threshold_comparison/baseline/just_above_validation_negative_max/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/fixed_model_threshold_comparison/selected/conservative/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/fixed_model_threshold_comparison/selected/midpoint_validation_gap/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/fixed_model_threshold_comparison/selected/just_above_validation_negative_max/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/formatting_controls/baseline/uppercase/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/formatting_controls/baseline/collapsed_whitespace/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/formatting_controls/baseline/sentence_bullets/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/formatting_controls/selected/uppercase/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/formatting_controls/selected/collapsed_whitespace/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/formatting_controls/selected/sentence_bullets/original_test_now_development",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/cross_validation/original",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/cross_validation/pilot_selected",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/cross_validation/length_only",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/diagnostics.json/cross_validation/without_repetition",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/0/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/1/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/2/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/3/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/4/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/5/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/6/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/7/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/8/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/9/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/10/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/original/folds/11/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/0/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/1/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/2/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/3/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/4/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/5/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/6/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/7/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/8/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/9/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/10/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/pilot_selected/folds/11/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/0/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/1/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/2/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/3/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/4/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/5/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/6/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/7/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/8/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/9/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/10/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/length_only/folds/11/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/0/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/1/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/2/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/3/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/4/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/5/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/6/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/7/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/8/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/9/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/10/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/artifacts/fold_predictions.json/without_repetition/folds/11/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/baseline/former_test_metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/baseline/retrospective_development_counterfactuals/legacy/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/baseline/retrospective_development_counterfactuals/negative_max/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/baseline/retrospective_development_counterfactuals/separating_midpoint/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/selected/former_test_metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/selected/retrospective_development_counterfactuals/legacy/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/selected/retrospective_development_counterfactuals/negative_max/metrics",
+      "errors": []
+    },
+    {
+      "location": "legacy/cycle2/results/diagnostics.json/reproduction/selected/retrospective_development_counterfactuals/separating_midpoint/metrics",
+      "errors": []
+    }
+  ],
+  "arithmetic_failures": [],
+  "training_constructor_calls": {
+    "training/add_ai_1900_more.py": [],
+    "training/build_combined_v11.py": [],
+    "training/build_hc3_corpus.py": [],
+    "training/build_hc3_corpus_v2.py": [],
+    "training/build_hc3_dev.py": [],
+    "training/build_hc3_paired_v10.py": [],
+    "training/build_short_corpus_v6.py": [],
+    "training/build_v3_corpus.py": [],
+    "training/fix_hc3_groups.py": [],
+    "training/make_ai_1900.py": [],
+    "training/make_corpus.py": [],
+    "training/make_dev_v9.py": [],
+    "training/optimize_ensemble_v7.py": [],
+    "training/optimize_hc3.py": [
+      "GroupKFold(n_splits=3)",
+      "TfidfVectorizer(\n            analyzer=\"word\",\n            ngram_range=(1, 3),\n            lowercase=True,\n            strip_accents=\"unicode\",\n            sublinear_tf=True,\n            min_df=1,\n            max_features=30000,\n        )",
+      "TfidfVectorizer(\n            analyzer=\"char_wb\",\n            ngram_range=(3, 5),\n            lowercase=True,\n            sublinear_tf=True,\n            min_df=1,\n            max_features=40000,\n        )",
+      "LogisticRegression(\n            C=C,\n            solver=\"liblinear\",\n            max_iter=5000,\n            class_weight=\"balanced\",\n            random_state=20260910,\n        )"
+    ],
+    "training/optimize_hc3_v4.py": [
+      "LinearSVC(\n        C=C,\n        class_weight=\"balanced\",\n        max_iter=10000,\n        random_state=20260910,\n    )",
+      "GroupKFold(\n        n_splits=3\n    )",
+      "TfidfVectorizer(\n            analyzer=\"word\",\n            ngram_range=(1, 3),\n            lowercase=True,\n            strip_accents=\"unicode\",\n            sublinear_tf=True,\n            min_df=1,\n            max_features=40000,\n        )",
+      "TfidfVectorizer(\n            analyzer=\"char_wb\",\n            ngram_range=(3, 5),\n            lowercase=True,\n            sublinear_tf=True,\n            min_df=1,\n            max_features=40000,\n        )",
+      "LogisticRegression(\n            C=C,\n            solver=\"liblinear\",\n            class_weight=\"balanced\",\n            max_iter=5000,\n            random_state=20260910,\n        )",
+      "LogisticRegression(\n                C=C,\n                solver=\"liblinear\",\n                class_weight=\"balanced\",\n                max_iter=5000,\n                random_state=20260910,\n            )",
+      "LinearSVC(\n                C=C,\n                class_weight=\"balanced\",\n                max_iter=10000,\n                random_state=20260910,\n            )"
+    ],
+    "training/optimize_hc3_v5.py": [
+      "TfidfVectorizer(\n        analyzer=cfg[\"analyzer\"],\n        ngram_range=cfg[\"ngram_range\"],\n        min_df=1,\n        max_features=cfg[\"max_features\"],\n        sublinear_tf=True,\n    )",
+      "LogisticRegression(\n        C=c,\n        max_iter=5000,\n        class_weight=class_weight,\n        solver=\"liblinear\",\n    )",
+      "TfidfVectorizer(\n            analyzer=\"word\",\n            ngram_range=(1, 3),\n            min_df=1,\n            max_features=30000,\n            sublinear_tf=True,\n        )",
+      "TfidfVectorizer(\n            analyzer=\"char_wb\",\n            ngram_range=(3, 5),\n            min_df=1,\n            max_features=40000,\n            sublinear_tf=True,\n        )",
+      "LinearSVC(\n            C=c,\n            class_weight=class_weight,\n        )",
+      "GroupKFold(n_splits=3)"
+    ],
+    "training/train_best_hc3.py": [
+      "TfidfVectorizer(\n    analyzer=\"word\",\n    ngram_range=(1, 3),\n    lowercase=True,\n    strip_accents=\"unicode\",\n    sublinear_tf=True,\n    min_df=1,\n    max_features=50000,\n)",
+      "TfidfVectorizer(\n    analyzer=\"char_wb\",\n    ngram_range=(3, 5),\n    lowercase=True,\n    sublinear_tf=True,\n    min_df=1,\n    max_features=50000,\n)",
+      "LogisticRegression(\n    C=C,\n    solver=\"liblinear\",\n    max_iter=5000,\n    class_weight=\"balanced\",\n    random_state=20260910,\n)"
+    ],
+    "training/train_best_hc3_v4.py": [
+      "TfidfVectorizer(\n    analyzer=\"char_wb\",\n    ngram_range=(3, 5),\n    min_df=1,\n    max_features=40000,\n    sublinear_tf=True,\n)",
+      "LinearSVC(\n    C=10.0,\n    class_weight=None,\n)"
+    ],
+    "training/train_best_hc3_v5.py": [
+      "TfidfVectorizer(\n    analyzer=\"char_wb\",\n    ngram_range=(2, 6),\n    min_df=1,\n    max_features=60000,\n    sublinear_tf=True,\n)",
+      "LinearSVC(\n    C=10.0,\n    class_weight=None,\n)"
+    ],
+    "training/train_combined_v11.py": [
+      "TfidfVectorizer(\n    analyzer=\"word\",\n    ngram_range=(1, 3),\n    min_df=2,\n    max_features=50000,\n    sublinear_tf=True,\n)",
+      "TfidfVectorizer(\n    analyzer=\"char_wb\",\n    ngram_range=(2, 6),\n    min_df=2,\n    max_features=80000,\n    sublinear_tf=True,\n)",
+      "LinearSVC(\n    C=3.0,\n)"
+    ],
+    "training/train_normalized_v8.py": [
+      "TfidfVectorizer(\n    analyzer=\"char_wb\",\n    ngram_range=(2, 6),\n    min_df=1,\n    max_features=60000,\n    sublinear_tf=True,\n)",
+      "LinearSVC(\n    C=10.0,\n)"
+    ],
+    "training/train_short_v6.py": [
+      "TfidfVectorizer(\n    analyzer=\"char_wb\",\n    ngram_range=(2, 6),\n    min_df=1,\n    max_features=60000,\n    sublinear_tf=True,\n)",
+      "LinearSVC(\n    C=10.0,\n)"
+    ],
+    "training/verify_hc3_groups.py": []
+  },
+  "external_samples": {
+    "article_human.txt": {
+      "present": false
+    },
+    "article_ai.txt": {
+      "present": false
+    },
+    "article_mixed.txt": {
+      "present": false
+    },
+    "article.txt": {
+      "present": true,
+      "whitespace_words": 175
+    }
+  },
+  "portable_copy_matches": true,
+  "limits": [
+    "No fitted-model scoring or AUROC reproduction without sklearn/joblib.",
+    "No near-duplicate discovery, provenance certification, permission adjudication, or new human quality annotation.",
+    "A content hash establishes identity, not authorship or reuse permission."
+  ]
+}

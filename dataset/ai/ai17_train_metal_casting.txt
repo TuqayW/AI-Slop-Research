@@ -1,0 +1,19 @@
+THE COOLING OF CAST METALS.
+
+When melted metal is poured into a mould, the solidification which follows is
+not instantaneous. The outer surface may become solid while the interior
+remains hot and fluid. The manner in which this cooling proceeds influences
+the form and properties of the finished casting.
+
+A mould which removes heat rapidly may produce a different structure from one
+which cools the metal slowly. Unequal cooling can also produce internal
+stresses because different portions of the casting contract at different
+rates.
+
+The thickness of the object is therefore an important consideration. A narrow
+section may solidify while a thick portion remains fluid, and the resulting
+contraction may leave a cavity or other defect.
+
+Good casting practice requires attention to the shape of the mould as well as
+to the composition of the metal. The finished object is determined not only by
+what material is poured into the mould, but also by the history of its cooling.

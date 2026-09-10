@@ -1,0 +1,179 @@
+{
+  "input_fingerprints": {
+    "pilot/protocol.json": "969ad65357f61898392e05ecd6d3465e4c52166de966eef282d7c07aac869adf",
+    "pilot/human_articles.json": "829d85809fbdfa187b4b4869dbe40c099d0929f01c8de060f013ab56eafbc61c",
+    "pilot/generated_articles.json": "4ed21b8a4f3c7048a01ec84fe9f8cafb12c8ffd8d9818c430cfbf9862261a58d",
+    "pilot/artifacts/corpus.csv": "21f14902821225ca375d22e4544a060cba365b4581e47cb0f7099a5a3b2e2508",
+    "detector.py": "7597950d9bd2cd53cfbe71b8121eef8565e8acafc73b29775eccdcd5119e7f4d",
+    "run_pilot.py": "7eb98e22e3a36fa56b4c6ef9a085682eb69fea8985c5d520fa722abe75487c96"
+  },
+  "candidates": [
+    {
+      "id": "all-lambda-0.1",
+      "feature_set": "all",
+      "regularization": 0.1,
+      "active_feature_count": 10,
+      "threshold": 0.9444533743733248,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "all-lambda-0.01",
+      "feature_set": "all",
+      "regularization": 0.01,
+      "active_feature_count": 10,
+      "threshold": 0.9940286295419359,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "all-lambda-1",
+      "feature_set": "all",
+      "regularization": 1.0,
+      "active_feature_count": 10,
+      "threshold": 0.7430034485220501,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "all-lambda-10",
+      "feature_set": "all",
+      "regularization": 10.0,
+      "active_feature_count": 10,
+      "threshold": 0.5452745588580253,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "without_length-lambda-0.1",
+      "feature_set": "without_length",
+      "regularization": 0.1,
+      "active_feature_count": 8,
+      "threshold": 0.9216638736472683,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "without_length-lambda-0.01",
+      "feature_set": "without_length",
+      "regularization": 0.01,
+      "active_feature_count": 8,
+      "threshold": 0.9887162221490227,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "without_length-lambda-1",
+      "feature_set": "without_length",
+      "regularization": 1.0,
+      "active_feature_count": 8,
+      "threshold": 0.7194017478254238,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    },
+    {
+      "id": "without_length-lambda-10",
+      "feature_set": "without_length",
+      "regularization": 10.0,
+      "active_feature_count": 8,
+      "threshold": 0.539989302517962,
+      "validation": {
+        "n": 6,
+        "tp": 3,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "auroc": 1.0
+      }
+    }
+  ],
+  "baseline_id": "all-lambda-0.1",
+  "selected_id": "without_length-lambda-10",
+  "model_fingerprints": {
+    "baseline_model.json": "5f733c21be664136658fc9aa31a33822b80365833873bb1dbfb73b30ca2d716d",
+    "selected_model.json": "7d3654718ac04c2e5956202e31e399021e71205a965988f532541d954b1d1983"
+  },
+  "test_scores_examined": false
+}

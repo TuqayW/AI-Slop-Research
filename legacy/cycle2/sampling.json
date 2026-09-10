@@ -1,0 +1,22 @@
+{
+  "version": "2.0",
+  "collection_status": "Superseded planning draft; not collected. Authoritative targets and requirements are in cycle2/protocol.json.",
+  "target_population": "Eligible consented/reuse-permitted English text in a declared participating-source frame, not the entire internet",
+  "date_start": "2024-01-01",
+  "date_end": "2026-09-10",
+  "target_documents": {"train": 1200, "tune": 400, "calibration": 400, "final_main": 800, "challenge_total": 600},
+  "count_interpretation": "Administrative targets, not achieved counts or a completed power analysis; no stopping according to detector success",
+  "genres": ["news_or_report", "explanation_or_tutorial", "argument_or_essay", "discussion_or_review"],
+  "topics": ["science_and_technology", "arts_and_culture", "civic_and_social", "everyday_practical"],
+  "representation": "Recruit across cells without detector scores. Record refusals, exclusions, source coverage and unknown metadata. Quotas do not prove representativeness. Proficiency must be voluntarily self-reported, never inferred.",
+  "four_label_cells": "Seek all four origin-by-quality combinations through independent annotation; do not discard uncertain cases silently or manufacture labels to fill quotas.",
+  "origin_evidence": "Human-only: consented drafts/session history and no-generation attestation or equivalent audit. Generated: independent operator, documented model, prompt hash, settings and timestamp. Mixed/unknown: separate challenge.",
+  "generation_independence": "At least three generator families in development and one held-out challenge family; external operator without detector feedback. This assistant is not an independent confirmatory generator.",
+  "grouping": "Connected publisher/source, pseudonymous author, source-document, prompt-family, edit/translation and near-duplicate clusters. No cluster crosses train/tune/calibration/final. Expand recruitment if clustering collapses the split.",
+  "sampling_unit": "Prespecified cluster-then-document draws within strata; record inclusion probabilities only when known. Select one negative calibration document per independent cluster per target by seed-fixed ID ordering, not score.",
+  "near_duplicates": "Normalized exact hashes and word-trigram Jaccard >=0.8 screen; manual semantic/paraphrase/source-link review also required",
+  "challenge_conditions": ["unseen_topic", "unseen_source", "unseen_generator", "formatting", "translation", "mixed_authorship", "short_text", "proficiency"],
+  "challenge_control": "Variants stay with final parent cluster. Meaning changes/translation need independent quality reannotation. Unknown origin is never a human label.",
+  "privacy": "Pseudonymous IDs and evidence hashes/references; no raw consent, contacts, real names, access tokens or unnecessary personal details. Permission for text is separate from software licensing.",
+  "custody": "Independent human custodian holds final/challenge texts and labels; hash commitments before unsealing; freeze model/code/features/thresholds first. Unblinding or tuning invalidates that set's confirmatory status."
+}

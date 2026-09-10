@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Features & $\lambda$ & Validation AUROC & Recall & FPR \\
+\midrule
+All ten & 0.1 & 1.000 & 1.000 & 0.000 \\
+All ten & 0.01 & 1.000 & 1.000 & 0.000 \\
+All ten & 1 & 1.000 & 1.000 & 0.000 \\
+All ten & 10 & 1.000 & 1.000 & 0.000 \\
+Without two length features & 0.1 & 1.000 & 1.000 & 0.000 \\
+Without two length features & 0.01 & 1.000 & 1.000 & 0.000 \\
+Without two length features & 1 & 1.000 & 1.000 & 0.000 \\
+Without two length features & 10 & 1.000 & 1.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\caption{Complete validation ledger. These six documents select settings; they do not estimate generalization.}
+\end{table}
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Screen & TP & FP & TN & FN & Accuracy & AUROC \\
+\midrule
+Baseline & 0 & 0 & 3 & 3 & 0.500 & 1.000 \\
+Selected & 0 & 0 & 3 & 3 & 0.500 & 1.000 \\
+Always negative & 0 & 0 & 3 & 3 & 0.500 & 0.500 \\
+\bottomrule
+\end{tabular}
+\caption{Final authorship pilot: three historical and three generated articles. The selected and baseline configurations were fixed before test scoring.}
+\end{table}

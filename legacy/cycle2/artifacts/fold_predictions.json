@@ -1,0 +1,1562 @@
+{
+  "original": {
+    "predictions": [
+      {
+        "index": 18,
+        "group": "balanced-valves",
+        "label": 0,
+        "score": 0.00017238063280766,
+        "threshold": 0.6419883738190664
+      },
+      {
+        "index": 19,
+        "group": "balanced-valves",
+        "label": 1,
+        "score": 0.9199310125326899,
+        "threshold": 0.6419883738190664
+      },
+      {
+        "index": 22,
+        "group": "ship-salvage",
+        "label": 0,
+        "score": 0.21529177430634075,
+        "threshold": 0.7550171138048101
+      },
+      {
+        "index": 23,
+        "group": "ship-salvage",
+        "label": 1,
+        "score": 0.5832478273442953,
+        "threshold": 0.7550171138048101
+      },
+      {
+        "index": 20,
+        "group": "safety-valves",
+        "label": 0,
+        "score": 0.030231133125786028,
+        "threshold": 0.7952699098035367
+      },
+      {
+        "index": 21,
+        "group": "safety-valves",
+        "label": 1,
+        "score": 0.8600300766296372,
+        "threshold": 0.7952699098035367
+      },
+      {
+        "index": 2,
+        "group": "light",
+        "label": 0,
+        "score": 0.10501786731404981,
+        "threshold": 0.8021571601863902
+      },
+      {
+        "index": 3,
+        "group": "light",
+        "label": 1,
+        "score": 0.7983827550985862,
+        "threshold": 0.8021571601863902
+      },
+      {
+        "index": 0,
+        "group": "fire-prevention",
+        "label": 0,
+        "score": 0.17259529054405306,
+        "threshold": 0.8008417040073439
+      },
+      {
+        "index": 1,
+        "group": "fire-prevention",
+        "label": 1,
+        "score": 0.8175455300692168,
+        "threshold": 0.8008417040073439
+      },
+      {
+        "index": 12,
+        "group": "safety-nuts",
+        "label": 0,
+        "score": 0.09499849805653945,
+        "threshold": 0.8202768582589578
+      },
+      {
+        "index": 13,
+        "group": "safety-nuts",
+        "label": 1,
+        "score": 0.9514220691211528,
+        "threshold": 0.8202768582589578
+      },
+      {
+        "index": 6,
+        "group": "volcanoes",
+        "label": 0,
+        "score": 0.031493501676066016,
+        "threshold": 0.8192246634177115
+      },
+      {
+        "index": 7,
+        "group": "volcanoes",
+        "label": 1,
+        "score": 0.9136713014539954,
+        "threshold": 0.8192246634177115
+      },
+      {
+        "index": 8,
+        "group": "air-engines",
+        "label": 0,
+        "score": 0.34465725840007133,
+        "threshold": 0.9373355779800244
+      },
+      {
+        "index": 9,
+        "group": "air-engines",
+        "label": 1,
+        "score": 0.8508584152601566,
+        "threshold": 0.9373355779800244
+      },
+      {
+        "index": 16,
+        "group": "nail-tools",
+        "label": 0,
+        "score": 0.04301317973740346,
+        "threshold": 0.9307225489784301
+      },
+      {
+        "index": 17,
+        "group": "nail-tools",
+        "label": 1,
+        "score": 0.9351631630184855,
+        "threshold": 0.9307225489784301
+      },
+      {
+        "index": 14,
+        "group": "oil-production",
+        "label": 0,
+        "score": 0.029451745697128166,
+        "threshold": 0.9350058740199327
+      },
+      {
+        "index": 15,
+        "group": "oil-production",
+        "label": 1,
+        "score": 0.9636340921200607,
+        "threshold": 0.9350058740199327
+      },
+      {
+        "index": 10,
+        "group": "buried-wires",
+        "label": 0,
+        "score": 0.29924055610522377,
+        "threshold": 0.7271094632788405
+      },
+      {
+        "index": 11,
+        "group": "buried-wires",
+        "label": 1,
+        "score": 0.9361339165849303,
+        "threshold": 0.7271094632788405
+      },
+      {
+        "index": 4,
+        "group": "glass-fibers",
+        "label": 0,
+        "score": 0.14021689988205574,
+        "threshold": 0.686821915821936
+      },
+      {
+        "index": 5,
+        "group": "glass-fibers",
+        "label": 1,
+        "score": 0.9071343190604875,
+        "threshold": 0.686821915821936
+      }
+    ],
+    "folds": [
+      {
+        "fold": 0,
+        "held_out_group": "balanced-valves",
+        "threshold": 0.6419883738190664,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 1,
+        "held_out_group": "ship-salvage",
+        "threshold": 0.7550171138048101,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 2,
+        "held_out_group": "safety-valves",
+        "threshold": 0.7952699098035367,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 3,
+        "held_out_group": "light",
+        "threshold": 0.8021571601863902,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 4,
+        "held_out_group": "fire-prevention",
+        "threshold": 0.8008417040073439,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 5,
+        "held_out_group": "safety-nuts",
+        "threshold": 0.8202768582589578,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 6,
+        "held_out_group": "volcanoes",
+        "threshold": 0.8192246634177115,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 7,
+        "held_out_group": "air-engines",
+        "threshold": 0.9373355779800244,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 8,
+        "held_out_group": "nail-tools",
+        "threshold": 0.9307225489784301,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 9,
+        "held_out_group": "oil-production",
+        "threshold": 0.9350058740199327,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 10,
+        "held_out_group": "buried-wires",
+        "threshold": 0.7271094632788405,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 11,
+        "held_out_group": "glass-fibers",
+        "threshold": 0.686821915821936,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      }
+    ]
+  },
+  "pilot_selected": {
+    "predictions": [
+      {
+        "index": 18,
+        "group": "balanced-valves",
+        "label": 0,
+        "score": 0.39785126590820447,
+        "threshold": 0.509492329136088
+      },
+      {
+        "index": 19,
+        "group": "balanced-valves",
+        "label": 1,
+        "score": 0.5276584865765693,
+        "threshold": 0.509492329136088
+      },
+      {
+        "index": 22,
+        "group": "ship-salvage",
+        "label": 0,
+        "score": 0.4861317617522091,
+        "threshold": 0.5130822158442472
+      },
+      {
+        "index": 23,
+        "group": "ship-salvage",
+        "label": 1,
+        "score": 0.507309699809123,
+        "threshold": 0.5130822158442472
+      },
+      {
+        "index": 20,
+        "group": "safety-valves",
+        "label": 0,
+        "score": 0.4553005533467882,
+        "threshold": 0.5144592057690477
+      },
+      {
+        "index": 21,
+        "group": "safety-valves",
+        "label": 1,
+        "score": 0.5203633970971364,
+        "threshold": 0.5144592057690477
+      },
+      {
+        "index": 2,
+        "group": "light",
+        "label": 0,
+        "score": 0.4861242959830909,
+        "threshold": 0.5164226791636235
+      },
+      {
+        "index": 3,
+        "group": "light",
+        "label": 1,
+        "score": 0.5153637719330393,
+        "threshold": 0.5164226791636235
+      },
+      {
+        "index": 0,
+        "group": "fire-prevention",
+        "label": 0,
+        "score": 0.49578400227197966,
+        "threshold": 0.5165099246350595
+      },
+      {
+        "index": 1,
+        "group": "fire-prevention",
+        "label": 1,
+        "score": 0.5163936247690893,
+        "threshold": 0.5165099246350595
+      },
+      {
+        "index": 12,
+        "group": "safety-nuts",
+        "label": 0,
+        "score": 0.4717068826005729,
+        "threshold": 0.5167309093925975
+      },
+      {
+        "index": 13,
+        "group": "safety-nuts",
+        "label": 1,
+        "score": 0.5343133148590685,
+        "threshold": 0.5167309093925975
+      },
+      {
+        "index": 6,
+        "group": "volcanoes",
+        "label": 0,
+        "score": 0.4627897402005293,
+        "threshold": 0.516788239415372
+      },
+      {
+        "index": 7,
+        "group": "volcanoes",
+        "label": 1,
+        "score": 0.5275180355136655,
+        "threshold": 0.516788239415372
+      },
+      {
+        "index": 8,
+        "group": "air-engines",
+        "label": 0,
+        "score": 0.4867432333236036,
+        "threshold": 0.5295317924623452
+      },
+      {
+        "index": 9,
+        "group": "air-engines",
+        "label": 1,
+        "score": 0.5195454785626183,
+        "threshold": 0.5295317924623452
+      },
+      {
+        "index": 16,
+        "group": "nail-tools",
+        "label": 0,
+        "score": 0.46865355693955973,
+        "threshold": 0.528214601391439
+      },
+      {
+        "index": 17,
+        "group": "nail-tools",
+        "label": 1,
+        "score": 0.5283117698933723,
+        "threshold": 0.528214601391439
+      },
+      {
+        "index": 14,
+        "group": "oil-production",
+        "label": 0,
+        "score": 0.4344137982121185,
+        "threshold": 0.5310310184450286
+      },
+      {
+        "index": 15,
+        "group": "oil-production",
+        "label": 1,
+        "score": 0.5400926361525994,
+        "threshold": 0.5310310184450286
+      },
+      {
+        "index": 10,
+        "group": "buried-wires",
+        "label": 0,
+        "score": 0.49772519241659574,
+        "threshold": 0.5115029856367226
+      },
+      {
+        "index": 11,
+        "group": "buried-wires",
+        "label": 1,
+        "score": 0.5298567440073142,
+        "threshold": 0.5115029856367226
+      },
+      {
+        "index": 4,
+        "group": "glass-fibers",
+        "label": 0,
+        "score": 0.4759752065149056,
+        "threshold": 0.5089249024781767
+      },
+      {
+        "index": 5,
+        "group": "glass-fibers",
+        "label": 1,
+        "score": 0.5250464529559014,
+        "threshold": 0.5089249024781767
+      }
+    ],
+    "folds": [
+      {
+        "fold": 0,
+        "held_out_group": "balanced-valves",
+        "threshold": 0.509492329136088,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 1,
+        "held_out_group": "ship-salvage",
+        "threshold": 0.5130822158442472,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 2,
+        "held_out_group": "safety-valves",
+        "threshold": 0.5144592057690477,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 3,
+        "held_out_group": "light",
+        "threshold": 0.5164226791636235,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 4,
+        "held_out_group": "fire-prevention",
+        "threshold": 0.5165099246350595,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 5,
+        "held_out_group": "safety-nuts",
+        "threshold": 0.5167309093925975,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 6,
+        "held_out_group": "volcanoes",
+        "threshold": 0.516788239415372,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 7,
+        "held_out_group": "air-engines",
+        "threshold": 0.5295317924623452,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 8,
+        "held_out_group": "nail-tools",
+        "threshold": 0.528214601391439,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 9,
+        "held_out_group": "oil-production",
+        "threshold": 0.5310310184450286,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 10,
+        "held_out_group": "buried-wires",
+        "threshold": 0.5115029856367226,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 11,
+        "held_out_group": "glass-fibers",
+        "threshold": 0.5089249024781767,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      }
+    ]
+  },
+  "length_only": {
+    "predictions": [
+      {
+        "index": 18,
+        "group": "balanced-valves",
+        "label": 0,
+        "score": 0.0073603820426874494,
+        "threshold": 1.0000000000000002
+      },
+      {
+        "index": 19,
+        "group": "balanced-valves",
+        "label": 1,
+        "score": 0.7177752258399885,
+        "threshold": 1.0000000000000002
+      },
+      {
+        "index": 22,
+        "group": "ship-salvage",
+        "label": 0,
+        "score": 0.7496245578009637,
+        "threshold": 0.6159347330805949
+      },
+      {
+        "index": 23,
+        "group": "ship-salvage",
+        "label": 1,
+        "score": 0.5397758598113569,
+        "threshold": 0.6159347330805949
+      },
+      {
+        "index": 20,
+        "group": "safety-valves",
+        "label": 0,
+        "score": 0.5901977468556038,
+        "threshold": 0.666743203959952
+      },
+      {
+        "index": 21,
+        "group": "safety-valves",
+        "label": 1,
+        "score": 0.5990623385320314,
+        "threshold": 0.666743203959952
+      },
+      {
+        "index": 2,
+        "group": "light",
+        "label": 0,
+        "score": 0.1876299727760705,
+        "threshold": 0.5841900720879565
+      },
+      {
+        "index": 3,
+        "group": "light",
+        "label": 1,
+        "score": 0.6549633118138636,
+        "threshold": 0.5841900720879565
+      },
+      {
+        "index": 0,
+        "group": "fire-prevention",
+        "label": 0,
+        "score": 0.1328994763636766,
+        "threshold": 1.0000000000000002
+      },
+      {
+        "index": 1,
+        "group": "fire-prevention",
+        "label": 1,
+        "score": 0.7195926875924502,
+        "threshold": 1.0000000000000002
+      },
+      {
+        "index": 12,
+        "group": "safety-nuts",
+        "label": 0,
+        "score": 0.41393879613544426,
+        "threshold": 1.0000000000000002
+      },
+      {
+        "index": 13,
+        "group": "safety-nuts",
+        "label": 1,
+        "score": 0.6778348653566272,
+        "threshold": 1.0000000000000002
+      },
+      {
+        "index": 6,
+        "group": "volcanoes",
+        "label": 0,
+        "score": 0.35299591409434633,
+        "threshold": 0.6973898861738869
+      },
+      {
+        "index": 7,
+        "group": "volcanoes",
+        "label": 1,
+        "score": 0.6162287865347322,
+        "threshold": 0.6973898861738869
+      },
+      {
+        "index": 8,
+        "group": "air-engines",
+        "label": 0,
+        "score": 0.6914800764763307,
+        "threshold": 0.6529125937248388
+      },
+      {
+        "index": 9,
+        "group": "air-engines",
+        "label": 1,
+        "score": 0.5688305008916651,
+        "threshold": 0.6529125937248388
+      },
+      {
+        "index": 16,
+        "group": "nail-tools",
+        "label": 0,
+        "score": 0.219299109597315,
+        "threshold": 0.6007794263071073
+      },
+      {
+        "index": 17,
+        "group": "nail-tools",
+        "label": 1,
+        "score": 0.6008907747769165,
+        "threshold": 0.6007794263071073
+      },
+      {
+        "index": 14,
+        "group": "oil-production",
+        "label": 0,
+        "score": 0.5197579866420777,
+        "threshold": 0.6118512212096536
+      },
+      {
+        "index": 15,
+        "group": "oil-production",
+        "label": 1,
+        "score": 0.6568885507920165,
+        "threshold": 0.6118512212096536
+      },
+      {
+        "index": 10,
+        "group": "buried-wires",
+        "label": 0,
+        "score": 0.14714489385575316,
+        "threshold": 0.6814521416212673
+      },
+      {
+        "index": 11,
+        "group": "buried-wires",
+        "label": 1,
+        "score": 0.7402531795758291,
+        "threshold": 0.6814521416212673
+      },
+      {
+        "index": 4,
+        "group": "glass-fibers",
+        "label": 0,
+        "score": 0.4096322369079513,
+        "threshold": 0.714169619895546
+      },
+      {
+        "index": 5,
+        "group": "glass-fibers",
+        "label": 1,
+        "score": 0.6926891542054926,
+        "threshold": 0.714169619895546
+      }
+    ],
+    "folds": [
+      {
+        "fold": 0,
+        "held_out_group": "balanced-valves",
+        "threshold": 1.0000000000000002,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 1,
+        "held_out_group": "ship-salvage",
+        "threshold": 0.6159347330805949,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 1,
+          "tn": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 1.0,
+          "f1": 0.0,
+          "accuracy": 0.0,
+          "auroc": 0.0
+        }
+      },
+      {
+        "fold": 2,
+        "held_out_group": "safety-valves",
+        "threshold": 0.666743203959952,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 3,
+        "held_out_group": "light",
+        "threshold": 0.5841900720879565,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 4,
+        "held_out_group": "fire-prevention",
+        "threshold": 1.0000000000000002,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 5,
+        "held_out_group": "safety-nuts",
+        "threshold": 1.0000000000000002,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 6,
+        "held_out_group": "volcanoes",
+        "threshold": 0.6973898861738869,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 7,
+        "held_out_group": "air-engines",
+        "threshold": 0.6529125937248388,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 1,
+          "tn": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 1.0,
+          "f1": 0.0,
+          "accuracy": 0.0,
+          "auroc": 0.0
+        }
+      },
+      {
+        "fold": 8,
+        "held_out_group": "nail-tools",
+        "threshold": 0.6007794263071073,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 9,
+        "held_out_group": "oil-production",
+        "threshold": 0.6118512212096536,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 10,
+        "held_out_group": "buried-wires",
+        "threshold": 0.6814521416212673,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 11,
+        "held_out_group": "glass-fibers",
+        "threshold": 0.714169619895546,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      }
+    ]
+  },
+  "without_repetition": {
+    "predictions": [
+      {
+        "index": 18,
+        "group": "balanced-valves",
+        "label": 0,
+        "score": 0.016516746001338765,
+        "threshold": 0.6048926504616936
+      },
+      {
+        "index": 19,
+        "group": "balanced-valves",
+        "label": 1,
+        "score": 0.9136492543044985,
+        "threshold": 0.6048926504616936
+      },
+      {
+        "index": 22,
+        "group": "ship-salvage",
+        "label": 0,
+        "score": 0.2097130359982149,
+        "threshold": 0.7541216583763527
+      },
+      {
+        "index": 23,
+        "group": "ship-salvage",
+        "label": 1,
+        "score": 0.5742698261714675,
+        "threshold": 0.7541216583763527
+      },
+      {
+        "index": 20,
+        "group": "safety-valves",
+        "label": 0,
+        "score": 0.038560698710028374,
+        "threshold": 0.7956610373967986
+      },
+      {
+        "index": 21,
+        "group": "safety-valves",
+        "label": 1,
+        "score": 0.8561623457281873,
+        "threshold": 0.7956610373967986
+      },
+      {
+        "index": 2,
+        "group": "light",
+        "label": 0,
+        "score": 0.08121378469545534,
+        "threshold": 0.8080432017567574
+      },
+      {
+        "index": 3,
+        "group": "light",
+        "label": 1,
+        "score": 0.7982469083576633,
+        "threshold": 0.8080432017567574
+      },
+      {
+        "index": 0,
+        "group": "fire-prevention",
+        "label": 0,
+        "score": 0.15018359223396033,
+        "threshold": 0.7929907920472359
+      },
+      {
+        "index": 1,
+        "group": "fire-prevention",
+        "label": 1,
+        "score": 0.8242927849455356,
+        "threshold": 0.7929907920472359
+      },
+      {
+        "index": 12,
+        "group": "safety-nuts",
+        "label": 0,
+        "score": 0.0839023751031949,
+        "threshold": 0.8150958606977093
+      },
+      {
+        "index": 13,
+        "group": "safety-nuts",
+        "label": 1,
+        "score": 0.9519450351558287,
+        "threshold": 0.8150958606977093
+      },
+      {
+        "index": 6,
+        "group": "volcanoes",
+        "label": 0,
+        "score": 0.03224022856004113,
+        "threshold": 0.8150253126123477
+      },
+      {
+        "index": 7,
+        "group": "volcanoes",
+        "label": 1,
+        "score": 0.9130327390865038,
+        "threshold": 0.8150253126123477
+      },
+      {
+        "index": 8,
+        "group": "air-engines",
+        "label": 0,
+        "score": 0.3559404972815212,
+        "threshold": 0.9353200868161573
+      },
+      {
+        "index": 9,
+        "group": "air-engines",
+        "label": 1,
+        "score": 0.8455616400093575,
+        "threshold": 0.9353200868161573
+      },
+      {
+        "index": 16,
+        "group": "nail-tools",
+        "label": 0,
+        "score": 0.044434769430918376,
+        "threshold": 0.9284664381325477
+      },
+      {
+        "index": 17,
+        "group": "nail-tools",
+        "label": 1,
+        "score": 0.9327311639604744,
+        "threshold": 0.9284664381325477
+      },
+      {
+        "index": 14,
+        "group": "oil-production",
+        "label": 0,
+        "score": 0.04898976059981866,
+        "threshold": 0.934051003917042
+      },
+      {
+        "index": 15,
+        "group": "oil-production",
+        "label": 1,
+        "score": 0.9644734685000067,
+        "threshold": 0.934051003917042
+      },
+      {
+        "index": 10,
+        "group": "buried-wires",
+        "label": 0,
+        "score": 0.32875232480563,
+        "threshold": 0.7066564635845123
+      },
+      {
+        "index": 11,
+        "group": "buried-wires",
+        "label": 1,
+        "score": 0.9354046642108519,
+        "threshold": 0.7066564635845123
+      },
+      {
+        "index": 4,
+        "group": "glass-fibers",
+        "label": 0,
+        "score": 0.14279975641328116,
+        "threshold": 0.6533414862081355
+      },
+      {
+        "index": 5,
+        "group": "glass-fibers",
+        "label": 1,
+        "score": 0.9007427651441838,
+        "threshold": 0.6533414862081355
+      }
+    ],
+    "folds": [
+      {
+        "fold": 0,
+        "held_out_group": "balanced-valves",
+        "threshold": 0.6048926504616936,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 1,
+        "held_out_group": "ship-salvage",
+        "threshold": 0.7541216583763527,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 2,
+        "held_out_group": "safety-valves",
+        "threshold": 0.7956610373967986,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 3,
+        "held_out_group": "light",
+        "threshold": 0.8080432017567574,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 4,
+        "held_out_group": "fire-prevention",
+        "threshold": 0.7929907920472359,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 5,
+        "held_out_group": "safety-nuts",
+        "threshold": 0.8150958606977093,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 6,
+        "held_out_group": "volcanoes",
+        "threshold": 0.8150253126123477,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 7,
+        "held_out_group": "air-engines",
+        "threshold": 0.9353200868161573,
+        "metrics": {
+          "n": 2,
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.5,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 8,
+        "held_out_group": "nail-tools",
+        "threshold": 0.9284664381325477,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 9,
+        "held_out_group": "oil-production",
+        "threshold": 0.934051003917042,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 10,
+        "held_out_group": "buried-wires",
+        "threshold": 0.7066564635845123,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      },
+      {
+        "fold": 11,
+        "held_out_group": "glass-fibers",
+        "threshold": 0.6533414862081355,
+        "metrics": {
+          "n": 2,
+          "tp": 1,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "auroc": 1.0
+        }
+      }
+    ]
+  }
+}

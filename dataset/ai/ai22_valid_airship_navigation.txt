@@ -1,0 +1,19 @@
+NAVIGATION OF AIRSHIPS.
+
+The movement of an airship introduces difficulties which are less conspicuous
+in a vehicle supported by the ground. Wind affects the path directly, and a
+change in altitude may alter both the speed and the character of the air
+encountered.
+
+The navigator must therefore distinguish between the direction in which the
+ship points and the path actually followed over the earth. A steady wind from
+one side may leave the vessel apparently well directed while carrying it far
+from the intended course.
+
+Instruments provide assistance, but measurements must be interpreted together.
+A compass gives direction, while observation of landmarks or celestial bodies
+may furnish an independent indication of progress.
+
+The useful lesson is that navigation is not simply the steering of a machine.
+It is the continuous comparison of intended motion with observed motion and
+the correction of errors before they become large.

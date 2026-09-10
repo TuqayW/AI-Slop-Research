@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-10",
+  "status": "local_method_snapshot_not_external_preregistration",
+  "canonical_files": {
+    "cycle2/protocol.json": "1a746cef0008fddaea6ba7bfa74bb19527be76fe648ebdcb4e2124e335f567ef",
+    "cycle2/rubric.md": "40e4fdf188a1cd4d127aa7c0d85ee898ce7376f963ce3190e1c4e05d56abe67b",
+    "cycle2/sampling.md": "f50bbc906c8c5e217855faf3b2cf4b9ba80656a7e152c5ef86aca1b238e6efd6",
+    "cycle2_workflow.py": "a88b3ea98a8010720451a7195e88c733da5e4eb2410cc01bc91638c12ac578dc",
+    "cycle2_stats.py": "60ecc40c0f5d34f1f2e6ac087aa80f57074aa87b0c080e39d3b0bb43a9c470ce",
+    "detector.py": "6e823d0c9fa0db2d052389c74a60ea98761894b9951f30bbacd37df7acf0f2e5"
+  },
+  "diagnostic_files": {
+    "research_cycle.py": "42916761378fd0c59329263878e68bb5c38e55aad4546e5b7c020b430306aa2f",
+    "cycle2/exploratory_plan.json": "077dd32c60bd5564ed525c1be12d035377d686b26da7778258d7b9a60a309e40"
+  },
+  "runtime": {
+    "python": "3.13.15",
+    "numpy": "2.4.1",
+    "scipy": "1.17.0"
+  },
+  "confirmatory_model_frozen": false,
+  "qualified_corpus_acquired": false,
+  "independent_annotation_audit_completed": false,
+  "final_evaluation_completed": false
+}

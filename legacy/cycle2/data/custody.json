@@ -1,0 +1,11 @@
+{
+  "status": "pending_external_custodian",
+  "custodian_attestation": null,
+  "independent_human_annotation_attestation": null,
+  "source_and_author_disjointness_attestation": null,
+  "final_texts_sha256": null,
+  "final_labels_sha256": null,
+  "challenge_texts_sha256": null,
+  "challenge_labels_sha256": null,
+  "final_unseen_by_developer": false
+}

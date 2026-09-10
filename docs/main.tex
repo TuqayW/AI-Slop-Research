@@ -1,0 +1,1215 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{listings}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\emergencystretch}{2em}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,frame=single}
+\newcommand{\code}[1]{\expandafter\nolinkurl\expandafter{\detokenize{#1}}}
+
+\title{Is AI ``Slop'' Taking Over the Internet?\\
+\large From an Interpretable Pilot to V11: Authorship Detection,\\
+Dataset Shift, and the Limits of Benchmark Evidence}
+\author{Research manuscript}
+\date{September 10, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The growth of machine-written text raises a measurement problem before it
+raises a classification problem: authorship, quality, and population prevalence
+are different targets. This study reviews the evidence motivating that
+distinction and reconstructs a sequence of detector-development experiments,
+from a handcrafted logistic baseline to V11, a linear support vector classifier
+using normalized word and character TF--IDF features. The initial 24-document
+historical pilot achieved test AUROC 1.0 but detected none of three generated
+articles at its validation-selected threshold. Later experiments on a
+300-document modern benchmark improved comparison-set performance, yet the
+project reported failures on short external examples. A short-text specialist
+increased the comparison-set human false-positive rate to 30\%; formatting
+normalization alone did not resolve reported transfer failures. V11 combines
+paired HC3 answers with benchmark material, using 2,248 training and 620
+validation texts. Its recorded validation accuracy is 0.9742, recall 0.9935,
+false-positive rate 0.0452, and AUROC 0.9991. These are selection-set results,
+not independent estimates of web-wide performance. A repository audit confirms
+corpus construction and metric arithmetic but finds an identical human passage
+in both V11 splits, missing external sample files, and incomplete subgroup
+result retention. The contribution is an exploratory account of operating-point
+failure, dataset dependence, and reproducibility limits. Independently
+adjudicated quality detection, untouched external validation, and population
+prevalence estimation remain uncompleted.
+\end{abstract}
+
+\section{Introduction and Research Questions}
+Cheap automated publishing could make useful writing harder to find. That
+possibility motivates this study; it is not a conclusion built into its design.
+An AI-assisted explanation may be accurate and useful, while a human-written
+article may be misleading. A classifier that distinguishes writing styles
+does not establish which document deserves trust. Nor does a large volume of
+generated text establish that most of the Internet is low-quality output.
+
+The original project proposed a joint authorship-and-quality detector and a
+separate prevalence study. Its implemented research has developed differently:
+the completed model experiments concern \emph{binary authorship labels}, while
+independent quality assessment and probability-based web sampling remain
+prospective. The paper preserves that larger motivation but evaluates the
+research that exists, rather than presenting the proposal as completed work.
+Its central empirical question is whether favorable classification results
+survive changes in the source, length, formatting, and composition of text.
+
+Four questions retain the original intellectual direction:
+\begin{enumerate}
+\item \textbf{RQ1---Prevalence:} Has the proportion of AI-generated or
+AI-assisted text increased within a clearly defined web sampling frame?
+\item \textbf{RQ2---Quality:} What proportion of that content meets an
+independently defined low-quality rubric?
+\item \textbf{RQ3---Detection:} Can a transparent model identify the
+intersection of machine authorship and low quality while limiting false
+accusations?
+\item \textbf{RQ4---Generalization:} How does detection change for unfamiliar
+publishers, generators, genres, and edited text?
+\end{enumerate}
+The present experiments address the authorship component of RQ3 and provide
+exploratory evidence relevant to RQ4. They do not answer RQ1 or RQ2 with new
+population data. This boundary matters: a useful negative result about detector
+transfer is not a failed prevalence estimate, and an accurate benchmark
+classifier is not automatically a validated ``slop'' detector.
+
+We reconstruct the development sequence from source code, raw and processed
+datasets, saved results, model metadata, and documentation. V11 is the current
+primary model, not necessarily the best model for an independently specified
+deployment population. Earlier failures remain part of the evidence. The
+paper distinguishes archived experimental results from computations reproduced
+during this revision and from observations retained only in project notes.
+The accompanying audit records those distinctions explicitly.
+
+\section{Existing Evidence: What Is Established?}
+\subsection{Growth depends on the denominator}
+Pew Research Center's August 20, 2026 analysis reports signs of AI authorship
+in about 10\% of its July 2026 English-language webpage sample, and in more
+than one-third of the subset dated after ChatGPT's release \cite{pew}.
+Its sampling covered 10,000 pages from each of 49 Common Crawl snapshots
+between January 2021 and July 2026. Publication dates were available for only
+about 10--15\% of pages in a crawl sample; dated content is not a random subset
+of the web \cite{pewmethods}. The estimates concern detector-indicated
+authorship or substantial editing, not independently verified low quality.
+
+Dolezal et al. report that roughly 35\% of newly published websites in their
+Internet Archive-based study were classified as AI-generated or AI-assisted
+by mid-2025. Their preprint does not find statistically significant support
+for a decline in factual accuracy or stylistic diversity associated with
+increasing AI text \cite{dolezal}. Those findings do not establish that factual
+accuracy is unaffected in every setting; they also do not support treating
+machine authorship as a quality label.
+
+These estimates have different denominators and should not be pooled.
+Existing pages, newly published sites, and the pages people actually read
+are distinct populations. A publisher could produce many little-read pages,
+while a single widely viewed page could dominate audience exposure. A claim
+about a majority of page counts would therefore still require a separate
+argument about exposure. None of the experiments reported below samples
+either population probabilistically.
+
+\subsection{Detection is not ground truth}
+Published evaluations make transfer a substantive part of detector assessment.
+RAID evaluates robustness across generators, domains, decoding choices, and
+adversarial changes \cite{raid}. Tufts et al. emphasize detection at specified
+false-positive rates and document failures on unfamiliar settings
+\cite{tufts}. M4 likewise shows that performance on known domains and generators
+does not ensure performance on unseen ones \cite{m4}. These are findings from
+external studies, not measurements made with V11.
+
+False positives also need to be examined across writing populations. Liang
+et al. report bias against non-native English writing in the detectors they
+studied \cite{liang}. The present repository does not contain sufficiently
+documented proficiency groups to repeat that assessment. We neither infer
+language background from prose nor claim that normalization resolves such
+disparities. A detector prediction remains a model output, not evidence that
+the author used a particular tool.
+
+Mixed-authorship resources such as CoAuthor and human evaluation resources
+such as SummEval illustrate related but distinct research tasks
+\cite{coauthor,summeval}. They were considered in the earlier planning
+materials; neither supplies the completed quality labels used by this
+project, because no such completed quality-label corpus is present. Origin
+guesses, writing proficiency ratings, and summary-quality judgments cannot
+silently substitute for the rubric defined here.
+
+\section{Operational Definition of AI ``Slop''}
+Let $A_i=1$ denote documented fully machine-generated origin and $Q_i=1$
+denote independently adjudicated low quality. The proposed joint target is
+\begin{equation}
+S_i=A_iQ_i.
+\label{eq:slop}
+\end{equation}
+This operational definition gives an informal expression a limited meaning
+within the proposed study. It does not identify a universally agreed category,
+establish intent, or demonstrate mass production. Mixed human--AI authorship
+is recorded separately. Substantially assisted writing could enter a secondary
+analysis only under an explicit alternative origin definition.
+
+The retained rubric scores factual and evidential adequacy, information value,
+and relevance/coherence on a scale from 0 (no material defect), through 1
+(limited defect), to 2 (substantial defect). The low-quality decision is positive
+when at least two dimensions receive 2, or when a verified central factual
+error defeats the document's purpose. Unsupported evidence and unresolved
+evidence are not identical: inadequate information may require an uncertain
+label rather than a finding of falsehood. Genre-specific expectations also
+matter. Fiction, opinion, and personal narrative cannot be judged by the same
+evidential conventions as a factual explanation.
+
+Two independent human raters would assess texts without seeing their origin
+labels or detector scores; a third would adjudicate disagreements. Reasons
+and evidence references should make decisions reviewable. Language proficiency,
+stylistic preference, repeated technical terms, and the absence of academic
+citations are not automatic quality defects. The four origin-by-quality cells
+must all be represented to prevent the shortcut ``generated means bad.''
+
+This annotation procedure is \emph{not completed}. The benchmark's raw JSON
+does contain annotator guesses, confidence judgments, comments, and outputs
+from other detectors. They concern perceived authorship, not independently
+adjudicated quality under this rubric. The processed quality-label fields
+remain empty. V11 therefore learns the datasets' supplied binary origin
+labels, not $Q_i$ or $S_i$; their provenance is discussed below rather than
+assumed from the presence of a label column.
+
+\section{Study Design: Testing the Takeover Hypothesis}
+\subsection{Two distinct datasets}
+The original design separates a \emph{prevalence corpus}, sampled from a
+defined web population, from a \emph{detector corpus}, constructed to support
+supervised learning and error assessment. That distinction still applies.
+The historical proposal targeted 4,000 sampled pages across four annual
+windows in 2022--2025 and 2,400 independently labeled origin-by-quality
+documents. These were collection targets, not achieved samples or a power
+analysis. Subsequent development corpora do not fulfill those targets merely
+because they contain thousands of answers.
+
+\textbf{The 1880 pilot.} The first experiment pairs 12 excerpts from
+\emph{Scientific American}, December 18, 1880, with 12 articles authored by
+the assistant preparing the project. The source is identified in the pilot
+protocol as Project Gutenberg ebook 21081. The historical issue supports
+pre-language-model provenance, subject to transcription caveats. It does not
+make the prose representative of contemporary writing or establish the truth
+of its claims. The generating assistant had the source passages in context.
+The recorded seed controls style assignment, not independent language-model
+sampling; the backend identifier and generation settings were not exposed.
+
+\textbf{The 1900 expansion.} A separate source, \emph{The Popular Science
+Monthly}, June 1900, is retained with the Gutenberg notice for ebook 47227.
+Eight extracted human articles supplied a 173-row human-only chunk corpus.
+V3 instead uses 30 selected human excerpts and 30 fixed generated articles,
+split into 30 training, 14 validation, and 16 comparison rows. The scripts
+\code{make_ai_1900.py} and \code{add_ai_1900_more.py} write literal article
+strings; rerunning them is not a new generation experiment. This expansion
+is distinct from the original 24-document 1880 pilot.
+
+\textbf{The modern benchmark.} The uploaded
+\code{data/benchmark/human_detectors.json} contains 300 records, with 150
+human-labeled and 150 AI-labeled texts. It records source, title, issue/date,
+link, generation condition, and additional human and detector judgments.
+The five conditions are \code{gpt-4o}, \code{paraphrased_gpt-4o},
+\code{claude}, \code{o1-pro}, and \code{humanized_o1-pro}. A condition value
+on a human row identifies its comparison condition, not a machine generator
+for that human text.
+
+The raw records contain 150 distinct source--title--issue article tuples,
+each represented once per origin label. They are organized into 30 numeric
+\code{prompt_id} groups, each containing five human and five generated rows
+across conditions. Thus 30 prompt groups do \emph{not} mean 30 underlying
+articles. The grouped CSV assigns the lexicographically sorted prompt IDs
+to 18 training, six validation, and six comparison groups, yielding
+180/60/60 rows. The retained sources include news organizations and science
+and general-interest magazines. They are not a representative mix of all
+web genres. Mean document length is 738.15 whitespace-delimited words for
+human-labeled text and 724.03 for generated text, computed from the stored CSV.
+
+The benchmark's links support source tracing, but the upload lacks a complete
+collection protocol, generation log, upstream version, and item-level reuse
+ledger. Its date field mixes recognizable dates with numeric encodings that
+have not been consistently resolved. We use the supplied labels for describing
+the experiment without claiming an independent provenance adjudication.
+Historical filenames beginning \code{hc3_} are misleading here: benchmark
+experiments through V8 used this JSON-derived corpus, not the subsequently
+acquired HC3 question-and-answer files.
+
+\textbf{HC3 and the combined V11 corpus.} The three raw HC3 files contain
+3,933 finance, 1,248 medicine, and 1,187 open-QA question records. An early
+extraction retains every answer with at least 80 whitespace-delimited words,
+giving 11,593 answers (3,346 human-labeled and 8,247 ChatGPT-labeled). That
+imbalanced extraction is not V11's training set.
+
+The paired builder instead retains a question only when both answer lists
+contain an eligible answer. It selects the first qualifying human answer and
+the first qualifying ChatGPT answer, rather than sampling every answer. The
+group key combines domain and raw-file line number. The resulting 3,278
+question pairs contain 6,556 texts, exactly balanced by origin. A pandas shuffle
+with seed 42 precedes a global 80/20 pair split: 2,622 pairs for training and
+656 for validation. The split is not domain-stratified.
+
+V11 caps the number of retained pairs per domain at 600 for training and 150
+for validation, sampling complete pairs with seed 42. It then adds the
+benchmark's existing training and validation rows. Table~\ref{tab:corpus}
+shows the actual composition. Both the raw-to-paired reconstruction and the
+paired-to-combined membership reconstruction match the uploaded CSVs in the
+revision audit. This verifies the transformation, not provenance, copyright
+clearance, or representativeness.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+& \multicolumn{2}{c}{Training} & \multicolumn{2}{c}{Validation} \\
+Component & Human & AI & Human & AI \\
+\midrule
+HC3 finance & 600 & 600 & 150 & 150 \\
+HC3 medicine & 413 & 413 & 126 & 126 \\
+HC3 open QA & 21 & 21 & 4 & 4 \\
+Modern benchmark & 90 & 90 & 30 & 30 \\
+\midrule
+Total & 1,124 & 1,124 & 310 & 310 \\
+\bottomrule
+\end{tabular}
+\caption{Audited V11 composition: 2,248 training and 620 validation texts.
+Only finance reaches the pair caps. The benchmark's 60 comparison rows are
+not included in this combined CSV.}
+\label{tab:corpus}
+\end{table}
+
+The HC3 JSONLs retain questions and answer lists but no acquisition log,
+upstream revision, or complete reuse documentation. Those records need to be
+restored before a fully documented corpus release. Questions establish the
+pairing structure; the detector receives answer text only. Neither the
+three-domain HC3 subset nor the news/magazine benchmark covers the variety
+of human expertise, language proficiency, editing, and authorship practices
+needed for broad deployment claims.
+
+\subsection{Leakage control and evaluation splits}
+The intended unit of separation is a connected cluster of related documents,
+including shared source material, prompt variants, authors, and duplicates.
+The actual implementations provide narrower protection. The original pilot
+groups by article-topic pair, not publication. V3 separates human source
+articles but uses different processing for human and generated prose.
+The modern benchmark keeps numeric prompt groups, and therefore the audited
+article pairs, within a single split. The V11 builder namespaces HC3 question
+groups and reports zero shared prompt IDs between training and validation.
+It prints that count rather than establishing every possible leakage relation.
+
+\textbf{The revision audit finds exact-text leakage.} An identical human
+medical answer appears under HC3 groups \code{medicine:416} and
+\code{medicine:695} in training and \code{medicine:1124} in validation.
+The text fields are byte-identical, before normalization. The duplication
+already occurs in paired V10 and survives V11 construction. Zero overlapping
+group IDs therefore does not justify the description ``leakage-free.''
+The result is a concrete failure of grouping by question alone to capture
+repeated answers.
+
+This finding does not establish how much the duplicate affected the saved
+metrics. Removing the validation row would not undo its relationship to
+training, repeated development, or threshold selection; reporting modified
+counts under the original experiment's name would be misleading. We preserve
+the original results and require a newly versioned, deduplicated development
+cycle with connected-component splitting. Near duplicates and repeated
+source-specific language may create further dependencies not measured by
+this exact-match audit.
+
+Statistical separation also differs from informational separation. The same
+60-row benchmark comparison partition was examined throughout model
+development. Although it remains named \code{test} in several files, it is
+not now an untouched final evaluation. V11 also incorporates benchmark
+training and validation material, making that benchmark a development source
+rather than independent external validation. The previously inspected pilot
+test articles likewise became development material in the second cycle.
+No fresh custodian-held final set is supplied for V11.
+
+\subsection{Estimands and uncertainty}
+A future prevalence study would estimate $p_A(t)$, $p_Q(t)$, and $p_S(t)$
+separately. With audited labels and sampling weights $w_i$, a design-based
+slop estimate would take the form
+\begin{equation}
+\widehat p_S(t)=\frac{\sum_{i\in t}w_iS_i}{\sum_{i\in t}w_i}.
+\end{equation}
+For a fixed screen with positive fraction $q$, sensitivity $r$, false-positive
+rate $f$, and true prevalence $p$,
+\begin{equation}
+q=rp+f(1-p),\qquad \widehat p=\frac{q-f}{r-f}.
+\label{eq:correction}
+\end{equation}
+The identity follows by conditioning on the true class. Its application
+requires error rates that transfer to the sampled population. For $S$, those
+are the \emph{joint screen's} errors, not an authorship model's errors. When
+$r$ is close to $f$, the correction is unstable. Values outside $[0,1]$ should
+prompt investigation rather than silent clipping.
+
+No value of $p$ is estimated here. Class balance is a corpus-construction
+choice, not a population prevalence, and V11 has no quality head. The original
+proposal's 2,000 publisher-cluster bootstrap replicates and annual contrast
+$p_S(2025)-p_S(2022)$ remain prospective. Any renewed longitudinal study must
+fix its archive windows and sampling rules, account for extraction losses
+and composition changes, and propagate uncertainty in period-specific error
+rates. A positive growth estimate would not establish a majority; a
+page-majority estimate would not establish exposure dominance.
+
+\section{Detection Model and How the Code Works}
+\subsection{Transparent features}
+The original \code{legacy/detector.py} extracts ten interpretable surface
+features: log token count, unique-token fraction, mean token length, mean
+sentence length, sentence-length coefficient of variation, repeated-trigram
+fraction, repeated-sentence fraction, digit-token fraction, URL count per
+token, and selected punctuation count per token. The approximations are
+deliberately simple. For example, splitting sentences at punctuation can
+misread abbreviations, while repeated technical terms may be informative
+rather than redundant. These features do not check facts or reveal provenance.
+
+V11 replaces that representation with two learned TF--IDF vocabularies.
+It contains no handcrafted quality, semantic-truth, perplexity, or
+language-model-internal features. Table~\ref{tab:v11config} records the
+configuration in the trainer, result JSON, and inspected serialized metadata.
+The word and character vocabularies and inverse document frequencies are
+fitted on training texts only; validation texts are transformed with those
+fitted objects.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{lXX}
+\toprule
+Setting & Word block & Character block \\
+\midrule
+Analyzer & \code{word} & \code{char_wb} \\
+$n$-grams & 1--3 words & 2--6 characters \\
+Maximum features & 50,000 & 80,000 \\
+Minimum document frequency & 2 training documents & 2 training documents \\
+Term frequency & Sublinear & Sublinear \\
+Vector normalization & L2 within block & L2 within block \\
+Case handling & Lowercase & Lowercase \\
+\midrule
+Classifier & \multicolumn{2}{l}{\code{LinearSVC}, $C=3.0$, no class weighting} \\
+Decision threshold & \multicolumn{2}{l}{$\tau=-0.364734947384451$} \\
+\bottomrule
+\end{tabularx}
+\caption{V11 settings. The saved classifier expects 130,000 input coordinates.
+Separate block normalization is followed by sparse concatenation, not an
+additional normalization of the concatenated vector.}
+\label{tab:v11config}
+\end{table}
+
+Before vectorization, the implemented normalization replaces HTML-like
+substrings matched by \code{<[^>]+>} with spaces, removes double asterisks,
+and removes isolated single asterisks matched by
+\verb|(?<!\w)\*(?!\w)|. Curly double quotes become straight double quotes;
+curly single quotes/apostrophes become straight apostrophes; en and em dashes
+become hyphens. Repeated whitespace is collapsed and the result is stripped.
+The vectorizers then lowercase text. This is a limited regex transformation,
+not a complete HTML or Markdown parser: underscore emphasis and some
+single-asterisk constructions are not removed. It does not remove all
+formatting differences or normalize their semantic consequences.
+
+For a retained feature $j$ occurring $c_{ij}>0$ times in document $i$, the
+default smoothed, sublinear weighting is
+\begin{equation}
+v_{ij}=(1+\log c_{ij})\left(1+\log\frac{N+1}{d_j+1}\right),
+\label{eq:tfidf}
+\end{equation}
+where $N$ and $d_j$ refer to the training corpus and its document frequency.
+Absent features receive zero. Each block is L2-normalized. The word analyzer
+uses the default token pattern retaining tokens of at least two word
+characters; \code{char_wb} constructs character sequences within whitespace
+word boundaries with boundary padding. Thus both lexical content and local
+orthographic/formatting patterns can affect the score. These are potentially
+useful predictors and potential shortcuts, not direct measurements of origin.
+
+\subsection{Separate origin and quality classifiers}
+The distinction in this heading belongs to the original design and remains
+scientifically necessary, even though V11 trains only the origin classifier.
+For the historical ten-feature baseline, training-only standardization is
+\begin{equation}
+z_{ij}=(x_{ij}-\mu_j)/s_j,
+\end{equation}
+with $s_j=1$ for effectively constant coordinates. The implemented logistic
+heads have the form
+\begin{equation}
+h_k(\mathbf z)=\sigma(b_k+\mathbf w_k^\top\mathbf z),
+\quad k\in\{A,Q\},\qquad \sigma(u)=\frac{1}{1+e^{-u}}.
+\end{equation}
+The original objective, with an unpenalized intercept, is
+\begin{equation}
+\mathcal L_k=\frac1n\sum_{i=1}^{n}
+\left[\log(1+e^{\eta_{ik}})-y_{ik}\eta_{ik}\right]
++\frac{0.1}{2}\lVert\mathbf w_k\rVert_2^2,
+\qquad \eta_{ik}=b_k+\mathbf w_k^\top\mathbf z_i.
+\end{equation}
+The code uses a stable logistic loss and an analytic gradient with SciPy's
+L-BFGS-B optimizer. Pilot tuning changes the penalty and feature subset.
+No independently trained quality head follows from implementing this interface.
+
+V11 instead fits a supervised linear support vector classifier to the
+concatenated TF--IDF vector $\mathbf u_i$. Its score is
+\begin{equation}
+f(\mathbf u_i)=b+\boldsymbol\beta^\top\mathbf u_i.
+\label{eq:svm}
+\end{equation}
+Serialized metadata records an L2 penalty, squared-hinge loss, an intercept,
+no class weighting, and $C=3.0$. The training code does not set a random seed
+for the estimator and otherwise relies on its library defaults. The saved
+metadata identifies scikit-learn 1.9.0. These details constrain reproducibility;
+they are not a reason to infer that another software version will produce
+byte-identical coefficients.
+
+Both model families are small supervised classifiers. Fitting their weights
+and selecting hyperparameters is not fine-tuning a language model. V11 neither
+queries a generator nor reads hidden token probabilities, metadata from a
+webpage, or Internet URLs. It evaluates only supplied text.
+
+\subsection{Thresholds and explanations}
+For V11, \code{train_combined_v11.py} searches the unique validation scores.
+It maximizes validation recall subject to empirical validation FPR at most
+5\%, then prefers lower FPR and finally a higher threshold. The fitted model
+and vectorizers are fixed during this selection. The resulting rule is
+\begin{equation}
+\widehat A_i=\mathbb{1}\{f(\mathbf u_i)\geq\tau\},
+\qquad m_i=f(\mathbf u_i)-\tau.
+\label{eq:decision}
+\end{equation}
+The margin $m_i$ measures signed distance in score units from the chosen
+operating point. It is not a probability. A score of 0.80 does not mean an
+80\% probability of AI authorship, and a negative score can still produce
+the output \code{AI} when the threshold is negative.
+
+This empirical constraint is not a deployment guarantee. Its calculation
+uses the same validation labels later summarized as validation performance.
+The threshold is therefore selected rather than independently tested there.
+Neither the model nor its threshold has been validated under every source,
+topic, length, or generator shift. The number of validation negatives, their
+dependencies, and the observed cross-split duplicate further limit inference.
+
+The historical two-head design would combine decisions as
+\begin{equation}
+\widehat S_i=\mathbb{1}\{h_A(\mathbf z_i)\geq\tau_A\}
+\mathbb{1}\{h_Q(\mathbf z_i)\geq\tau_Q\}.
+\end{equation}
+Even those logistic scores are not demonstrated to be calibrated, and their
+product is not a validated slop probability. The original implementation
+reports large feature contributions to each logit and returns a null joint
+review flag when quality is untrained. Such contributions explain arithmetic,
+not authorship. V11's CLI does not implement that explanation interface or
+the joint decision; it reports a score, threshold, margin, word count, and
+binary class string.
+
+\subsection{Implementation boundary}
+The original baseline abstains below 80 tokens. V11 does not inherit that
+behavior: its CLI rejects empty files but imposes no validated minimum-length
+rule and performs no out-of-distribution abstention. The HC3 builder's
+80-word eligibility filter is a data-construction rule, not an inference
+safeguard. A short text can therefore receive a V11 class string without
+evidence that the operating point is appropriate for its length.
+
+The current model bundle includes fitted vectorizers, classifier, threshold,
+and experiment metadata. The compressed portable bundle retains the
+vectorizers, classifier, and threshold; the release script supplies the same
+normalization function locally. Neither requires the training corpus for
+ordinary inference, but reconstructing training requires that corpus and its
+software environment. The original bundle also references a normalization
+function by its Python serialization name, which is an additional portability
+consideration. Model serialization should be loaded only from trusted sources.
+
+Path changes in the reorganized repository affect execution. The root
+\code{detector_v11.py} expects a model in the working directory, whereas
+the uploaded model is under \code{models/current}. Several builders expect
+raw files at old root-level locations and trainers write outputs there.
+The release command in the appendix uses the layout actually supplied.
+These path issues do not invalidate recorded arithmetic, but they prevent
+describing every README command as a verified turnkey reproduction.
+
+\section{Results and Evaluation Plan}
+\subsection{External findings versus original results}
+Table~\ref{tab:status} separates the kinds of evidence. Reported model
+metrics come from their archived JSONs. New audit computations are limited
+to corpus reconstruction, identity checks, descriptive counts, and metric
+arithmetic unless explicitly stated otherwise. No new model was trained and
+no final evaluation was opened during manuscript revision.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Evidence & Available record & What it does not establish \\
+\midrule
+Published prevalence studies & External literature & This project's slop prevalence \\
+Software verification & Historical smoke-check records & Real-world classifier performance \\
+Pilot and diagnostic cycles & Texts, code, weights, results & Modern-web generalization \\
+Modern benchmark experiments & Grouped data, search and result JSONs & Untouched final evaluation after reuse \\
+V11 validation & Combined CSV and aggregate metrics & Independent threshold assessment \\
+External sanity checks & README observations; one supplied text & A representative external benchmark \\
+Revision audit & Reconstructed membership, hashes, arithmetic & Provenance certification or inference replay \\
+Quality and prevalence study & Rubric and prospective protocol & Completed annotations or population estimates \\
+\bottomrule
+\end{tabularx}
+\caption{Evidence status of the current repository. The word ``test'' in a
+filename does not establish independence from development.}
+\label{tab:status}
+\end{table}
+
+\subsection{Observed software-verification results}
+The historical record reports 21 initial smoke assertions, 36 additional
+pilot checks, and 38 second-cycle statistical/workflow checks. These used
+in-session or explicitly synthetic fixtures and are not a bundled independent
+detector benchmark. Their successful completion should not be expressed as
+classification accuracy on human and generated writing. The archived
+verification records also describe earlier LaTeX builds, not the current
+manuscript's scientific validity.
+
+For this revision, \code{docs/audit_repository.py} fingerprints 171 research
+inputs, inspects every processed CSV, compares the raw benchmark's texts and
+labels with its processed version, reconstructs HC3 pairs from all three raw
+files, and reconstructs combined V11 membership. Both HC3 reconstructions
+match. It also checks 133 metric blocks against their confusion counts with
+no arithmetic discrepancy. This last check cannot validate AUROC, which
+requires score ordering, or establish that the underlying predictions are
+correct. It does establish that the stored thresholded metrics agree with
+the stored counts.
+
+The revision environment lacks scikit-learn and joblib; no packages were
+installed. Saved-model inference, AUROC, and row-level subgroup results were
+therefore not independently reproduced. Non-executing serialized-metadata
+inspection corroborates V11's vectorizer and classifier settings, but is
+not a substitute for scoring the corpus. Recorded results are identified
+as such throughout.
+
+\subsection{Original pilot: ranking without detection}
+The 1880 pilot allocates six topic pairs to training, three to validation,
+and three to its original test. Eight configurations compare all ten
+features with a subset omitting log token count and mean sentence length,
+at L2 penalties 0.01, 0.1, 1, and 10. All eight achieve validation AUROC 1.0,
+recall 1.0, and FPR 0 on six documents. The recorded tie-break selects the
+eight-feature configuration with penalty 10, not a statistically demonstrated
+winner. Its original test has three true negatives, three false negatives,
+and no positive predictions. The baseline gives the same decisions.
+
+Both fitted models nevertheless have test AUROC 1.0. For the selected model,
+historical scores range from approximately 0.2776 to 0.4731 and generated
+scores from 0.5146 to 0.5372; all are below the validation-selected threshold
+of approximately 0.5400. The model preserves the ranking while missing every
+generated test article. Its accuracy is 0.5, recall and F1 are zero, and
+precision is undefined. An always-negative control has the same decisions
+but AUROC 0.5. The experiment therefore distinguishes a useful ranking from
+a useful operating point.
+
+The observed FPR of zero is weak reassurance with three human negatives.
+Even under independent Bernoulli sampling, its one-sided 95\% upper bound
+would be $1-0.05^{1/3}\approx0.632$. This is an illustrative small-sample
+calculation, not a credible population guarantee for a shared-source corpus.
+The original threshold and failed decisions remain part of the record after
+those articles are reassigned to development.
+
+\subsection{Model evolution from V2 through V11}
+V2 moves from handcrafted features to word 1--3-gram and character 3--5-gram
+TF--IDF with logistic regression. Its 24-document pilot record reports
+perfect thresholded performance in the 12/6/6 partitions. V3 retains that
+family of representation on the separate 60-document historical expansion
+and also reports perfect results. These are not independent confirmations
+of the original pilot: its data had already been examined, and the expansion
+remains historically confounded.
+
+V3 adds a particularly visible processing asymmetry. The human chunk builder
+tokenizes prose and rejoins tokens with spaces, removing punctuation, whereas
+the fixed generated articles are retained as ordinary prose. Origin is thus
+correlated with preprocessing. High performance can reflect that difference
+as well as era, source, or writing style; the experiment does not isolate
+their contributions.
+
+The modern benchmark then becomes the principal development resource.
+The archived benchmark V2 logistic model reaches comparison accuracy 0.9333,
+with three false positives and one false negative. A 21-configuration,
+three-fold GroupKFold search compares word, character, and combined features
+over seven regularization values. The selected combined logistic model
+uses $C=10$ and records comparison accuracy 0.9667. The search metadata's
+older textual group description does not override the actual grouped CSV
+used by the code.
+
+V4 broadens the search to 48 settings, comparing logistic regression and
+linear SVMs with word, character, combined, and stylometric-augmented
+representations. The selected model uses character \code{char_wb} 3--5-grams,
+40,000 features, and $C=10$. V5 evaluates 135 settings spanning character
+ranges, combined features, regularization, model family, and class weights.
+Its selected character 2--6-gram SVM uses 60,000 features and $C=10$ without
+class weighting. V5's grouped search refits features inside each fitting
+fold, but chooses a threshold and reports decision metrics on that same
+fold's validation labels. Those operating-point metrics are selection
+diagnostics, not nested estimates of a frozen decision procedure.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Model / assessment & $n$ & Accuracy & Recall & FPR & FNR & AUROC \\
+\midrule
+Pilot selected / original test & 6 & .5000 & .0000 & .0000 & 1.0000 & 1.0000 \\
+V2 / pilot comparison & 6 & 1.0000 & 1.0000 & .0000 & .0000 & 1.0000 \\
+V3 / 1900 comparison & 16 & 1.0000 & 1.0000 & .0000 & .0000 & 1.0000 \\
+Benchmark V2 / comparison & 60 & .9333 & .9667 & .1000 & .0333 & .9967 \\
+Optimized logistic / comparison & 60 & .9667 & 1.0000 & .0667 & .0000 & .9989 \\
+V4 / comparison & 60 & .9667 & 1.0000 & .0667 & .0000 & 1.0000 \\
+V5 / comparison & 60 & .9833 & 1.0000 & .0333 & .0000 & .9989 \\
+V6 / full-text comparison & 60 & .8500 & 1.0000 & .3000 & .0000 & 1.0000 \\
+V7 / comparison & 60 & .9833 & 1.0000 & .0333 & .0000 & .9989 \\
+V8 / comparison & 60 & .9833 & 1.0000 & .0333 & .0000 & .9989 \\
+V11 / combined validation & 620 & .9742 & .9935 & .0452 & .0065 & .9991 \\
+\bottomrule
+\end{tabular}
+\caption{Archived experiment results, rounded to four decimals; FNR is
+derived as $1-\mathrm{recall}$. Different corpora and evaluation roles must
+not be ranked as a single leaderboard. The benchmark comparison rows are
+reused across development, and V11's row is validation, not a new test.}
+\label{tab:evolution}
+\end{table}
+
+V6 addresses document length by forming non-overlapping 180--260-word chunks
+from the benchmark's training documents. It obtains 474 training chunks
+(241 human, 233 generated) and 160 chunks from the separate validation
+documents (82 human, 78 generated). Chunk creation respects the existing
+document split, but multiple chunks remain dependent observations. The
+short-validation threshold gives three human false positives and one AI
+false negative. On the original full-document comparison set it gives nine
+false positives among 30 human texts and no false negatives among 30 generated
+texts. Thus AUROC 1.0 coexists with FPR 0.30. Improved sensitivity on the
+reported short external examples comes at a substantial cost under this
+different length distribution.
+
+V7 combines V5 and V6 margins, using the first 260 words for the short model
+on longer documents. Twenty-one mixture weights are compared on validation.
+The selected weights are 1.0 for V5 and 0.0 for V6, with a threshold of zero
+on the resulting V5 margin. The selected ``ensemble'' is therefore V5's
+decision rule, not evidence that combining the two models improved transfer.
+
+V8 applies the normalization described above to character features. It
+records one human false positive and no AI false negatives on the 60-row
+comparison set, the same confusion counts as V5, although a matching count
+does not prove that every prediction is identical. The README reports that
+normalization did not resolve external generalization. Its outcome motivates
+broader data coverage rather than a claim that formatting is irrelevant.
+
+A V9 preparation step selects 227 benchmark training/validation documents
+of 350--1,000 words; no fitted V9 result is supplied. The next material
+change is HC3 acquisition, followed by V10 pairing and V11 combination.
+No separate fitted V10 result is supplied either. V11 changes training
+composition, feature combination, feature limits, document-frequency
+filtering, and regularization relative to V8. Its reported external
+improvement is consistent with the value of broader data, but this is not
+a controlled ablation establishing diversity as the sole cause.
+
+\subsection{V11 validation results and unresolved subgroup attribution}
+Table~\ref{tab:v11metrics} preserves the aggregate values in
+\code{models/current/hc3_v11_combined_results.json}. The training record
+has no thresholded errors in 2,248 texts and AUROC 1.0; these are fit-set
+statistics, not generalization evidence. In validation, 14 of 310
+human-labeled texts are flagged and two of 310 generated texts are missed.
+The recorded threshold satisfies the empirical 5\% constraint on that
+selection set. It does not constrain each source separately.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lr}
+\toprule
+Quantity & Recorded value \\
+\midrule
+Validation texts & 620 \\
+Accuracy & 0.9741935483870968 \\
+Precision & 0.9565217391304348 \\
+Recall & 0.9935483870967742 \\
+F1 & 0.9746835443037974 \\
+False-positive rate & 0.04516129032258064 \\
+AUROC & 0.9991155046826222 \\
+True negatives / false positives & 296 / 14 \\
+False negatives / true positives & 2 / 308 \\
+\bottomrule
+\end{tabular}
+\caption{Exact aggregate V11 validation values from the archived JSON.
+The derived FNR is $2/310\approx0.006452$. Numerical precision records the
+artifact, not the certainty of population performance.}
+\label{tab:v11metrics}
+\end{table}
+
+Source-specific error rates would be more informative than an aggregate
+alone, but the upload does not retain the necessary output. The V11 trainer
+prints metrics by origin and source; its saved result JSON contains only
+aggregate training and validation metrics. There is no associated stdout
+ledger or per-document validation score file. Table~\ref{tab:subgroups}
+therefore reports auditable denominators without inventing source errors.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrl}
+\toprule
+Validation component & Human & AI & Source FPR / recall \\
+\midrule
+HC3 finance & 150 & 150 & Not retained in V11 JSON \\
+HC3 medicine & 126 & 126 & Not retained in V11 JSON \\
+HC3 open QA & 4 & 4 & Not retained in V11 JSON \\
+Modern benchmark & 30 & 30 & Not retained in V11 JSON \\
+\bottomrule
+\end{tabular}
+\caption{V11 subgroup denominators. Missing subgroup errors are not zeros.
+The small open-QA subgroup cannot support a stable source-level inference.}
+\label{tab:subgroups}
+\end{table}
+
+The project handoff also reports approximate HC3 figures: finance human FPR
+0.057 and AI recall 0.9962; medicine FPR 0.0159 and recall 1.0; open-QA FPR
+0.25 with four human examples. The finance values cannot be produced by
+integer error counts with 150 observations per label. They are arithmetically
+compatible with $30/526$ and $524/526$ in the \emph{uncapped paired}
+validation corpus, which contains 526 finance examples per label. That
+compatibility does not identify the model or run that generated them.
+Medicine and open-QA denominators are unchanged by capping and do not resolve
+the attribution. We preserve this discrepancy as an unresolved record,
+not a V11 source-performance table.
+
+The handoff's reported contrast between benchmark and HC3 validation likewise
+needs its original output or a saved-model replay. It must not be suppressed
+by implying uniform performance, but it cannot be quantified from aggregate
+counts alone. A reproducible breakdown must use the archived model,
+normalization, frozen threshold, exact combined CSV, and explicit subgroup
+membership. No threshold should be changed during that reconstruction.
+
+\subsection{External sanity checks and formatting dependence}
+The README records the four V11 outputs in Table~\ref{tab:external}. It also
+reports that V5 missed \code{article.txt}, V6 improved sensitivity to short
+external examples, and V8 did not resolve transfer. These observations
+motivated development and should remain visible. They are weaker evidence
+than an archived, independently labeled evaluation with preserved scores.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{llX}
+\toprule
+Example & Reported V11 output & Evidence available in this upload \\
+\midrule
+\code{article_human.txt} & HUMAN & README observation; text absent \\
+\code{article_ai.txt} & AI & README observation; text absent \\
+\code{article_mixed.txt} & AI & README observation; text absent; mixed origin \\
+\code{article.txt} & AI & Text present under \code{samples}; 175 words \\
+\bottomrule
+\end{tabularx}
+\caption{Project-level development sanity checks, not a four-document
+benchmark independently reproduced in this revision. Source/generation
+provenance and per-file score logs are incomplete.}
+\label{tab:external}
+\end{table}
+
+An AI output for a mixed-authorship text cannot be counted as a correct
+binary-origin decision without first defining the target. The existing
+\code{article.txt} concerns automated web traffic, but its claims are sample
+input, not evidence supporting this paper's prevalence argument. Its
+175-word length is substantially below the benchmark means. The README's
+approximate 150--300-word description of external examples cannot be
+verified for the three missing files. None of these observations estimates
+an external accuracy rate, and no 100\% accuracy claim follows from them.
+
+The README describes a feature-weight audit that found prominent HTML,
+Markdown, and quotation patterns. A dedicated weight-audit output is not
+retained. The revision can nevertheless verify label-correlated formatting
+directly in the stored benchmark. Table~\ref{tab:formatting} gives document
+counts for specified patterns across all 300 rows. These are retrospective
+descriptions of an already inspected corpus, not additional validation.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Pattern present in a document & Human ($n=150$) & AI ($n=150$) \\
+\midrule
+Any HTML-like tag & 83 & 72 \\
+Double asterisks & 0 & 23 \\
+\code{<br>} variants & 30 & 60 \\
+Curly double quotation marks & 144 & 65 \\
+Straight double quotation marks & 11 & 86 \\
+\bottomrule
+\end{tabular}
+\caption{Audit counts from the raw text fields in the grouped benchmark.
+Categories overlap; they are not exhaustive or mutually exclusive. Exact
+regex definitions are retained in the audit script.}
+\label{tab:formatting}
+\end{table}
+
+The relevant mechanism is straightforward: a classifier can use a pattern
+that predicts the dataset label without that pattern being characteristic
+of authorship in another population. The counts show opportunities for
+such behavior, not that any one feature caused all errors. Normalization
+addresses some visible differences but can leave topic vocabulary, source
+conventions, editorial style, and other artifacts intact. V8's reported
+transfer failure is consistent with that broader problem; it does not
+identify its unique cause.
+
+\subsection{What the completed experiment must report}
+A confirmatory successor must evaluate a model and threshold frozen before
+access to new final labels. It should report TP, FP, TN, FN, FPR, FNR,
+precision, recall, F1, accuracy, AUROC, and any abstention coverage, together
+with denominators and uncertainty. The current V11 point estimates should
+not be supplemented with invented confidence intervals. A credible interval
+analysis must account for question/article clustering, threshold selection,
+model selection, and the actual sampling frame; an ordinary independent-row
+binomial interval would miss important dependencies here.
+
+Threshold stability needs repeated development partitions with a separate
+calibration stage, followed by topic-, source-, time-, and generator-disjoint
+assessment. Length strata, formatting interventions, paraphrasing, human-edited
+AI text, and documented proficiency groups should be included where provenance
+and consent permit. A shift-specific threshold can be studied prospectively,
+but not introduced after inspecting final errors to obtain a preferred result.
+RAID remains a possible origin-detection challenge resource, not a
+quality-labeled slop benchmark \cite{raid}.
+
+Balanced evaluation also does not determine deployment precision. For a
+purely hypothetical prevalence of 5\%, sensitivity of 80\%, and FPR of 5\%,
+1,000 documents yield expected counts of 40 true positives and 47.5 false
+positives. Precision would be about 45.7\%. This is arithmetic illustrating
+the base-rate issue, not an observed result for V11. Population measurement
+requires the additional assumptions in Equation~\ref{eq:correction}.
+
+\section{Second Development Cycle: Diagnostics and Readiness}
+\subsection{Scope and separation of evidence}
+The second cycle preceded the modern benchmark and V11 work. It reused all
+24 original pilot articles as development material to investigate the failed
+operating point. Its archival readiness files correctly describe what had
+not been obtained \emph{at that stage}; statements that contemporary data
+were absent are no longer a description of the entire current repository.
+They also do not imply that the newer corpora meet the earlier quality,
+rights-review, or final-custody requirements.
+
+The main diagnostic implementation is preserved in
+\code{legacy/cycle2_diagnostics.py}; \code{docs/research_cycle.py} supplies
+the supplementary repeated-split analysis. The latter still imports the
+old detector name and uses old root-relative paths. It is neither V11's
+trainer nor a current, completed confirmatory evaluation. Its retained
+outputs, not an assumed successful rerun in the reorganized checkout, are
+the source of the diagnostic results summarized here.
+
+\subsection{Exploratory failure analysis and controls}
+The primary analysis uses 12 leave-one-topic-pair-out assessments. In each
+fold, one pair is assessed, three select a threshold, and eight fit the
+model. Training-only normalization is recomputed within each fold. The
+original ten-feature setting gives FNR 0.25 and the selected eight-feature
+setting gives FNR $1/3$; both have FPR zero and mean within-fold AUROC 1.0.
+A length-only control has FPR $1/6$ and FNR $2/3$, while removing repetition
+features leaves the original setting's aggregate decisions unchanged.
+Scores from different fits are not pooled into a single AUROC.
+
+The original model's thresholds range from approximately 0.6420 to 0.9373,
+with median 0.8015. The selected setting ranges from 0.5089 to 0.5310,
+with median 0.5165. Its smaller numerical movement is not proof of greater
+stability: different penalties alter score scales, and the setting still
+misses more generated articles in these folds. Conditional topic-pair
+bootstrap intervals for FNR are $[0,0.50]$ and approximately
+$[0.083,0.583]$, respectively. These archived intervals exclude refitting
+uncertainty and do not estimate modern-web error.
+
+The supplementary analysis evaluates 100 fixed-seed 6/3/3 topic-pair
+partitions, five feature/penalty settings, and three threshold policies.
+There are 500 fits for those comparisons and 100 additional permutation
+fits, not 600 independent experiments. For the selected pilot setting,
+the original threshold rule has mean FNR 0.240 and mean FPR 0.000. Using
+the next representable value above the largest calibration-negative score
+reduces mean FNR to zero but raises mean FPR to 0.260. A separating midpoint,
+with fallback to the original rule, gives mean FNR about 0.007 and FPR 0.040.
+These counterfactual policies describe an exploratory trade-off; they do not
+replace the original failed test result.
+
+Formatting probes on the fixed pilot models also matter. Uppercasing and
+collapsing whitespace leave scores unchanged, while adding a hyphen before
+each sentence changes five of 24 baseline decisions and four of 24 selected
+model decisions. Maximum absolute score changes are about 0.1541 and 0.01849.
+A digit-to-``number'' substitution changes content and must not be called
+a meaning-preserving formatting test.
+
+The 99-permutation leave-pair-out analysis gives a Monte Carlo value of
+0.01 for mean within-fold AUROC. The separate 100-permutation analysis on
+the original assessment split gives a tail fraction about 0.099. They use
+different statistics and allocations; reporting only the more favorable
+value would misrepresent the record. Both are exploratory association checks
+under exchangeability assumptions, not evidence that origin rather than
+era, source, or register caused the association.
+
+The immediate failure mechanism is identifiable: generated assessment
+scores remain below a conservative validation-derived cutoff despite
+preserved rank ordering. Its underlying cause is not isolated. Historical
+era, publication, and generating assistant are aligned with origin, so a
+source-disjoint comparison is not identifiable within this tiny corpus.
+Repeated splitting cannot create missing source diversity.
+
+\subsection{Uncertainty and prospective methodology}
+The archived prospective protocol fixes the original ten-feature logistic
+model, not V11, and proposes negative-only Neyman--Pearson order-statistic
+calibration. Such methods separate calibration from fitting under explicit
+assumptions \cite{tong2018}. The retained implementation uses per-head
+target FPR 0.05 and violation probability 0.025, with a planned minimum of
+120 independent negative clusters per head. An order-statistic bound requires
+independent, exchangeable calibration negatives and a scoring model fixed
+before calibration. It is not a guarantee under distribution shift and is
+not the empirical threshold search actually used for V11.
+
+That distinction prevents a tempting but invalid inference: the existence
+of a conservative calibration function elsewhere in the repository does
+not confer its guarantees on the current SVM. The local method snapshot
+is also not an externally timestamped preregistration. It neither freezes
+V11 retrospectively nor converts its validation results into confirmatory
+evidence. A new V11-based protocol would require a versioned amendment
+before any new final evaluation.
+
+\subsection{Annotation, custody, and release status}
+The archived rubric proposes at least 100 independently double-rated
+documents, raw binary agreement at least 0.80, a lower 95\% cluster-bootstrap
+kappa bound at least 0.60, and at least 95\% resolved quality decisions.
+These are design choices, not established universal acceptance standards.
+The actual annotation audit has zero eligible documents and null agreement
+statistics. New benchmark origin guesses do not satisfy these requirements.
+There is no completed quality agreement analysis to report.
+
+The prospective workflow records human review, rights and provenance checks,
+model/input hashes, and an independent custodian's commitment for final
+data. Software can check the supplied records but cannot establish that
+raters were truly independent or that final data remained unseen. No
+completed V11 evaluation satisfying that workflow is supplied. Original
+pilot and later benchmark materials remain development evidence, and a
+fresh final corpus is still required.
+
+\section{Limitations, Ethics, and Next Steps}
+\textbf{Coverage and confounding.} V11 covers a limited mixture of finance,
+medicine, open-domain answers, and news/magazine writing. The benchmark
+conditions do not represent every generator, decoding procedure, future
+model, or degree of human editing. Historical experiments are further
+confounded by era, source, and processing. Neither training size nor
+pair-level balance resolves those limitations. Authorship can correlate
+with topic, proficiency, translation patterns, formatting, and source
+conventions without the classifier learning a portable origin signal.
+
+\textbf{Evaluation dependence.} Development repeatedly inspected the
+benchmark comparison set and external examples. V11's aggregate comes
+from the threshold-selection set and includes an exact cross-split text
+duplicate. Some source strata are extremely small: four human open-QA
+examples allow an empirical FPR change of 0.25 from a single error. The
+source-specific errors are not retained for the combined model, and the
+handoff numbers cannot safely be attributed to that validation set. The
+available record supports neither a stable source-wise FPR claim nor an
+unbiased universal accuracy estimate.
+
+\textbf{What the score cannot say.} A human document can be flagged and a
+generated one can be missed. Heavy paraphrasing, translation, partial
+assistance, and later editing may change both the appropriate target and
+the feature distribution. V11 has no calibrated probabilities, no quality
+head, and no validated short-text or out-of-distribution abstention rule.
+Its lexical weights cannot establish authorship from text alone. No
+population prevalence or annual trend follows from a balanced convenience
+corpus and its validation scores.
+
+\textbf{Reproducibility and provenance.} The audit verifies important
+transformations but does not reproduce fitted-model inference in the
+available environment. Missing external texts, row-level score logs,
+acquisition/generation records, and reuse documentation limit independent
+replication. Some script paths no longer match the repository layout.
+These are research-package limitations, not details to conceal in a
+favorable performance summary. The archived artifacts should remain intact
+while a corrected, separately versioned pipeline is developed.
+
+\textbf{Responsible use.} Outputs are screening and research signals for
+manual review, not proof of cheating, plagiarism, origin, or misconduct.
+They should not be used alone for academic misconduct accusations, punitive
+moderation, employment decisions, publication rejection, legal conclusions,
+or automatic content removal. The CLI's \code{AI}/\code{HUMAN} strings are
+operational class names, not certified findings about an individual. False
+accusations cannot be prevented merely by choosing a low empirical validation
+FPR, and a low score does not certify human authorship.
+
+\textbf{Collection and disclosure.} A future release should use permitted
+public material or consented writing, record reuse permissions, minimize
+personal information, and prefer aggregate findings over unnecessary author
+identifiers or annotator comments. A source link is not itself a reuse
+permission, and a historical Gutenberg notice does not authorize release
+of unrelated contemporary texts. No new article bodies are redistributed
+by this manuscript. An AI assistant was used to prepare and revise study
+materials and this paper, and authored the original pilot's generated
+articles. The later fixed generated examples are retained as development
+materials, not represented as independent human writing. Venue-specific
+disclosure and accountable human review remain necessary before submission.
+
+The next cycle should first repair provenance and grouping, restore missing
+inputs and per-document result logs, and preserve the V11 snapshot. After
+constructing a genuinely new, independently documented corpus, developers
+should conduct source/topic/generator and length controls without accessing
+the final set. If quality remains a target, independent rubric annotation
+and an agreement audit must precede quality-model fitting. Freeze the
+features, calibration rule, model, primary metrics, and subgroup plan before
+custodian-held final and challenge evaluation. Only after transferable error
+rates and a probability sample exist should error-adjusted prevalence be
+attempted. None of those requirements can be completed by editing prose.
+
+\section{Conclusion}
+The project's clearest result is not its highest accuracy value. It is the
+sequence of ways a favorable score can fail to answer the intended question.
+The initial pilot preserves ranking but fails at its chosen threshold. V5
+performs strongly on a repeatedly inspected benchmark while missing a
+reported short external example. V6 shifts the operating point at the cost
+of substantially more benchmark human false positives. V8 addresses visible
+formatting artifacts without resolving reported transfer failures. V11
+adds paired HC3 data and shows improved behavior in the available project
+notes, alongside strong aggregate validation performance.
+
+That progression supports further study of training composition and
+distribution shift, not a causal claim that one change solved detection.
+The audit strengthens the contribution by identifying exact-text leakage,
+ambiguous subgroup attribution, and missing external evidence rather than
+leaving those limitations implicit. The present work is an exploratory
+detector-development case study with an explicit route to stronger
+evaluation. It does not establish a universally accurate AI detector,
+a validated low-quality-content detector, or an Internet-wide ``slop''
+majority. Those claims require evidence that this repository does not yet
+contain.
+
+\appendix
+\section{Reproducing the Implementation}
+\subsection{Evidence map and audit}
+The revision's supporting files are \code{docs/PROJECT_AUDIT.md},
+\code{docs/audit_repository.py}, and \code{docs/audit_results.json}.
+The pre-revision manuscript is retained as \code{docs/main_pre_v11.tex};
+it is a historical snapshot, not an alternative current paper. Table
+\ref{tab:evidencemap} identifies the principal sources for the numerical
+and methodological claims. Full input hashes and constructor expressions
+are included in the machine-readable audit.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\linewidth}{lX}
+\toprule
+Claim & Repository evidence \\
+\midrule
+Pilot selection and failed test & \code{legacy/pilot/artifacts/selection.json}; \code{test_results.json}; \code{test_predictions.json} in the same directory \\
+Historical V2/V3 & \code{models/archive/v2_results.json}; \code{v3_results.json}; \code{dataset/v3_corpus.csv} \\
+Benchmark evolution & \code{models/archive/hc3_*results.json}; optimization/search JSONs and corresponding \code{training/} scripts \\
+Original/modern distinction & \code{legacy/pilot/protocol.json}; \code{data/historical_1900/}; \code{data/benchmark/human_detectors.json} \\
+HC3 pairing and V11 composition & \code{training/build_hc3_paired_v10.py}; \code{training/build_combined_v11.py}; their output CSVs \\
+V11 model and aggregate metrics & \code{training/train_combined_v11.py}; \code{models/current/hc3_v11_combined_results.json}; saved model metadata \\
+Second-cycle diagnostics & \code{legacy/cycle2/artifacts/diagnostics.json}; \code{legacy/cycle2/results/diagnostics.json} \\
+Incomplete annotation & \code{legacy/cycle2/artifacts/annotation_audit.json}; blank quality fields in processed data \\
+External observations & \code{README.md}; \code{samples/article.txt}; no complete per-file score ledger \\
+\bottomrule
+\end{tabularx}
+\caption{Evidence map. Patterned filenames denote a family of retained
+artifacts, not a claim that every file used the same dataset.}
+\label{tab:evidencemap}
+\end{table}
+
+From the repository root, the non-training audit runs with the supplied
+Python environment and pandas:
+\begin{lstlisting}
+python docs/audit_repository.py
+\end{lstlisting}
+It overwrites only its revision audit JSON, not models or experiment results.
+It checks exact text duplication and supplied group membership, not every
+near-duplicate or shared-author relationship. It does not retrieve links,
+verify claims within articles, determine reuse rights, or infer missing labels.
+
+\subsection{Inference, training, and software versions}
+The release layout provides an inference-only route when the recorded
+dependencies are available:
+\begin{lstlisting}
+cd release/V11_RELEASE
+python3 detector_v11.py ../../samples/article.txt
+\end{lstlisting}
+The command must be launched from that folder because the model path is
+working-directory relative. It describes the supplied layout; inference
+was not rerun in the revision environment. The current and release portable
+model copies have matching SHA-256 hashes.
+
+The uploaded dependency file lists NumPy 2.5.2, SciPy 1.18.0,
+scikit-learn 1.9.0, joblib 1.5.3, and pandas 3.0.5; the README records
+Python 3.13.14. In contrast, the audit ran on Python 3.13.15, NumPy 2.4.1,
+SciPy 1.17.0, and pandas 2.3.3, without scikit-learn or joblib. These are
+distinct environments. No cross-version inference equivalence or exact
+training replay is claimed.
+
+The V11 training sequence is implemented by
+\code{training/build_hc3_paired_v10.py},
+\code{training/build_combined_v11.py}, and
+\code{training/train_combined_v11.py}. Before replay, restore or explicitly
+adapt their expected input/output locations in a separate experiment
+directory. Do not run them blindly over preserved artifacts. Reproduction
+should log library versions, raw and processed hashes, pair membership,
+feature settings, threshold, model fingerprint, all row scores, and
+source-level metrics. A data-cleaned successor needs a new identifier and
+must not replace the V11 results reported here.
+
+Build the current self-contained paper from the repository root with:
+\begin{lstlisting}
+latexmk -cd -pdf -interaction=nonstopmode -halt-on-error docs/main.tex
+\end{lstlisting}
+The bibliography is embedded. Tables require no external pilot figures or
+obsolete root-relative inputs. The root-level \code{main.pdf} belongs to
+the earlier project state; the revised output is \code{docs/main.pdf}.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{pew}
+S. Bestvater, A. Smith, C. TerBush, C. Baronavski, and J. Chavda.
+\emph{How Much of the Internet Is Written With AI?}
+Pew Research Center, August 20, 2026.
+
+\bibitem{pewmethods}
+S. Bestvater, A. Smith, C. TerBush, C. Baronavski, and J. Chavda.
+\emph{Methodology: How Much of the Internet Is Written With AI?}
+Pew Research Center, August 20, 2026.
+
+\bibitem{dolezal}
+J. Dolezal, S. Alam, M. Graham, and M. Bohacek.
+\emph{The Impact of AI-Generated Text on the Internet}.
+arXiv:2604.26965, version 1, April 14, 2026. Preprint.
+
+\bibitem{raid}
+L. Dugan, A. Hwang, F. Trhl\'{i}k, A. Zhu, J. M. Ludan, H. Xu,
+D. Ippolito, and C. Callison-Burch.
+RAID: A Shared Benchmark for Robust Evaluation of Machine-Generated Text
+Detectors. \emph{Proceedings of ACL}, 2024.
+doi:10.18653/v1/2024.acl-long.674.
+
+\bibitem{tufts}
+B. Tufts, X. Zhao, and L. Li.
+A Practical Examination of AI-Generated Text Detectors for Large Language
+Models. \emph{Findings of NAACL}, pp. 4839--4856, 2025.
+doi:10.18653/v1/2025.findings-naacl.271.
+
+\bibitem{liang}
+W. Liang, M. Yuksekgonul, Y. Mao, E. Wu, and J. Zou.
+GPT detectors are biased against non-native English writers.
+\emph{Patterns}, 4(7):100779, 2023.
+doi:10.1016/j.patter.2023.100779.
+
+\bibitem{tong2018}
+X. Tong, Y. Feng, and J. J. Li.
+Neyman-Pearson classification algorithms and NP receiver operating characteristics.
+\emph{Science Advances}, 4(2):eaao1659, 2018.
+doi:10.1126/sciadv.aao1659.
+
+\bibitem{m4}
+Y. Wang et al.
+M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated
+Text Detection. \emph{Proceedings of EACL}, pp. 1369--1407, 2024.
+doi:10.18653/v1/2024.eacl-long.83.
+
+\bibitem{coauthor}
+M. Lee, P. Liang, and Q. Yang.
+CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring
+Language Model Capabilities. \emph{Proceedings of CHI}, 2022.
+doi:10.1145/3491102.3502030.
+
+\bibitem{summeval}
+A. R. Fabbri, W. Kry\'{s}ci\'{n}ski, B. McCann, C. Xiong, R. Socher, and D. Radev.
+SummEval: Re-evaluating Summarization Evaluation.
+\emph{Transactions of the Association for Computational Linguistics}, 9:391--409,
+2021. doi:10.1162/tacl\_a\_00373.
+\end{thebibliography}
+\end{document}

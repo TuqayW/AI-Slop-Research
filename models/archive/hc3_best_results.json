@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "feature_set": "word_char",
+    "C": 10.0,
+    "word_ngrams": [
+      1,
+      3
+    ],
+    "character_ngrams": [
+      3,
+      5
+    ],
+    "character_analyzer": "char_wb",
+    "validation_max_fpr": 0.05
+  },
+  "threshold": 0.43630393426902514,
+  "train": {
+    "n": 180,
+    "tp": 90,
+    "fp": 0,
+    "tn": 90,
+    "fn": 0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fpr": 0.0,
+    "auroc": 1.0
+  },
+  "valid": {
+    "n": 60,
+    "tp": 30,
+    "fp": 0,
+    "tn": 30,
+    "fn": 0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fpr": 0.0,
+    "auroc": 1.0
+  },
+  "test": {
+    "n": 60,
+    "tp": 30,
+    "fp": 2,
+    "tn": 28,
+    "fn": 0,
+    "accuracy": 0.9666666666666667,
+    "precision": 0.9375,
+    "recall": 1.0,
+    "f1": 0.967741935483871,
+    "fpr": 0.06666666666666667,
+    "auroc": 0.9988888888888889
+  },
+  "test_by_generation_model": {
+    "claude": {
+      "n": 12,
+      "tp": 6,
+      "fp": 0,
+      "tn": 6,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auroc": 1.0
+    },
+    "gpt-4o": {
+      "n": 12,
+      "tp": 6,
+      "fp": 0,
+      "tn": 6,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auroc": 1.0
+    },
+    "humanized_o1-pro": {
+      "n": 12,
+      "tp": 6,
+      "fp": 2,
+      "tn": 4,
+      "fn": 0,
+      "accuracy": 0.8333333333333334,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "fpr": 0.3333333333333333,
+      "auroc": 0.9722222222222223
+    },
+    "o1-pro": {
+      "n": 12,
+      "tp": 6,
+      "fp": 0,
+      "tn": 6,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auroc": 1.0
+    },
+    "paraphrased_gpt-4o": {
+      "n": 12,
+      "tp": 6,
+      "fp": 0,
+      "tn": 6,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "auroc": 1.0
+    }
+  },
+  "warning": "Experimental research detector. These results are limited to this dataset and should not be interpreted as general web accuracy."
+}

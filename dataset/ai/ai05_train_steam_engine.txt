@@ -1,0 +1,25 @@
+THE GOVERNING OF STEAM ENGINES.
+
+The successful operation of a steam engine requires more than the production
+of pressure within the boiler. The engine must receive steam in such a manner
+that the power developed remains reasonably uniform under changing loads.
+Without some means of regulation, a reduction in the demand may cause the
+speed to increase, while an increase in the work required may produce an
+undesirable slowing of the machinery.
+
+The governor performs this regulating function by responding to variations in
+speed and altering the admission of steam. Its action is therefore indirect:
+it does not create the power, but modifies the conditions under which the
+engine receives it. The simplicity of this principle should not lead to the
+supposition that every governor will act equally well.
+
+The response must be sufficiently rapid without producing continuous
+oscillation. A mechanism which closes the admission too suddenly may cause an
+irregular motion, while one which moves too slowly may permit the speed to
+change considerably before correction occurs. Friction and looseness in the
+connecting parts introduce further difficulties.
+
+The practical engineer consequently judges a governing apparatus not merely by
+its ability to alter the steam supply, but by the steadiness of the whole
+engine while the load varies. A successful arrangement is one whose corrections
+are prompt, moderate and repeatable.

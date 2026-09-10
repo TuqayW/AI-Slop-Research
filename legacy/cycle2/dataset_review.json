@@ -1,0 +1,43 @@
+{
+  "reviewed_on": "2026-09-10",
+  "review_scope": "Primary dataset documentation reviewed through the browser; no new raw corpus downloaded or independently annotated.",
+  "candidates": [
+    {
+      "name": "HelpSteer2",
+      "documentation": "https://huggingface.co/datasets/nvidia/HelpSteer2/blob/main/README.md",
+      "raw_annotations": "https://huggingface.co/datasets/nvidia/HelpSteer2/resolve/main/disagreements/disagreements.jsonl.gz",
+      "declared_license": "CC-BY-4.0",
+      "documented_strength": "Generated responses from multiple models with independent contractor ratings; an individual-rating release is available.",
+      "gap": "No human-written response comparison and a different quality rubric. Selected/filtered ratings are not this study's independent annotation audit. Collection is not a representative 2026 web sample.",
+      "decision": "Potential auxiliary generated-quality study only; not accepted as the required joint corpus."
+    },
+    {
+      "name": "ELLIPSE",
+      "documentation": "https://github.com/scrosseye/ELLIPSE-Corpus",
+      "access_probe": "https://raw.githubusercontent.com/scrosseye/ELLIPSE-Corpus/main/README.md",
+      "declared_license": "CC-BY-NC-SA-4.0",
+      "documented_strength": "Learner essays with proficiency scores, a rubric, and a separately released raw-rater file.",
+      "gap": "Proficiency is not the proposed content-quality construct; essays are not a diverse contemporary web sample. Young writers and demographic fields require careful minimization and permitted-use review.",
+      "decision": "Potential separately governed proficiency challenge; not accepted as low-quality ground truth."
+    },
+    {
+      "name": "MAGE",
+      "documentation": "https://github.com/yafuly/MAGE",
+      "dataset_card": "https://huggingface.co/datasets/yaful/MAGE/blob/main/README.md",
+      "access_probe": "https://huggingface.co/datasets/yaful/MAGE/raw/main/README.md",
+      "declared_repository_license": "Apache-2.0",
+      "documented_strength": "Human and generated text across source datasets, generators, and distribution-shift testbeds.",
+      "gap": "No matched independent annotations for this quality rubric. Processed data filter low-quality texts; inherited text rights need per-source review. Its origin coding is reversed relative to this project.",
+      "decision": "Potential origin-only auxiliary benchmark, not a substitute for the proposed quality-labeled evaluation."
+    }
+  ],
+  "terminal_access_results": [
+    {"resource": "HelpSteer2 raw disagreements", "result": "URLError: Tunnel connection failed: 403 Forbidden"},
+    {"resource": "ELLIPSE repository README", "result": "URLError: Tunnel connection failed: 403 Forbidden"},
+    {"resource": "MAGE raw dataset card", "result": "URLError: Tunnel connection failed: 403 Forbidden"}
+  ],
+  "accepted_new_documents": 0,
+  "independent_project_annotations": 0,
+  "reserved_untouched_final_documents": 0,
+  "limitations": "Documentation review is not a provenance audit, permission adjudication, or consent verification for individual texts. No final dataset is claimed to exist."
+}

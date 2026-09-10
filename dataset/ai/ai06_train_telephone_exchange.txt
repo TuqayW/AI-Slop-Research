@@ -1,0 +1,25 @@
+THE ORGANIZATION OF A TELEPHONE EXCHANGE.
+
+The rapid growth of telephone service has made the exchange an important
+mechanism in its own right. When only a small number of subscribers are
+connected, the operator may establish a communication with little difficulty.
+As the number increases, however, the possible combinations multiply rapidly,
+and the exchange must provide an orderly means of making one connection while
+preserving many others.
+
+Each subscriber requires a line leading to the central office, together with
+some means of indicating that service is requested. The operator then connects
+the calling line with the line belonging to the desired subscriber. The
+apparatus must make the connection secure without requiring an excessive number
+of independent operations.
+
+The chief difficulty is not the principle of connection but the management of
+large numbers of simultaneous calls. A good exchange must provide sufficient
+capacity while avoiding needless complication. Faults must also be located
+promptly, for a defective contact in a central office may interfere with many
+subscribers at once.
+
+The telephone exchange illustrates a general principle of modern engineering:
+when the number of users becomes large, organization may be as important as
+the individual mechanism. The usefulness of each instrument depends upon the
+ability of the entire system to work together.

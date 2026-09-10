@@ -1,0 +1,45 @@
+{
+  "status": "blocked",
+  "errors": [
+    "A fixed pair of distinct independent human raters is required.",
+    "Human review is not complete: annotation_process_review_complete.",
+    "Human review is not complete: independent_human_review.",
+    "Human review is not complete: privacy_review_complete.",
+    "Human review is not complete: provenance_review_complete.",
+    "Human review is not complete: rights_review_complete.",
+    "Human reviewer and review evidence must be documented.",
+    "Insufficient independent annotation pairs for the admission audit.",
+    "Kappa uncertainty does not meet the frozen admission criterion.",
+    "Raw agreement does not meet the frozen admission criterion.",
+    "Sampling frame and selection method are required.",
+    "Too many unresolved quality labels."
+  ],
+  "documents": 0,
+  "resolved_fraction": null,
+  "binary_agreement": {
+    "n": 0,
+    "raw_agreement": null,
+    "kappa": null
+  },
+  "binary_kappa_cluster_95": null,
+  "valid_kappa_bootstrap_replicates": 0,
+  "dimension_agreement": {
+    "factual": {
+      "n": 0,
+      "raw_agreement": null,
+      "kappa": null
+    },
+    "information": {
+      "n": 0,
+      "raw_agreement": null,
+      "kappa": null
+    },
+    "coherence": {
+      "n": 0,
+      "raw_agreement": null,
+      "kappa": null
+    }
+  },
+  "adjudication_records": 0,
+  "verification_limit": "The code validates supplied records, not real consent, human identity, independence, or genuine final-data blinding."
+}

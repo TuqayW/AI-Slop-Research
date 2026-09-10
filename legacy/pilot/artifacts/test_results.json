@@ -1,0 +1,47 @@
+{
+  "selection_sha256": "a476cbce95c236523c7d29fbec05ab1bcf36e5747f9bcd42c392cc0e4b66828c",
+  "models": {
+    "baseline": {
+      "n": 6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.5,
+      "auroc": 1.0,
+      "fpr_one_sided_95_upper_if_independent": 0.6315968501359612
+    },
+    "selected": {
+      "n": 6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.5,
+      "auroc": 1.0,
+      "fpr_one_sided_95_upper_if_independent": 0.6315968501359612
+    },
+    "always_negative": {
+      "n": 6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 3,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.5,
+      "auroc": 0.5
+    }
+  },
+  "warning": "Six test documents from three topic pairs, one historical issue and one assistant. No modern-web or slop accuracy claim."
+}
