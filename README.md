@@ -1,7 +1,6 @@
 # AI Text Detector Research Project
 
-> **Research project by Tuqay Mehdiyev**  
-> Baku, Azerbaijan · Baku European Lyceum  
+> **Research project by Tuqay Mehdiyev**
 > **Project date:** 10 September 2026
 
 ## About this project
@@ -24,8 +23,7 @@ The project currently culminates in **V11**, a supervised text classifier based 
 
 ### Tuqay Mehdiyev
 
-**Location:** Baku, Azerbaijan  
-**School:** Baku European Lyceum  
+**Location:** Baku, Azerbaijan
 **Date of this research snapshot:** 10 September 2026
 
 Tuqay Mehdiyev is a student researcher developing this project around interests in **artificial intelligence, machine learning, natural-language processing, software development, and reproducible research**.
@@ -716,8 +714,7 @@ For a formal, citable research snapshot, a future release can also be archived t
 ## Current snapshot
 
 **Author:** Tuqay Mehdiyev  
-**Location:** Baku, Azerbaijan  
-**School:** Baku European Lyceum  
+**Location:** Baku, Azerbaijan
 **Date:** 10 September 2026  
 **Current model:** V11  
 **Primary task:** Human-vs-AI text classification  
