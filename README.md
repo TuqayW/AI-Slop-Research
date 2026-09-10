@@ -1,243 +1,114 @@
 # AI Text Detector Research Project
 
-A reproducible research project for experimenting with **human-vs-AI text classification**, with a current focus on short and medium-length English text.
+> **Research project by Tuqay Mehdiyev**  
+> Baku, Azerbaijan · Baku European Lyceum  
+> **Project date:** 10 September 2026
 
-The project has evolved through multiple model and dataset experiments. The current best development model is **V11**, a linear Support Vector Machine using normalized word- and character-level TF-IDF features and trained on a combination of the HC3 corpus and a separate modern human/AI benchmark.
+## About this project
 
-> **Important:** This project is a research prototype, not a universally validated AI detector. A high score on one benchmark does not imply the same accuracy on arbitrary writing, websites, authors, subjects, or future language models.
+This repository is an independent research and software project exploring a simple but difficult question:
 
----
+> **Can machine-learning methods distinguish human-written text from AI-generated text reliably when the writing style, domain, length, and generation process change?**
 
-## Current status
+The project started as a small experimental detector and gradually became a broader investigation into **AI-text detection, dataset quality, distribution shift, false positives, false negatives, leakage, formatting artifacts, and reproducible evaluation**.
 
-### Current model: V11
+The goal is not to build a system that simply produces an impressive benchmark number. The goal is to understand **what a detector learns, when it works, when it fails, and how much confidence we should place in its output**.
 
-The current V11 classifier uses:
+The project currently culminates in **V11**, a supervised text classifier based on normalized word- and character-level TF-IDF features with a linear Support Vector Machine.
 
-* word TF-IDF features with 1–3 word n-grams
-* character TF-IDF features with 2–6 character n-grams
-* HTML/Markdown normalization
-* normalized quotation and dash characters
-* `LinearSVC`
-* `C=3`
-* a threshold selected using validation data with a target validation FPR of at most 5%
-
-Training data combines:
-
-1. A paired subset of the **HC3 English corpus**
-2. The project's separate modern human/AI benchmark
-
-The current combined training set contains:
-
-```text
-Training:   2,248 texts
-Validation:   620 texts
-Labels:      exactly balanced
-```
-
-The HC3 portion was built from matched human/ChatGPT answer pairs. The benchmark portion contains multiple human/AI generation conditions.
+> **Important:** V11 is a research prototype, not a universally validated AI detector. Strong performance on a particular benchmark does not imply equivalent performance on arbitrary writing, websites, authors, subjects, languages, or future language models. fileciteturn0file0L5-L7
 
 ---
 
-# Quick start
+## Author
 
-## Requirements
+### Tuqay Mehdiyev
 
-The current development environment used:
+**Location:** Baku, Azerbaijan  
+**School:** Baku European Lyceum  
+**Date of this research snapshot:** 10 September 2026
 
-```text
-Python       3.13.14
-numpy        2.5.2
-scipy        1.18.0
-scikit-learn 1.9.0
-joblib       1.5.3
-```
+Tuqay Mehdiyev is a student researcher developing this project around interests in **artificial intelligence, machine learning, natural-language processing, software development, and reproducible research**.
 
-The standalone detector does not require pandas.
-
-For the current environment:
-
-```bash
-pip3 install numpy==2.5.2 scipy==1.18.0 scikit-learn==1.9.0 joblib==1.5.3
-```
-
-For reproducing the broader training pipeline, pandas is also useful:
-
-```bash
-pip3 install pandas==3.0.5
-```
-
-The exact dependency record is stored in:
-
-```text
-models/current/requirements_v11.txt
-```
+The project is designed not only as a detector, but also as a learning and research record: each model version documents a question, an experiment, a result, and a reason for the next change.
 
 ---
 
-# Running the detector
+# Why I started this project
 
-The simplest interface is:
+AI-generated writing is increasingly common, but detecting it from the final text alone is much harder than it first appears.
 
-```bash
-python3 detector_v11.py article.txt
-```
+A classifier can perform extremely well on one dataset because it learns patterns that are genuinely associated with AI generation. But it can also perform well for the wrong reason—for example, by learning:
 
-The detector reports:
+- formatting conventions,
+- source-specific writing styles,
+- prompt-specific vocabulary,
+- document-length differences,
+- dataset-construction artifacts.
 
-```text
-File
-Words
-Score
-Threshold
-Margin
-Prediction
-```
+That creates a central research problem:
 
-Example:
+> **Is the model learning something about AI-generated language, or is it learning something about the dataset?**
 
-```text
-File: article.txt
-Words: 225
-Score: -0.192923
-Threshold: -0.364735
-Margin: 0.171812
-Prediction: AI
-```
-
-### Interpreting the result
-
-The score is a **decision-function score**, not a calibrated probability.
-
-The rule is:
-
-```text
-score >= threshold  -> AI
-score <  threshold  -> HUMAN
-```
-
-The margin is:
-
-```text
-score - threshold
-```
-
-A positive margin means the document is on the AI side of the learned decision boundary.
-
-A negative margin means it is on the human side.
-
-Do not interpret:
-
-```text
-score = 0.80
-```
-
-as:
-
-```text
-80% probability the text is AI
-```
-
-No such probability calibration is currently claimed.
+This repository is an attempt to investigate that distinction experimentally.
 
 ---
 
-# Portable release
+# The research journey
 
-The intended inference-only package is:
+The project has evolved through multiple model generations.
 
 ```text
-release/
-└── V11_RELEASE/
-    ├── detector_v11.py
-    ├── hc3_v11_portable.joblib
-    ├── hc3_v11_combined_results.json
-    └── requirements_v11.txt
+Original pilot
+      ↓
+V2 / V3
+      ↓
+Modern benchmark construction
+      ↓
+Grouped / leakage-aware evaluation
+      ↓
+V4 / V5 feature + model search
+      ↓
+V6 short-text experiment
+      ↓
+V7 ensemble experiment
+      ↓
+V8 formatting normalization
+      ↓
+HC3 corpus expansion
+      ↓
+V11 combined model
 ```
 
-The portable model contains the trained:
+Each stage was kept because the failures are scientifically useful.
 
-* word TF-IDF vectorizer
-* character TF-IDF vectorizer
-* LinearSVC model
-* decision threshold
+For example:
 
-The standalone `detector_v11.py` contains its own text-normalization function, so inference does not depend on importing the training script.
+- **V5** performed strongly on the modern benchmark but failed on one external AI example.
+- **V6** became much more sensitive to short AI examples but produced an unacceptable increase in human false positives.
+- **V8** normalized obvious HTML/Markdown artifacts, but normalization alone did not solve the external generalization problem.
+- **V11** combined broader HC3 data with the modern benchmark and successfully classified the current set of small external sanity checks.
 
-Run the release version from inside its directory:
-
-```bash
-cd release/V11_RELEASE
-python3 detector_v11.py ../../samples/article.txt
-```
-
-The `.joblib` model is the learned model. The training datasets are **not** needed for ordinary inference.
+This progression is one of the main research findings of the project.
 
 ---
 
-# Reproducing training
+# Current model: V11
 
-The current V11 training workflow is:
+V11 is a supervised binary text classifier using:
 
 ```text
-raw HC3 data
-       |
-       v
-paired HC3 corpus
-       |
-       v
-combined training/validation corpus
-       |
-       v
-normalized word + character TF-IDF
-       |
-       v
+Word TF-IDF
+    +
+Character TF-IDF
+    +
 LinearSVC
-       |
-       v
-validation threshold selection
-       |
-       v
-V11 model
 ```
-
-Important training files:
-
-```text
-training/build_hc3_paired_v10.py
-training/build_combined_v11.py
-training/train_combined_v11.py
-```
-
-The corresponding processed data are stored under:
-
-```text
-dataset/
-```
-
-The raw HC3 files are stored under:
-
-```text
-data/hc3/
-```
-
-The separate modern benchmark is stored under:
-
-```text
-data/benchmark/
-```
-
----
-
-# Current V11 training configuration
-
-The current combined model uses:
 
 ### Word features
 
 ```text
-TF-IDF
-word analyzer
+analyzer: word
 n-grams: 1–3
 max features: 50,000
 min_df: 2
@@ -247,15 +118,14 @@ sublinear TF: enabled
 ### Character features
 
 ```text
-TF-IDF
-char_wb analyzer
+analyzer: char_wb
 n-grams: 2–6
 max features: 80,000
 min_df: 2
 sublinear TF: enabled
 ```
 
-### Model
+### Classifier
 
 ```text
 LinearSVC
@@ -264,28 +134,120 @@ C = 3.0
 
 ### Text normalization
 
-Before vectorization:
+Before feature extraction, V11:
 
-* HTML tags are removed
-* Markdown emphasis markers are removed
-* curly quotation marks are normalized
-* curly apostrophes are normalized
-* different dash characters are normalized
-* repeated whitespace is collapsed
+- removes HTML tags
+- removes Markdown emphasis markers
+- normalizes curly quotation marks
+- normalizes curly apostrophes
+- normalizes dash variants
+- collapses repeated whitespace
 
-The normalization is performed before feature extraction.
+The implementation and current model settings are documented in the repository's training code and experiment records. fileciteturn0file0L232-L276
 
 ---
 
-# V11 training data
+# How the detector works
 
-V11 combines two different sources.
+The model receives the text itself.
+
+It does not inspect:
+
+- model internals
+- browser metadata
+- hidden API information
+- author accounts
+- Internet URLs
+- external webpages
+
+The text is transformed into sparse TF-IDF representations and passed to the LinearSVC classifier.
+
+The detector produces a **decision-function score**.
+
+The current rule is:
+
+```text
+score >= threshold  → AI
+score <  threshold  → HUMAN
+```
+
+The current V11 threshold is:
+
+```text
+-0.364734947384451
+```
+
+The margin is:
+
+```text
+score - threshold
+```
+
+A positive margin means the document is on the AI side of the decision boundary.
+
+A negative margin means it is on the human side.
+
+The score is **not a calibrated probability**. For example, a score of `0.80` must not be interpreted as “80% probability the text is AI.” fileciteturn0file0L108-L141
+
+---
+
+# Run the detector
+
+The main entry point is:
+
+```bash
+python3 detector_v11.py samples/article.txt
+```
+
+Example output:
+
+```text
+File: samples/article.txt
+Words: 225
+Score: -0.192923
+Threshold: -0.364735
+Margin: 0.171812
+Prediction: AI
+```
+
+The model is intended to be a **screening/research tool**, not an authorship proof.
+
+---
+
+# Portable model
+
+The inference-oriented release is stored under:
+
+```text
+release/V11_RELEASE/
+```
+
+with:
+
+```text
+detector_v11.py
+hc3_v11_portable.joblib
+hc3_v11_combined_results.json
+requirements_v11.txt
+```
+
+The trained model artifact contains the learned vectorizers, classifier, and decision threshold.
+
+The training datasets are not required for ordinary inference.
+
+> **Release note:** the portable artifact was created as an experimental packaging step during the 10 September 2026 development session. Before calling it an official release, its outputs should be verified against the canonical V11 model artifact. This repository intentionally preserves both artifacts so that the discrepancy can be investigated rather than hidden.
+
+---
+
+# Training data
+
+V11 combines two major sources.
 
 ## HC3
 
-The HC3 English corpus contains human and ChatGPT answers associated with the same questions.
+The English HC3 corpus provides paired human and ChatGPT answers.
 
-The current paired construction produced:
+The project's paired construction produced:
 
 ```text
 3,278 paired questions
@@ -294,9 +256,7 @@ The current paired construction produced:
 3,278 ChatGPT
 ```
 
-For the V11 combined dataset, the HC3 portion was capped by domain so that finance did not completely dominate the training set.
-
-The retained HC3 domains are:
+The V11 training construction used the domains:
 
 ```text
 finance
@@ -304,30 +264,20 @@ medicine
 open_qa
 ```
 
-Each pair contributes:
+Each retained question contributes one human answer and one ChatGPT answer.
 
-```text
-1 human answer
-1 AI answer
-```
-
-The same question/pair is kept in only one split.
+Train/validation separation is performed at the pair/question level so the same question does not occur in both splits. fileciteturn0file0L280-L314
 
 ## Modern benchmark
 
-The project also contains a separate modern benchmark with multiple generation conditions.
-
-Its purpose is to measure whether the detector transfers beyond the HC3-style question/answer setting.
-
-The benchmark contains:
+The project also contains a separate 300-document modern benchmark:
 
 ```text
-300 documents
 150 human
 150 AI
 ```
 
-and includes several generation conditions, including:
+with multiple AI-generation conditions including:
 
 ```text
 gpt-4o
@@ -337,16 +287,16 @@ o1-pro
 humanized_o1-pro
 ```
 
-The benchmark remains useful for historical comparison, but it should not be treated as a universal estimate of real-world detector accuracy.
+The benchmark is valuable for comparison, subgroup analysis, and failure analysis, but it is not a universal estimate of real-world detector accuracy. fileciteturn0file0L316-L340
 
 ---
 
-# Current measured V11 results
+# Current V11 validation result
 
 On the constructed V11 validation set:
 
 ```text
-Validation size: 620
+n = 620
 
 Accuracy:  97.42%
 Precision: 95.65%
@@ -356,133 +306,63 @@ FPR:        4.52%
 AUROC:     0.9991
 ```
 
-Confusion counts:
+Confusion matrix:
 
 ```text
-TN: 296
-FP:  14
-FN:   2
-TP: 308
+TN = 296
+FP =  14
+FN =   2
+TP = 308
 ```
 
-These are **validation results for this project dataset**.
-
-They are not a claim that V11 will achieve 97.42% accuracy on arbitrary Internet text.
+These are **validation results for this project's data**. They should not be presented as proof that the detector will achieve the same accuracy on arbitrary Internet text. fileciteturn0file0L344-L370
 
 ---
 
 # External sanity checks
 
-The project includes a small set of manually prepared external articles used only as qualitative sanity checks.
-
-Current V11 behavior:
+The current small set of manually prepared external examples produced:
 
 ```text
-article_human.txt -> HUMAN
-article_ai.txt    -> AI
-article_mixed.txt -> AI
-article.txt       -> AI
+article_human.txt → HUMAN
+article_ai.txt    → AI
+article_mixed.txt → AI
+article.txt       → AI
 ```
 
-These examples are useful for development, but four articles are nowhere near enough to establish statistical generalization.
+These checks are useful because some earlier models failed on `article.txt`.
 
-The correct interpretation is:
+However, four external examples are not a statistically representative benchmark.
+
+The correct claim is:
 
 > V11 successfully classified these four particular external examples.
 
-The incorrect interpretation is:
+The incorrect claim is:
 
-> V11 is proven to be 100% accurate on real-world text.
-
----
-
-# Model history
-
-The project deliberately preserves earlier experiments.
-
-Important historical versions include:
-
-```text
-V2
-V3
-V4
-V5
-V6
-V7
-V8
-V11
-```
-
-They explored:
-
-* handcrafted stylometric features
-* word TF-IDF
-* character TF-IDF
-* word + character combinations
-* LinearSVC
-* logistic regression
-* class weighting
-* short-text training
-* score ensembles
-* formatting normalization
-* broader training data
-* HC3 expansion
-
-Older models are stored under:
-
-```text
-models/archive/
-```
-
-Their corresponding result files are retained so future experiments can be compared against earlier work.
-
-Do not delete historical model artifacts merely because they are no longer the best model.
+> V11 is proven to be 100% accurate on real-world text. fileciteturn0file0L374-L397
 
 ---
 
-# Important lessons from the experiments
+# What the experiments taught us
 
-## 1. Benchmark accuracy can be misleading
+## Dataset performance is not the same as generalization
 
-The original modern benchmark produced very strong results for several configurations.
+A classifier can learn dataset-specific signals instead of genuinely general signals of AI authorship.
 
-However, external examples showed that a model can perform extremely well on the benchmark while failing on writing that comes from a different distribution.
+This project therefore treats distribution shift as a central research question.
 
-This is one of the central research findings of the project.
+## Short text is different
 
-A detector can learn:
+The modern benchmark documents were substantially longer than some external examples.
 
-```text
-dataset-specific patterns
-```
+A short-text specialist model improved sensitivity to several short AI examples but produced substantially more human false positives on the benchmark.
 
-instead of:
+This suggests that a single universal threshold may not be optimal across all document lengths and domains. fileciteturn0file0L469-L481
 
-```text
-general properties of AI-generated writing
-```
+## Formatting can leak into a classifier
 
-Therefore benchmark performance must always be interpreted together with out-of-distribution evaluation.
-
----
-
-## 2. Short text behaves differently
-
-The original benchmark documents were roughly 700–750 words on average.
-
-The project's external examples were roughly 150–300 words.
-
-A dedicated short-text model improved sensitivity on the project's external AI examples but caused substantially more human false positives on the benchmark.
-
-Therefore:
-
-> There is no evidence yet that one simple threshold is optimal for every document length and domain.
-
----
-
-## 3. Formatting artifacts can leak into classifiers
-
-Feature inspection showed strong model weights associated with patterns such as:
+Feature analysis revealed strong signals associated with formatting patterns such as:
 
 ```text
 <br>
@@ -491,196 +371,87 @@ Feature inspection showed strong model weights associated with patterns such as:
 quotes
 ```
 
-Some of these artifacts were unevenly distributed between human and AI benchmark documents.
+Some of these patterns were unevenly distributed across the benchmark labels.
 
-That is dangerous because such patterns may describe the dataset-generation process rather than authorship.
+That matters because a classifier can accidentally learn properties of the dataset-generation pipeline instead of properties of authorship.
 
-V8 therefore added normalization before feature extraction.
+V8 added explicit formatting normalization to investigate this problem. fileciteturn0file0L483-L500
 
-V8 did not eliminate the external generalization problem, but the experiment demonstrated why artifact auditing is necessary.
+## Broader data helped more than blind tuning
+
+The major improvement in the development process came from adding broader paired HC3 data rather than continuously changing one hyperparameter.
+
+This supports a practical lesson:
+
+> **Better and more representative training data can matter more than small improvements in model configuration.** fileciteturn0file0L504-L516
 
 ---
 
-## 4. More diverse training data helped
+# What V11 is not
 
-The major improvement came from adding paired HC3 data rather than endlessly tuning the original 300-document benchmark.
-
-The combined V11 model successfully classified the project's external examples that V5 missed.
-
-This suggests that:
+V11 is:
 
 ```text
-training-data diversity
+a supervised binary text classifier
 ```
 
-is currently more important than another small hyperparameter search.
+It is **not**:
+
+```text
+a fine-tuned large language model
+```
+
+The model does not establish who wrote a document with certainty.
+
+A positive prediction does not prove AI authorship.
+
+A human prediction does not prove human authorship.
+
+The model score is not a probability.
 
 ---
 
-# Current model limitations
+# Limitations
 
-V11 is not a universal authorship detector.
+The current project remains limited by:
 
-Known limitations include:
+- English-focused training
+- incomplete domain coverage
+- limited representation of current/future AI systems
+- distribution shift
+- short-text instability
+- false positives
+- false negatives
+- paraphrasing and humanization
+- benchmark-specific artifacts
+- small subgroup sizes in some analyses
+- lack of fully independent large-scale external evaluation
+- lack of calibrated probabilities
+- inability to estimate real-world population prevalence from these experiments
 
-### Language
-
-The current project is primarily English-focused.
-
-### Length
-
-Very short text can be unstable.
-
-The current project does not establish a reliable universal minimum or maximum document length for detection.
-
-### Domain shift
-
-Performance can change substantially across:
-
-* journalism
-* academic writing
-* blogs
-* forums
-* technical writing
-* fiction
-* social media
-* marketing
-* edited professional text
-
-### Model shift
-
-The current training data do not represent every current or future language model.
-
-### Humanization/paraphrasing
-
-AI text that has been heavily edited, paraphrased, or humanized may behave differently from ordinary machine output.
-
-### False positives
-
-A human-written document can be classified as AI.
-
-A high detector score is not proof of AI authorship.
-
-### False negatives
-
-AI-generated text can be classified as human.
-
-A low score is not proof of human authorship.
-
-### Probability
-
-The current SVM score is not a calibrated probability.
+These limitations are not side notes; they are part of the research question.
 
 ---
 
 # Responsible use
 
-This project should be used as a **research and screening tool**, not as definitive evidence of authorship.
+This system should be treated as a **research and screening signal**, not definitive evidence.
 
-Do not use a detector score by itself to:
+A detector score should not, by itself, be used to:
 
-* accuse someone of cheating
-* accuse someone of plagiarism
-* punish a student
-* remove an author's work
-* reject a publication
-* make employment decisions
-* establish legal responsibility
+- accuse someone of cheating
+- accuse someone of plagiarism
+- punish a student
+- reject an academic paper
+- remove someone's work
+- make employment decisions
+- establish legal responsibility
 
-A detector output should be treated as one weak piece of evidence among many.
-
-For high-stakes decisions, human review and provenance evidence are more important than a single classifier score.
+High-stakes decisions require stronger evidence, human review, and provenance information.
 
 ---
 
-# Development philosophy
-
-The project follows these principles:
-
-## Never tune on the final evaluation set
-
-Once a test set has been inspected repeatedly, it should be treated as a comparison benchmark rather than a truly untouched final test.
-
-The project therefore distinguishes between:
-
-```text
-training
-validation
-comparison benchmark
-```
-
-rather than pretending every measured number is an independent estimate.
-
-## Prefer grouped splits
-
-Related documents, prompts, variants, and answers should stay in the same split where possible.
-
-This reduces leakage from near-duplicates and shared prompts.
-
-## Preserve model history
-
-Do not overwrite previous models.
-
-Every major experiment should produce:
-
-```text
-model artifact
-configuration
-results
-dataset version
-```
-
-## Prefer data improvement over blind hyperparameter searching
-
-When a model fails on external text, the first question should be:
-
-> Is the training distribution representative?
-
-rather than:
-
-> Which value of C should I try next?
-
----
-
-# Recommended future development
-
-The current highest-value direction is **broader and better-controlled data**, not another arbitrary TF-IDF sweep.
-
-Useful future directions include:
-
-1. More modern human text from independent sources
-2. More AI generations from different models
-3. Human-edited and partially AI-assisted text
-4. Cross-domain evaluation
-5. Time-based evaluation
-6. More independent external challenge sets
-7. Calibration of the final score
-8. Length-stratified thresholds
-9. Robustness against paraphrasing and humanization
-10. Confidence/abstention behavior
-11. Transformer-based models after sufficient data expansion
-12. Proper uncertainty intervals and repeated group-level evaluation
-
-A future model should ideally be evaluated on:
-
-```text
-in-domain data
-cross-domain data
-cross-model data
-short text
-long text
-human-edited AI text
-fully human text
-fully AI text
-```
-
-before making broad performance claims.
-
----
-
-# Project structure
-
-The current project is organized as follows:
+# Development structure
 
 ```text
 New Project/
@@ -703,39 +474,33 @@ New Project/
 ├── dataset/
 │
 ├── training/
-│
 ├── analysis/
-│
 ├── evaluation/
-│
 ├── tools/
-│
 ├── samples/
-│
 ├── docs/
-│
 └── legacy/
 ```
 
 ### `models/current/`
 
-Current production/development artifacts.
+Current model artifacts and current result records.
 
 ### `models/archive/`
 
-Older model versions and experiment results.
+Older model versions and historical experiment results.
 
 ### `data/`
 
-Original external datasets and historical source material.
+Original external and historical source material.
 
 ### `dataset/`
 
-Processed datasets generated by project scripts.
+Processed datasets generated during development.
 
 ### `training/`
 
-Corpus-building, optimization, and model-training scripts.
+Dataset construction, optimization, and model-training scripts.
 
 ### `analysis/`
 
@@ -751,56 +516,21 @@ Packaging and model-management utilities.
 
 ### `samples/`
 
-Example input documents.
+Example documents used during development.
 
 ### `docs/`
 
-Paper/research documentation.
+Research paper and research documentation.
 
 ### `legacy/`
 
-The original pilot and obsolete detector implementations.
+Earlier detector implementations and experimental records.
 
 ---
 
-# Useful commands
+# Reproducing the current model
 
-## Run current detector
-
-```bash
-python3 detector_v11.py samples/article.txt
-```
-
-## Run release detector
-
-```bash
-cd release/V11_RELEASE
-python3 detector_v11.py ../../samples/article.txt
-```
-
-## Check project structure
-
-```bash
-find . -maxdepth 2 -type f | sort
-```
-
-## Check project size
-
-```bash
-du -sh .
-```
-
-## Check installed versions
-
-```bash
-python3 -c "import sys, numpy, scipy, sklearn, joblib; print(sys.version); print(numpy.__version__); print(scipy.__version__); print(sklearn.__version__); print(joblib.__version__)"
-```
-
----
-
-# Re-training V11
-
-The core training sequence is:
+The main V11 training path is:
 
 ```bash
 python3 training/build_hc3_paired_v10.py
@@ -808,122 +538,302 @@ python3 training/build_combined_v11.py
 python3 training/train_combined_v11.py
 ```
 
-Do not run retraining blindly over the current model files if you need the exact current V11 artifact.
+Important files:
 
-Preserve the existing model first:
-
-```bash
-cp models/current/hc3_v11_combined_model.joblib \
-   models/archive/hc3_v11_combined_model_backup.joblib
+```text
+training/build_hc3_paired_v10.py
+training/build_combined_v11.py
+training/train_combined_v11.py
 ```
 
-A new experimental model should normally receive a new version identifier.
+Processed training data are under:
 
-For example:
+```text
+dataset/
+```
+
+Raw HC3 data are under:
+
+```text
+data/hc3/
+```
+
+The modern benchmark is under:
+
+```text
+data/benchmark/
+```
+
+---
+
+# Development rules
+
+## Do not overwrite V11
+
+Future experiments should normally use:
 
 ```text
 V12
 V13
 V14
+...
 ```
 
-rather than overwriting V11.
+rather than modifying V11 in place.
+
+## Preserve previous models
+
+Every serious experiment should keep:
+
+```text
+model artifact
+configuration
+dataset version
+results
+```
+
+## Keep test data conceptually separate
+
+Because development repeatedly inspected the existing comparison benchmark, it should no longer be described as a pristine untouched final test.
+
+Future work should create a genuinely held-out challenge set before making new confirmatory claims.
+
+## Prefer grouped evaluation
+
+Related prompts, variants, and documents should remain together where possible.
+
+## Prefer better data over endless hyperparameter searching
+
+When an external example fails, investigate:
+
+```text
+distribution
+domain
+length
+generation process
+formatting
+data leakage
+```
+
+before simply trying another value of `C`.
 
 ---
 
-# Exact reproducibility
+# Future research roadmap
 
-For inference reproducibility, preserve:
+The most valuable next steps are:
+
+1. collect more independent modern human text
+2. add AI generations from more systems and settings
+3. add human-edited and partially AI-assisted writing
+4. create time-based evaluation
+5. create cross-domain and cross-model challenge sets
+6. calibrate the classifier score
+7. investigate length-aware decision rules
+8. evaluate robustness to paraphrasing and humanization
+9. quantify uncertainty
+10. investigate transformer-based approaches only after improving data diversity
+
+A serious future evaluation should include:
 
 ```text
-detector_v11.py
-hc3_v11_portable.joblib
-requirements_v11.txt
+in-domain text
+cross-domain text
+cross-model text
+short text
+long text
+fully human text
+fully AI-generated text
+human-edited AI text
+paraphrased AI text
 ```
 
-For training reproducibility, preserve:
-
-```text
-dataset/
-data/
-training/
-models/
-```
-
-and the exact software versions.
-
-The trained model artifact contains the learned feature vocabulary, model weights, and threshold.
-
-The dataset is still needed to reproduce or extend the training process.
+Only after such evaluation should broader claims about detector performance be considered.
 
 ---
 
-# Research record
+# Research archive and reproducibility
 
-This project contains several generations of experiments.
+The repository intentionally preserves the history of failed and successful experiments.
 
-The historical pilot used older data and an earlier handcrafted feature model.
+Important historical versions include:
 
-Subsequent experiments demonstrated:
+```text
+V2
+V3
+V4
+V5
+V6
+V7
+V8
+V11
+```
 
-* operating-point failures despite high AUROC
-* benchmark/generalization mismatch
-* sensitivity to document length
-* formatting leakage
-* the limits of short-text-only training
-* the value of adding a broader paired corpus
-* the importance of keeping validation and comparison data conceptually separate
+The history records why models changed and what each experiment revealed.
 
-These are part of the research record and should not be rewritten merely because a later model performs better.
+The project therefore treats **failed experiments as evidence**, not as clutter.
+
+That is especially important for detector research, where a model that scores well on one dataset can still fail when the data distribution changes.
 
 ---
 
-# What V11 is
+# Code and paper
 
-V11 is:
+The research manuscript is maintained in:
 
 ```text
-a supervised binary text classifier
+docs/main.tex
 ```
 
-using:
+Supporting research/audit files include:
 
 ```text
-TF-IDF + LinearSVC
+docs/PROJECT_AUDIT.md
+docs/audit_repository.py
+docs/audit_results.json
+docs/research_cycle.py
 ```
 
-with:
+The paper should be updated whenever a substantial model, dataset, or evaluation change alters the scientific conclusions.
+
+The repository's code and the manuscript should therefore be treated as two parts of the same research record:
 
 ```text
-word features
+code + data + experiment history + paper
+```
+
+---
+
+# Citation and archival plans
+
+The GitHub repository is the living development record.
+
+For a formal, citable research snapshot, a future release can also be archived through a service such as **Zenodo**, which can assign a DOI to published research outputs and can automatically archive GitHub releases once the repository is connected. citeturn180531search0turn180531search1turn180531search7
+
+---
+
+# Where this research could be published
+
+Because this is a student-led project, I would prioritize venues that explicitly support student research.
+
+## 1. Journal of Emerging Investigators (JEI)
+
+This is probably the most natural first journal target for the current project.
+
+JEI explicitly accepts middle- and high-school student authors aged 13 or older, and it connects student researchers with scientific mentors. However, JEI requires a **senior mentor as a co-author**, and the manuscript must be submitted by an adult. citeturn648701search4turn648701search11
+
+That means the strongest path would be:
+
+```text
+Tuqay Mehdiyev
 +
-character features
-+
-text normalization
+a qualified teacher / professor / research mentor
 ```
 
-It is **not**:
+with the paper revised into a formal student research manuscript.
+
+## 2. arXiv
+
+arXiv can be useful as a public preprint once the manuscript is mature.
+
+However, arXiv requires endorsement for a first submission or for a new category, and its current policy explains that a first-time submitter can seek endorsement from an established arXiv author. citeturn648701search0
+
+For this project, I would treat arXiv as a **preprint/dissemination step**, not a replacement for peer review.
+
+## 3. Journal of Open Source Software (JOSS)
+
+JOSS is attractive because this repository is not just a paper—it is also an open research-software project.
+
+JOSS is a peer-reviewed open-access journal for research software, but it expects open-source, feature-complete software with clear research significance and substantial scholarly contribution. citeturn648701search5turn648701search8
+
+I would **not submit V11 to JOSS yet**. The software and evaluation protocol need to mature first, particularly around reproducible packaging, tests, licensing, and evidence of broader usefulness. JOSS's current guidance emphasizes research impact, scholarly contribution, maintainability, and credible reuse. citeturn648701search3turn648701search10
+
+## 4. Zenodo + GitHub
+
+This is not peer review, but it is an excellent archival step.
+
+A published Zenodo record receives a DOI, and Zenodo supports GitHub integration for archiving repository releases. citeturn180531search0turn180531search7
+
+A sensible sequence is:
 
 ```text
-a fine-tuned language model
+GitHub
+   ↓
+stable V12/V13 release
+   ↓
+Zenodo archive + DOI
+   ↓
+journal / preprint submission
 ```
-
-and it does not inspect model internals, hidden probabilities, metadata, or Internet URLs.
-
-It only evaluates the text supplied to it.
 
 ---
 
-# Final note
+# Recommended publication path
 
-The project's goal is not to produce an impressive detector number.
+For this particular project, my recommended order is:
 
-The goal is to determine:
+```text
+1. Finish the research methodology
+        ↓
+2. Build a genuinely independent challenge set
+        ↓
+3. Get a teacher/research mentor
+        ↓
+4. Revise the manuscript with formal statistical evaluation
+        ↓
+5. Submit to JEI
+        ↓
+6. Archive the stable research release on Zenodo
+        ↓
+7. Consider arXiv
+        ↓
+8. Consider JOSS after the software becomes
+   mature enough for its research-software criteria
+```
 
-> How well can a text classifier distinguish human and AI-generated writing under realistic distribution shift, and where does that approach fail?
+That path is more credible than trying to publish immediately based on the current benchmark numbers alone.
 
-The most important results are therefore not just the highest benchmark score.
+---
 
-The failure cases, external checks, data leakage analysis, distribution shifts, and preserved experiment history are equally important.
+# Project philosophy
 
-For that reason, every future model should be compared against V11 using the same documented evaluation protocol before being called an improvement.
+The project is built around one principle:
+
+> **A detector should be judged by how honestly it behaves under distribution shift, not only by how impressive its best benchmark score looks.**
+
+The research therefore records:
+
+- successes
+- failures
+- false positives
+- false negatives
+- dataset limitations
+- leakage concerns
+- formatting artifacts
+- distribution shifts
+- model versions
+- reproducibility information
+
+The objective is not to prove that AI text can always be detected.
+
+The objective is to measure **how far we can get, why the approach works when it works, and where it breaks**.
+
+---
+
+## Current snapshot
+
+**Author:** Tuqay Mehdiyev  
+**Location:** Baku, Azerbaijan  
+**School:** Baku European Lyceum  
+**Date:** 10 September 2026  
+**Current model:** V11  
+**Primary task:** Human-vs-AI text classification  
+**Current approach:** Normalized word + character TF-IDF with LinearSVC  
+**Current validation set:** 620 texts  
+**Current validation AUROC:** 0.9991  
+**Current validation accuracy:** 97.42%  
+**Current validation AI recall:** 99.35%  
+**Current validation FPR:** 4.52%
+
+> These figures describe the current project evaluation setup; they are not a universal estimate of detector accuracy.
+
